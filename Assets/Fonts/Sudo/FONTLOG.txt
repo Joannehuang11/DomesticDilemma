@@ -1,0 +1,285 @@
+Sudo is Copyright (c) 2009-2023, Jens Kutilek (http://www.kutilek.de/).
+
+v0.81
+- Remove more glyphs that are not really needed
+- Add proportional fractions and superscript/subscript figures to UI family
+- Add /heavyleftpointinganglequotationmarkornament/heavyrightpointinganglequotationmarkornament
+- Tweak glyph order
+- Add more currency symbols
+- Fix vertical metrics in VF fonts (Glyphs bug)
+- Hinting fixes
+
+v0.80
+- Remove Opentype feature icons, they were incomplete anyway
+- Shift tilde over horned base characters
+- Tweak proportional glyphs
+- Finish superscript uppercase letters
+- Add control symbols
+
+v0.79
+- Stylistic Set 4 (Extra Spacing) only applies to UI family
+- Wider space glyph in UI family
+- Finish all Greek glyphs
+- Add PETSCII block graphics in PUA for compatibility with https://github.com/jenskutilek/homecomputer-fonts
+- Re-enable PANOSE values
+- Fix short descender Italic of Eng.loclNSM
+
+v0.78
+- Finish more Greek glyphs
+- Hinting improvements and fixes
+- Add a Stylistic Set 4 with extra spacing
+- Add a Stylistic Set 19 which turns ſ into s
+- Add character variants for m (cv05)
+- Try disabling PANOSE values
+- Fix post.isFixedWidth values in UI family
+- Export with tried and true Glyphs build 3151
+
+v0.77
+- Add raised colon before equal to make the new Python walrus operator look nicer
+- Add a Debian package
+
+v0.76
+- Improve modifier letters
+- Fix some Cyrillic letters
+- Export with Glyphs build 3219
+
+v0.74
+- Add workaround for Affinity applying ligatures where there are none
+- Improve shape of proportional /ef-cy.ss20/yu-cy.ss20/Nje-cy.ss20
+- Make shape of /phiSymbol.ss20 similar to /phiSymbol
+- Add more proportional variants for Greek and Cyrillic
+
+v0.73
+- Fix DIN 91379 sequence support
+- Minor fixes
+- Tweak some accent positions
+- Export with Glyphs build 3214
+
+v0.72
+- Add missing iogonek and istroke without dot, needed for mark positioning (#25)
+
+v0.71
+- Add ccmp, mark, mkmk features that were deactivated before (#25)
+- Fix vertical metrics in Sudo UI Var to match static fonts
+- Set WWS and Use Typo Metrics flags in OS/2 table
+- Export STAT tables for static fonts
+- Add missing glyph variants
+- Add missing glyphs to features
+
+v0.70
+- Include variable font for Sudo UI for the first time
+- Draw some more Cyrillic and Greek glyphs
+- Add DIN 91379 character set
+- Add more box drawing characters
+- Lots of fixes for descender axis
+- Export with Glyphs build 3208
+
+v0.69
+- Add more kerning
+- Fix /ldots, update some metrics
+- Add symbols for DVD, file folder, open file folder, folder, open folder
+- Add some zero-width characters
+- Hinting and width fixes
+- Don't export Mac names
+- Fix weight class for Thin weight
+- Add many box drawing characters
+- Update OpenType layout features and glyph renaming
+- Export with Glyphs build 3161
+
+v0.68
+- Export with Glyphs build 3135
+- Add /Istroke
+- Make /acute/grave taller, keep old shorter version in double and case accents
+- Make African Eng the default form
+- Move alternate /g to CV01 feature
+- Improve /t.ss20
+- Remove Dutch special glyphs
+- Add serifless alternates for /I/J/i/j/l (in character variants 2–4 and stylistic set 3)
+- Use correct caron in /Lcaron.ss20
+
+v0.67
+- Export with Glyphs build 3134
+- Detail corrections
+- Hinting fixes
+- Increase overshoot suppression to 50 ppm
+- Add proportional variants for /e and related glyphs
+- Alignment fixes
+- Interpolation fixes
+- Remove legacy IJ and ij glyphs
+- Fix some zone widths
+- Set descender axis values so that the axis doesn't need mapping
+- Update cvar table in patch file
+- Improve /Lslash/lslash
+- Finish some more Thin glyphs
+
+v0.65
+- Revert design changes in n and related glyphs
+- Fix some accent positions
+- Change internal axis locations so that no mapping is necessary for extrema
+
+v0.65
+- Add more glyphs
+- Change embedding permissions to "installable"
+- Set PANOSE values for family manually
+- Update font info
+- Adapt many glyphs for Thin weight
+- Remove glyphs: /C.pl/F.pl/L.pl/N.pl/O.pl
+- Changed Regular: /A.sups/B.sups/D.sups/G.sups/N.sups/R.sups/Z.sups/ka-cy
+- Changed Bold: /fivesuperior/sixsuperior/sevensuperior/eightsuperior/ninesuperior/ka-cy
+- Changed Thin: /fivesuperior/sixsuperior/sevensuperior/eightsuperior/ninesuperior/ordfeminine/ordmasculine/crescentMoon/thumbsUpSign/thumbsDownSign/bustInSilhouette/speechBalloon/tearOffCalendar/telephoneReceiver/mobilePhone/antennaBars/shuffleArrows/speaker/speakerWithThreeSoundWaves/leftMagnifyingGlass/rightMagnifyingGlass/key/lock/openLock/clockwiseRightAndLeftSemicircleArrows/ballotScriptX/ballotBoxWithScriptX/ballotBoldScriptX/ballotBoxWithBoldScriptX/ballotBoxWithBoldCheck/cloud/heavenTrigram/sunWithRays/venus/mars/heartWhiteSuit/gearWithoutHub/lowerRightPencil/checkmark/heavyCheckMark/multiplicationX/heavyMultiplicationX/ballotX/heavyBallotX/aktieselskab/ballotBoxWithLightX/careof/capslock/optionKey/propellor/angle/minussuperior/orthogonal/perpendicular/plussuperior/uniEC2A/uniEC2B/uniEC2C/orn001/orn002/emoji.mouth/ka-cy
+- Export fonts with Glyphs build 3130
+
+v0.64, 2022-04-05
+- Rename unregistered ytde axis to YTDE (Descender)
+- Fix scaling of Descender axis
+- Add proportional alternate for E
+- Export fonts with Glyphs build 3120
+
+v0.63, 2022-03-05
+- Add proportional alternates for A and E
+- Improve bowls on Italic glyphs
+- New design for alpha
+- Tweak phi, psi
+- Add ef-cy
+- Export fonts with Glyphs build 3116
+
+v0.62, 2022-01-17
+- Tweak old-style 2
+- Improve hinting for old-style figures
+- Tweak some accents
+- Add ratio, modifier letter apostrophe, modifier letter turned comma characters
+
+v0.61, 2021-11-11
+- Add old-style figures
+- Make /ballotBox/ballotBoxWithCheck/ballotBoxWithX/heavyGreekCross
+  /heavyCheckMark/multiplicationX/heavyMultiplicationX/ballotX/heavyBallotX
+more consistent
+
+v0.60, 2021-09-23
+- Breaking change: Make default line height one "pixel" shorter (#23)
+- Add more missing glyphs
+
+v0.55.2, 2021-06-24
+- Fix variable font again
+
+v0.55.1, 2021-06-23
+- Re-add missing variable font
+
+v0.55, 2021-06-23
+- Add shorter variants of ABCDEF for use in hexadecimal numbers
+- Fix interpolation error in combining caron
+- Remove proportional and italic alternate glyphs from monospaced family
+- Add more missing glyphs
+- Improve gasp table
+- Remove ccmp feature from monospaced fonts
+
+v0.54, 2021-06-17
+- Add support for Vietnamese
+- Add more missing glyphs
+
+v0.53.1, 2021-05-17
+- Bugfix for variable font: Remove rvrn feature, fix substitution condition range for italic forms (thanks Erwin Denissen)
+- Hinting fix for variable font
+
+v0.53.0, 2021-05-14
+- Include proportional "Sudo UI" family (former working title was  "Sudo Text")
+- Update sources to Glyphs 3 format
+- Rebuild variable font source from master source
+- Hinting fixes
+- Add more missing glyphs
+
+v0.52 (Fix for variable font only)
+- Fix interpolation of ringcomb and acutecomb
+
+v0.51
+- Bugfix uni1D7B (#18)
+- Add uni026A
+- Fix position of strokeshortcomb in /dcroat/hbar/tbar/dje-cy
+
+v0.50
+- Add more missing Bold and Thin glyphs (/AE/I/IJ/OE/Germandbls/Schwa/I.ss02.ss20/eth/ij/eng/longs/r.ss20/s.ss20/braceleft/braceright/florin/asciicircum/partialdiff/ampersand/tildecomb)
+- Begin redesigning accents
+- Begin adding accents for Vietnamese
+- Use anchors
+- Some italic corrections
+- Improve s
+
+v0.42
+- Add more powerline stuff
+- Update vendor ID
+- Update hinting
+- Minor changes
+
+v0.41
+- Breaking change! Adjust vertical metrics to allow for unclipped top accents. This will change the default line spacing of existing documents.
+- Add quick and dirty hungarumlautcomb to stay within the vertical metrics
+- Move underscoredbl up so it doesn't exceed the descender metric in Bold and Bold Italic
+- Bugfix in overlinecomb, overline
+- Adjust accent position in Lcommaaccent
+- Remove mark feature, it was not fully functional anyway
+- Remove kern and mark features in variable fonts, as was already done in static fonts
+- Remove color glyphs, they were causing problems with syntax highlighting in Atom
+- Fix axis mapping in variable fonts again
+- Export fonts with Glyphs build 1284
+
+v0.40
+- Update variable font from design source
+- Rename variable font family name to "Sudo Variable", to avoid confusion with the static fonts
+- Add variable web font in WOFF2 format
+- Export fonts with Glyphs build 1264
+
+v0.39
+- Add Braille 6 dot glyphs
+- Add color versions for light, medium and dark shade characters
+
+v0.38
+- Bugfix for font names in Italic and Bold
+
+v0.37
+- Finish numbers in Thin masters
+- Redesign acute and grave accents, dieresis, macron
+- Improvements in Thin masters
+- Bugfixes and other improvements
+
+v0.36
+- Update variable font and webfonts
+
+v0.35
+- Add some old-school pixel smilies
+- Fixes
+
+v0.33-dev5
+- Add Italic data in Glyphs file
+- Improve display of Italic on macOS
+
+v0.33-dev4
+- Raise hyphen and endash, emdash, horizontalbar to better align with mathematical symbols
+
+v0.33-dev3
+- Export with Glyphs build 1128, should fix most of the hinting problems
+- Include Variable Font for upright styles
+
+v0.33-dev2
+- Resolve some hinting problems
+- Make all glyphs actually monospaced
+
+v0.33-dev
+
+- Support Powerline
+- Redesign some glyphs
+- Add Thin master and more in-between weights (in progress)
+- Use dotted zero as default
+- Add proportionally spaced Sudo Text family (in progress)
+- Move sources to GlyphsApp
+
+v0.33, 2016-05-29
+
+- Mark fonts as monospaced (was there a reason why I didn’t before?)
+- Update glyph set in Regular and Regular Italic with icon set
+- Update Italic to match Regular
+- Copy hinting from Bold to Bold Italic
+- Include web fonts (WOFF)
+
+v0.32, 2013-11-13
+
+- Initial public release
