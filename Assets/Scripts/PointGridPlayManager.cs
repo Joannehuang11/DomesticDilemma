@@ -1,11 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics.Tracing;
-using JetBrains.Annotations;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
-
 
 public enum pointGridPlayingState
 {
@@ -30,18 +23,14 @@ public class PointGridPlayManager : MonoBehaviour
 
 
     // imgs and obj for GamePlayBg
-    public Sprite activeGamePlayBgImg;
-    public GameObject activeGamePlayBg;
+    public GameObject GamePlayUI;
 
 
     // Start is called before the first frame update
     void Start()
     {
         UpdateGridPlayingState(pointGridPlayingState.None);
-        
-        //GamePlayBg
-        Image image = activeGamePlayBg.GetComponent<Image>(); 
-
+        UpdateGridPlayResult(pointGridPlayResult.None);
     }
 
     // Update is called once per frame
@@ -50,38 +39,56 @@ public class PointGridPlayManager : MonoBehaviour
         
     }
 
-    
+    public void StartPointGridGame()
+    {
+        UpdateGridPlayingState(pointGridPlayingState.Selecting);
+    }
+
     // Update the current state of the game    
     public void UpdateGridPlayingState (pointGridPlayingState newState)
     {
         currentGridPlayingState = newState;
-
         
         // Handle the new state
         switch (currentGridPlayingState)
         {
             case pointGridPlayingState.None:
-                Debug.Log("The point grid game is not being played.");
+                Debug.Log("pointGridPlayingState is None.");
+                GamePlayUI.GetComponent<UpdateGridGameplayBg>().UpdateBg(false);
                 break;
             case pointGridPlayingState.Selecting:
-                Debug.Log("The point grid game is in the selecting stage.");
+                GamePlayUI.GetComponent<UpdateGridGameplayBg>().UpdateBg(true);
+                Debug.Log("pointGridPlayingState is Selecting.");
                 break;
             case pointGridPlayingState.Result:
-                Debug.Log("The point grid game has a result.");
+                GamePlayUI.GetComponent<UpdateGridGameplayBg>().UpdateBg(false);
+                Debug.Log("pointGridPlayingState is Result.");
                 break;
         }
     }
 
-    void updateGridGamePlayBg(pointGridPlayingState state)
+    public void UpdateGridPlayResult (pointGridPlayResult newResult)
     {
-        Image image = activeGamePlayBg.GetComponent<Image>(); 
-        if (state == pointGridPlayingState.None)
+        currentGridPlayResult = newResult;
+
+        // Handle the new result
+        switch (currentGridPlayResult)
         {
-            image.sprite = activeGamePlayBgImg;
-        }
-        else
-        {
-            image.sprite = null;
+            case pointGridPlayResult.None:
+                Debug.Log("pointGridPlayResult is None.");
+                break;
+            case pointGridPlayResult.P1Win:
+                Debug.Log("pointGridPlayResult is P1Win.");
+                break;
+            case pointGridPlayResult.P2Win:
+                Debug.Log("pointGridPlayResult is P2Win.");
+                break;
+            case pointGridPlayResult.P1P2Draw:
+                Debug.Log("pointGridPlayResult is P1P2Draw.");
+                break;
+            case pointGridPlayResult.P1P2GiveUp:
+                Debug.Log("pointGridPlayResult is P1P2GiveUp.");
+                break;
         }
     }
 }
