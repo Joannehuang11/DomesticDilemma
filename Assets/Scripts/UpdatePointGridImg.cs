@@ -7,8 +7,8 @@ public class UpdatePointGridImg : MonoBehaviour
 {
     //status images
     public Sprite defaultImg;
+    public Sprite p0WinImg;
     public Sprite p1WinImg;
-    public Sprite p2WinImg;
     public Sprite drawImg;
     public Sprite giveUpImg;
     
@@ -19,7 +19,9 @@ public class UpdatePointGridImg : MonoBehaviour
     public Sprite countdownImg2;
     public Sprite countdownImg1;
 
-    private Image pointGridImg;
+    //callback
+    public GameObject pointGridPlayManager;
+    Image pointGridImg;
     
     // Start is called before the first frame update
     void Start()
@@ -33,27 +35,28 @@ public class UpdatePointGridImg : MonoBehaviour
         
     }
 
-    public void UpdatePointGridImgStatus(pointGridPlayResult result)
+    public void SetPointGridImg(pointGridPlayResult result)
     {
+        
         switch (result)
         {
             case pointGridPlayResult.None:
                 pointGridImg.sprite = defaultImg;
                 break;
+            case pointGridPlayResult.P0Win:
+                pointGridImg.sprite = p0WinImg;
+                break;
             case pointGridPlayResult.P1Win:
                 pointGridImg.sprite = p1WinImg;
                 break;
-            case pointGridPlayResult.P2Win:
-                pointGridImg.sprite = p2WinImg;
-                break;
-            case pointGridPlayResult.P1P2Draw:
+            case pointGridPlayResult.P0P1Draw:
                 pointGridImg.sprite = drawImg;
                 break;
-            case pointGridPlayResult.P1P2GiveUp:
+            case pointGridPlayResult.P0P1GiveUp:
                 pointGridImg.sprite = giveUpImg;
                 break;
             default:
-                Debug.Log("fail update pointGridImgStatus");
+                Debug.Log("fail to set pointGridImgStatus");
                 break;
         }
     }
@@ -65,7 +68,7 @@ public class UpdatePointGridImg : MonoBehaviour
     
     private IEnumerator updateCountDownImg()
     {
-        Debug.Log("Start Countdown Img Update");
+        // Debug.Log("Start Countdown Img Update");
         
         pointGridImg.sprite = countdownImg5;
         yield return new WaitForSeconds(1f);
@@ -81,5 +84,7 @@ public class UpdatePointGridImg : MonoBehaviour
 
         pointGridImg.sprite = countdownImg1;
         yield return new WaitForSeconds(1f);
+
+        pointGridPlayManager.GetComponent<PointGridPlayManager>().UpdateGridGameResult();
     }
 }

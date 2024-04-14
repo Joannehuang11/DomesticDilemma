@@ -34,6 +34,7 @@ public class PlayerManager : MonoBehaviour
     public void SetPlayerCall(playerCall call)
     {
         playerCall = call;
+        // Debug.Log("Set Player " + playerNo + " call:" + call);
     }
 
     public playerCall GetPlayerCall()

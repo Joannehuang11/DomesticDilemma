@@ -4,16 +4,16 @@ public enum pointGridPlayingState
 {
     None,
     Selecting,
-    Result
+    ResultAction
 }
 
 public enum pointGridPlayResult
 {
     None,
+    P0Win,
     P1Win,
-    P2Win,
-    P1P2Draw,
-    P1P2GiveUp
+    P0P1Draw,
+    P0P1GiveUp
 }
 
 public class PointGridPlayManager : MonoBehaviour
@@ -28,14 +28,17 @@ public class PointGridPlayManager : MonoBehaviour
     public GameObject GamePlayUI;
     public GameObject PointGridUI;
 
+    // players data
+    public GameObject player0;
+    public GameObject player1;
+
 
     // Start is called before the first frame update
     void Start()
     {
         currentRound = 0;
-        UpdateGridPlayingState(pointGridPlayingState.None);
-        UpdateGridPlayResult(pointGridPlayResult.None);
-
+        SetGridPlayingState(pointGridPlayingState.None);
+        SetGridPlayResult(pointGridPlayResult.None);
     }
 
     // Update is called once per frame
@@ -50,28 +53,72 @@ public class PointGridPlayManager : MonoBehaviour
         {
             currentRound++;
             Debug.Log("Start Round" + currentRound);
-            UpdateGridPlayingState(pointGridPlayingState.Selecting);
+            
+            SetGridPlayingState(pointGridPlayingState.Selecting);
             PointGridUI.GetComponent<UpdatePointGridImg>().startCountDown();
-            //get game result
-
-            // get player 1 selected
-            // get player 2 selected
-            // get game result
-            // update grid play result
-                // update point grid img
-                // update text
-            // update game playing state
-            // update 
         }
         else
         {
             Debug.Log("Game Over");
+        } 
+    }
+
+    //check game result
+    public void UpdateGridGameResult()
+    {
+        playerCall playercall0 = player0.GetComponent<PlayerManager>().GetPlayerCall();
+        playerCall playercall1 = player1.GetComponent<PlayerManager>().GetPlayerCall();
+
+        // if not select
+        if (playercall0 == playerCall.None)
+        {
+            player0.GetComponent<PlayerManager>().SetPlayerCall(playerCall.NotCollab); 
+            // Debug.Log("Player 1 not select, set playercall to NotCollab");
         }
-        
+        if (playercall1 == playerCall.None)
+        {
+            player1.GetComponent<PlayerManager>().SetPlayerCall(playerCall.NotCollab); 
+            // Debug.Log("Player 2 not select, set playercall to NotCollab");
+        }
+
+        //get result
+        if (player0.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.Collab && player1.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.Collab)
+        {
+            SetGridPlayResult(pointGridPlayResult.P0P1Draw);
+        }
+        else if (player0.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.Collab && player1.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.NotCollab)
+        {
+            SetGridPlayResult(pointGridPlayResult.P0Win);
+        }
+        else if (player0.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.NotCollab && player1.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.Collab)
+        {
+            SetGridPlayResult(pointGridPlayResult.P1Win);
+        }
+        else if (player0.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.NotCollab && player1.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.NotCollab)
+        {
+            SetGridPlayResult(pointGridPlayResult.P0P1GiveUp);
+        }
+        else
+        {
+            Debug.Log("fail to update grid game result");
+        }
+
+        Debug.Log("Update game: Player 0 call:" + player0.GetComponent<PlayerManager>().GetPlayerCall() + " Player 1 call:" + player1.GetComponent<PlayerManager>().GetPlayerCall() + " Result:" + currentGridPlayResult);
+
+        //update player coin
+
+        //update game playing state
+        SetGridPlayingState(pointGridPlayingState.ResultAction);
+
+        //update game UI
+        PointGridUI.GetComponent<UpdatePointGridImg>().SetPointGridImg(currentGridPlayResult);
+            // update status sign
+            // update status text
+        // update game playing state -> result action
     }
 
     // Update the current state of the game    
-    public void UpdateGridPlayingState (pointGridPlayingState newState)
+    public void SetGridPlayingState (pointGridPlayingState newState)
     {
         currentGridPlayingState = newState;
         
@@ -86,14 +133,15 @@ public class PointGridPlayManager : MonoBehaviour
                 GamePlayUI.GetComponent<UpdateGridGameplayBg>().UpdateBg(true);
                 Debug.Log("pointGridPlayingState is Selecting.");
                 break;
-            case pointGridPlayingState.Result:
+            case pointGridPlayingState.ResultAction:
                 GamePlayUI.GetComponent<UpdateGridGameplayBg>().UpdateBg(false);
-                Debug.Log("pointGridPlayingState is Result.");
+                Debug.Log("pointGridPlayingState is Result Action.");
                 break;
         }
     }
 
-    public void UpdateGridPlayResult (pointGridPlayResult newResult)
+    // Update the current result of the game
+    public void SetGridPlayResult (pointGridPlayResult newResult)
     {
         currentGridPlayResult = newResult;
 
@@ -103,16 +151,16 @@ public class PointGridPlayManager : MonoBehaviour
             case pointGridPlayResult.None:
                 Debug.Log("pointGridPlayResult is None.");
                 break;
-            case pointGridPlayResult.P1Win:
+            case pointGridPlayResult.P0Win:
                 Debug.Log("pointGridPlayResult is P1Win.");
                 break;
-            case pointGridPlayResult.P2Win:
+            case pointGridPlayResult.P1Win:
                 Debug.Log("pointGridPlayResult is P2Win.");
                 break;
-            case pointGridPlayResult.P1P2Draw:
+            case pointGridPlayResult.P0P1Draw:
                 Debug.Log("pointGridPlayResult is P1P2Draw.");
                 break;
-            case pointGridPlayResult.P1P2GiveUp:
+            case pointGridPlayResult.P0P1GiveUp:
                 Debug.Log("pointGridPlayResult is P1P2GiveUp.");
                 break;
         }
