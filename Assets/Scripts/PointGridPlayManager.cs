@@ -18,19 +18,24 @@ public enum pointGridPlayResult
 
 public class PointGridPlayManager : MonoBehaviour
 {
+    //basic game data
     public pointGridPlayingState currentGridPlayingState = pointGridPlayingState.None;
     public pointGridPlayResult currentGridPlayResult = pointGridPlayResult.None;
+    public int currentRound;
+    public int maxRound = 20;
 
-
-    // imgs and obj for GamePlayBg
+    // trigger updates to the UI
     public GameObject GamePlayUI;
+    public GameObject PointGridUI;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        currentRound = 0;
         UpdateGridPlayingState(pointGridPlayingState.None);
         UpdateGridPlayResult(pointGridPlayResult.None);
+
     }
 
     // Update is called once per frame
@@ -41,7 +46,28 @@ public class PointGridPlayManager : MonoBehaviour
 
     public void StartPointGridGame()
     {
-        UpdateGridPlayingState(pointGridPlayingState.Selecting);
+        if (currentRound < maxRound)
+        {
+            currentRound++;
+            Debug.Log("Start Round" + currentRound);
+            UpdateGridPlayingState(pointGridPlayingState.Selecting);
+            PointGridUI.GetComponent<UpdatePointGridImg>().startCountDown();
+            //get game result
+
+            // get player 1 selected
+            // get player 2 selected
+            // get game result
+            // update grid play result
+                // update point grid img
+                // update text
+            // update game playing state
+            // update 
+        }
+        else
+        {
+            Debug.Log("Game Over");
+        }
+        
     }
 
     // Update the current state of the game    
@@ -53,8 +79,8 @@ public class PointGridPlayManager : MonoBehaviour
         switch (currentGridPlayingState)
         {
             case pointGridPlayingState.None:
-                Debug.Log("pointGridPlayingState is None.");
                 GamePlayUI.GetComponent<UpdateGridGameplayBg>().UpdateBg(false);
+                Debug.Log("pointGridPlayingState is None.");
                 break;
             case pointGridPlayingState.Selecting:
                 GamePlayUI.GetComponent<UpdateGridGameplayBg>().UpdateBg(true);

@@ -21,12 +21,12 @@ public class UpdateGridGameplayBg : MonoBehaviour
         if (isActive)
         {
             GamePlayBg.sprite = activeGamePlayBgImg;
-            Debug.Log("Update the GamePlayBg to active.");
+            // Debug.Log("Update the GamePlayBg to active.");
         }
         else
         {
             GamePlayBg.sprite = inactiveGamePlayBgImg;
-            Debug.Log("Update the GamePlayBg to inactive.");
+            // Debug.Log("Update the GamePlayBg to inactive.");
         }
     }
 }
