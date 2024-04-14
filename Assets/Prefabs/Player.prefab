@@ -567,7 +567,7 @@ GameObject:
   - component: {fileID: 2725394102557055907}
   - component: {fileID: 590240434779063501}
   m_Layer: 5
-  m_Name: CoinStatus
+  m_Name: Coins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -771,6 +771,7 @@ MonoBehaviour:
   playerNo: 0
   playerCoin: 0
   playerCall: 0
+  playerState: 0
 --- !u!1 &4644937833415432373
 GameObject:
   m_ObjectHideFlags: 0
