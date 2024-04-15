@@ -28,9 +28,10 @@ public class PointGridPlayManager : MonoBehaviour
     public GameObject GamePlayUI;
     public GameObject PointGridUI;
 
-    // players data
+    // interface
     public GameObject player0;
     public GameObject player1;
+    public GameObject actionCardsPlayManager;
 
 
     // Start is called before the first frame update
@@ -118,34 +119,43 @@ public class PointGridPlayManager : MonoBehaviour
             SetGridPlayResult(pointGridPlayResult.P0P1Draw);
             player0.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Action, 3, false, true);
             player1.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Hold, 3, false, true);
+            
+            SetGridPlayingState(pointGridPlayingState.ResultAction);
+            actionCardsPlayManager.GetComponent<ActionCardsPlayManager>().setActionCardsPlayingState(actionCardsPlayingState.Waiting);
         }
         else if (player0.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.Collab && player1.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.NotCollab)
         {
             SetGridPlayResult(pointGridPlayResult.P0Win);
             player0.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Action, 5, false, true);
             player1.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Hold, 0, false, true);
+        
+            SetGridPlayingState(pointGridPlayingState.ResultAction);
+            actionCardsPlayManager.GetComponent<ActionCardsPlayManager>().setActionCardsPlayingState(actionCardsPlayingState.Waiting);        
         }
         else if (player0.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.NotCollab && player1.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.Collab)
         {
             SetGridPlayResult(pointGridPlayResult.P1Win);
             player0.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Action, 0, false, true);
             player1.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Hold, 5, false, true);
+
+            SetGridPlayingState(pointGridPlayingState.ResultAction);
+            actionCardsPlayManager.GetComponent<ActionCardsPlayManager>().setActionCardsPlayingState(actionCardsPlayingState.Waiting);        
         }
         else if (player0.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.NotCollab && player1.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.NotCollab)
         {
             SetGridPlayResult(pointGridPlayResult.P0P1GiveUp);
             player0.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Action, 1, false, true);
             player1.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Hold, 1, false, true);
+        
+            SetGridPlayingState(pointGridPlayingState.ResultAction);
+            actionCardsPlayManager.GetComponent<ActionCardsPlayManager>().setActionCardsPlayingState(actionCardsPlayingState.Waiting);        
         }
         else
         {
             Debug.Log("fail to update grid game result");
         }
-        Debug.Log("Update game: Player 0 call:" + player0.GetComponent<PlayerManager>().GetPlayerCall() + " Player 1 call:" + player1.GetComponent<PlayerManager>().GetPlayerCall() + " Result:" + currentGridPlayResult);
+        // Debug.Log("Update game: Player 0 call:" + player0.GetComponent<PlayerManager>().GetPlayerCall() + " Player 1 call:" + player1.GetComponent<PlayerManager>().GetPlayerCall() + " Result:" + currentGridPlayResult);
 
-        
-        //Update game playing state
-        SetGridPlayingState(pointGridPlayingState.ResultAction);
 
         //update game UI
         PointGridUI.GetComponent<UpdatePointGridImg>().SetPointGridImg(currentGridPlayResult);
@@ -156,20 +166,20 @@ public class PointGridPlayManager : MonoBehaviour
     public void SetGridPlayingState (pointGridPlayingState newState)
     {
         currentGridPlayingState = newState;
+
+        // Update the section background
+        GamePlayUI.GetComponent<UpdateGridGameplayBg>().UpdateBg(currentGridPlayingState);
         
         // Handle the new state
         switch (currentGridPlayingState)
         {
             case pointGridPlayingState.None:
-                GamePlayUI.GetComponent<UpdateGridGameplayBg>().UpdateBg(false);
                 Debug.Log("pointGridPlayingState is None.");
                 break;
             case pointGridPlayingState.Selecting:
-                GamePlayUI.GetComponent<UpdateGridGameplayBg>().UpdateBg(true);
                 Debug.Log("pointGridPlayingState is Selecting.");
                 break;
             case pointGridPlayingState.ResultAction:
-                GamePlayUI.GetComponent<UpdateGridGameplayBg>().UpdateBg(false);
                 Debug.Log("pointGridPlayingState is Result Action.");
                 break;
         }

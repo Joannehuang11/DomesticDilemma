@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UpdateGridGameplayBg : MonoBehaviour
+public class UpdateActionCardsPlayBg : MonoBehaviour
 {
     public Sprite activeBgImg;
     public Sprite inactiveBgImg;
@@ -16,17 +16,26 @@ public class UpdateGridGameplayBg : MonoBehaviour
         GamePlayBg = GetComponent<Image>();
     }
 
-    public void UpdateBg(pointGridPlayingState state)
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void UpdateBg(actionCardsPlayingState state)
     {
         switch (state)
         {
-            case pointGridPlayingState.None:
+            case actionCardsPlayingState.None:
                 GamePlayBg.sprite = inactiveBgImg;
                 break;
-            case pointGridPlayingState.Selecting:
+            case actionCardsPlayingState.Waiting:
                 GamePlayBg.sprite = activeBgImg;
                 break;
-            case pointGridPlayingState.ResultAction:
+            case actionCardsPlayingState.P0Selected:
+                GamePlayBg.sprite = inactiveBgImg;
+                break;
+            case actionCardsPlayingState.P1Selected:
                 GamePlayBg.sprite = inactiveBgImg;
                 break;
         }
