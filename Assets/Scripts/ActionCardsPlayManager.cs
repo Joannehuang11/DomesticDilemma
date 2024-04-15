@@ -62,4 +62,9 @@ public class ActionCardsPlayManager : MonoBehaviour
     {
         return actionCardsPlayingState;
     }
+
+    public GameObject getActionCard(int cardNo)
+    {
+        return actionCards[cardNo];
+    }
 }

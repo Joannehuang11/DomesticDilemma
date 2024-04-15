@@ -54,7 +54,9 @@
     "dotnet.defaultSolution": "DomesticDilemma.sln",
     "cSpell.words": [
         "Behaviour",
+        "Datas",
         "Gameplay",
-        "playercall"
+        "playercall",
+        "UGUI"
     ]
 }
