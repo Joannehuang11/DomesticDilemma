@@ -777,6 +777,7 @@ MonoBehaviour:
   playerStatusText: {fileID: 0}
   playerStatusSignCoinTextObj: {fileID: 0}
   playerStatusSignSymbol: {fileID: 0}
+  playerStatusCard: {fileID: 0}
 --- !u!1 &4644937833415432373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1389,6 +1390,7 @@ GameObject:
   - component: {fileID: 5727789480011391891}
   - component: {fileID: 3066666145122010940}
   - component: {fileID: 6231978371297300200}
+  - component: {fileID: 342497422679746569}
   m_Layer: 5
   m_Name: Symbol
   m_TagString: Untagged
@@ -1453,6 +1455,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &342497422679746569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8867926463576749229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a0e5420258e42c793c003c2cfc42d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questionImg: {fileID: 21300000, guid: 472c99c678583403789dfdfd9f5cb6ce, type: 3}
+  checkImg: {fileID: 21300000, guid: f806d5a3f6ee34eb2a46ad33598c16b7, type: 3}
+  playerManager: {fileID: 0}
 --- !u!1 &8962525820216793704
 GameObject:
   m_ObjectHideFlags: 0

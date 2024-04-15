@@ -24,7 +24,7 @@ public class UpdateStatusSignSymbol : MonoBehaviour
         
     }
 
-    public void SetStatusSignSymbolImg (playerStatus state)
+    public void setSymbol (playerStatus state)
     {
         switch (state)
         {

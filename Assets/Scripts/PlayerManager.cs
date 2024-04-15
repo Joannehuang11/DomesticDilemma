@@ -37,6 +37,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject playerStatusSignCoinTextObj;
     private TextMeshProUGUI playerStatusSignCoinText;
     public GameObject playerStatusSignSymbol;
+    public GameObject playerStatusCard;
 
 
     //game costing
@@ -56,7 +57,7 @@ public class PlayerManager : MonoBehaviour
         playerIDtext.text = "Player " + playerNo.ToString();
         playerCoinText.text = playerCoin.ToString();        
         SetPlayerStatus(playerStatus.Selecting, 0, true, false);
-        playerStatusSignSymbol.GetComponent<UpdateStatusSignSymbol>().SetStatusSignSymbolImg(playerStatus);
+        playerStatusSignSymbol.GetComponent<UpdateStatusSignSymbol>().setSymbol(playerStatus);
     
         //game costing
         currentCost = 0;
@@ -72,6 +73,11 @@ public class PlayerManager : MonoBehaviour
     {
         playerCall = call;
         // Debug.Log("Set Player " + playerNo + " call:" + call);
+        if (call != playerCall.None)
+        {
+            SetPlayerStatus(playerStatus.Ready, 0, true, true);
+            playerStatusSignSymbol.GetComponent<UpdateStatusSignSymbol>().setSymbol(playerStatus);
+        }
     }
 
     public playerCall GetPlayerCall()
@@ -95,6 +101,9 @@ public class PlayerManager : MonoBehaviour
         playerStatusSignCoinText.text = statusCoin.ToString("+0;-0;0");
 
         currentCost = statusCoin;
+
+        playerStatusCard.GetComponent<UpdateStatusCardBg>().UpdateBg(playerStatus, playerNo);
+        playerStatusSignSymbol.GetComponent<UpdateStatusSignSymbol>().setSymbol(playerStatus);
 
         if (isSymbolShow)
         {
@@ -137,6 +146,5 @@ public class PlayerManager : MonoBehaviour
     {
         return playerStatus;
     }
-
 
 }

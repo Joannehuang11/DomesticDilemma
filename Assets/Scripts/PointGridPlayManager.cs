@@ -24,7 +24,7 @@ public class PointGridPlayManager : MonoBehaviour
     public int currentRound;
     public int maxRound = 20;
 
-    // trigger updates to the UI
+    //UI
     public GameObject GamePlayUI;
     public GameObject PointGridUI;
 
@@ -44,7 +44,31 @@ public class PointGridPlayManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //player make calls
+        if (currentGridPlayingState == pointGridPlayingState.Selecting)
+        {
+            
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Debug.Log("Q key was pressed.");
+                player0.GetComponent<PlayerManager>().SetPlayerCall(playerCall.Collab);
+            } 
+            else if (Input.GetKeyDown(KeyCode.W))
+            {
+                Debug.Log("W key was pressed.");
+                player0.GetComponent<PlayerManager>().SetPlayerCall(playerCall.NotCollab);
+            }
+            else if (Input.GetKeyDown(KeyCode.O))
+            {
+                Debug.Log("O key was pressed.");
+                player1.GetComponent<PlayerManager>().SetPlayerCall(playerCall.Collab);
+            }
+            else if (Input.GetKeyDown(KeyCode.P))
+            {
+                Debug.Log("P key was pressed.");
+                player1.GetComponent<PlayerManager>().SetPlayerCall(playerCall.NotCollab);
+            }   
+        }
     }
 
     public void StartPointGridGame()
@@ -54,6 +78,13 @@ public class PointGridPlayManager : MonoBehaviour
             currentRound++;
             Debug.Log("Start Round" + currentRound);
             
+            //reset player call
+            player0.GetComponent<PlayerManager>().SetPlayerCall(playerCall.None);
+            player0.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Selecting, 0, true, false);
+            player1.GetComponent<PlayerManager>().SetPlayerCall(playerCall.None);
+            player1.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Selecting, 0, true, false);
+
+            //reset game status
             SetGridPlayingState(pointGridPlayingState.Selecting);
             PointGridUI.GetComponent<UpdatePointGridImg>().startCountDown();
         }
@@ -63,7 +94,7 @@ public class PointGridPlayManager : MonoBehaviour
         } 
     }
 
-    //check game result
+    //update game result
     public void UpdateGridGameResult()
     {
         playerCall playercall0 = player0.GetComponent<PlayerManager>().GetPlayerCall();
