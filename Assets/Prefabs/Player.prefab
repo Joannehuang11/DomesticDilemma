@@ -440,7 +440,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 40, y: 40}
+  m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &198990933679511774
 CanvasRenderer:
@@ -470,7 +470,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 24361ee4b07fd4ff78dcde61b2fa27b2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa062634eab494dcfb57c63f99d4f963, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -545,7 +545,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cea228f31549fde48a76610820c35545, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a91315a3af8054ce2aa98ee0757f2d7a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -771,7 +771,12 @@ MonoBehaviour:
   playerNo: 0
   playerCoin: 0
   playerCall: 0
-  playerState: 0
+  playerStatus: 0
+  playerIDtext: {fileID: 0}
+  playerCoinText: {fileID: 0}
+  playerStatusText: {fileID: 0}
+  playerStatusSignCoinTextObj: {fileID: 0}
+  playerStatusSignSymbol: {fileID: 0}
 --- !u!1 &4644937833415432373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1100,7 +1105,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: edf38f19c43c11b498eabbd356aed2e5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1366d6dadc07f46a49b680b65afac988, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

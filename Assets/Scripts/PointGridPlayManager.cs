@@ -81,40 +81,44 @@ public class PointGridPlayManager : MonoBehaviour
             // Debug.Log("Player 2 not select, set playercall to NotCollab");
         }
 
-        //get result
+        //update result
         if (player0.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.Collab && player1.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.Collab)
         {
             SetGridPlayResult(pointGridPlayResult.P0P1Draw);
+            player0.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Action, 3, false, true);
+            player1.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Hold, 3, false, true);
         }
         else if (player0.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.Collab && player1.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.NotCollab)
         {
             SetGridPlayResult(pointGridPlayResult.P0Win);
+            player0.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Action, 5, false, true);
+            player1.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Hold, 0, false, true);
         }
         else if (player0.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.NotCollab && player1.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.Collab)
         {
             SetGridPlayResult(pointGridPlayResult.P1Win);
+            player0.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Action, 0, false, true);
+            player1.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Hold, 5, false, true);
         }
         else if (player0.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.NotCollab && player1.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.NotCollab)
         {
             SetGridPlayResult(pointGridPlayResult.P0P1GiveUp);
+            player0.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Action, 1, false, true);
+            player1.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Hold, 1, false, true);
         }
         else
         {
             Debug.Log("fail to update grid game result");
         }
-
         Debug.Log("Update game: Player 0 call:" + player0.GetComponent<PlayerManager>().GetPlayerCall() + " Player 1 call:" + player1.GetComponent<PlayerManager>().GetPlayerCall() + " Result:" + currentGridPlayResult);
 
-        //update player coin
-
-        //update game playing state
+        
+        //Update game playing state
         SetGridPlayingState(pointGridPlayingState.ResultAction);
 
         //update game UI
         PointGridUI.GetComponent<UpdatePointGridImg>().SetPointGridImg(currentGridPlayResult);
-            // update status sign
-            // update status text
-        // update game playing state -> result action
+
     }
 
     // Update the current state of the game    

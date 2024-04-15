@@ -33,19 +33,33 @@ public class PlayerManager : MonoBehaviour
     public TextMeshProUGUI playerIDtext;
     public TextMeshProUGUI playerCoinText;
     public TextMeshProUGUI playerStatusText;
+    
+    public GameObject playerStatusSignCoinTextObj;
+    private TextMeshProUGUI playerStatusSignCoinText;
     public GameObject playerStatusSignSymbol;
+
+
+    //game costing
+    private int currentCost;
 
     
     // Start is called before the first frame update
     void Start()
     {
+        //Get component
+        playerStatusSignCoinText = playerStatusSignCoinTextObj.GetComponent<TextMeshProUGUI>();
+        
         playerCoin = 0;
         playerCall = playerCall.None;
 
+        //UI
         playerIDtext.text = "Player " + playerNo.ToString();
         playerCoinText.text = playerCoin.ToString();        
-        SetPlayerStatus(playerStatus.Selecting);
+        SetPlayerStatus(playerStatus.Selecting, 0, true, false);
         playerStatusSignSymbol.GetComponent<UpdateStatusSignSymbol>().SetStatusSignSymbolImg(playerStatus);
+    
+        //game costing
+        currentCost = 0;
     }
 
     // Update is called once per frame
@@ -68,16 +82,31 @@ public class PlayerManager : MonoBehaviour
     public void SetPlayerCoin(int coin)
     {
         playerCoin = coin;
+        playerCoinText.text = playerCoin.ToString();
     }
     public int GetPlayerCoin()
     {
         return playerCoin;
     }
 
-    public void SetPlayerStatus(playerStatus state)
+    public void SetPlayerStatus(playerStatus state, int statusCoin, bool isSymbolShow, bool isCostChange)
     {
         playerStatus = state;
-        
+        playerStatusSignCoinText.text = statusCoin.ToString("+0;-0;0");
+
+        currentCost = statusCoin;
+
+        if (isSymbolShow)
+        {
+            playerStatusSignCoinTextObj.SetActive(false);
+            playerStatusSignSymbol.SetActive(true);
+        }
+        else
+        {
+            playerStatusSignCoinTextObj.SetActive(true);
+            playerStatusSignSymbol.SetActive(false);
+        }
+
         switch (state)
         {
             case playerStatus.Selecting:
@@ -96,6 +125,11 @@ public class PlayerManager : MonoBehaviour
                 playerStatusText.text = "Hold";
                 // Debug.Log("Player " + playerNo + " is hold");
                 break;
+        }
+
+        if (isCostChange)
+        {
+            SetPlayerCoin(playerCoin += currentCost);
         }
     }
 

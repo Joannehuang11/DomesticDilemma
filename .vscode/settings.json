@@ -53,6 +53,7 @@
     },
     "dotnet.defaultSolution": "DomesticDilemma.sln",
     "cSpell.words": [
+        "Behaviour",
         "Gameplay",
         "playercall"
     ]
