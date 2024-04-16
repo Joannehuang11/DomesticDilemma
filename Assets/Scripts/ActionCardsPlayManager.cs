@@ -14,10 +14,10 @@ public enum actionCardsPlayingState
 
 public class ActionCardsPlayManager : MonoBehaviour
 {
-    public GameObject pointGridPlayManager;
-    public GameObject territoryPlayManager;
-    public GameObject player0;
-    public GameObject player1;
+    public GameObject pointGridPlayManagerObj;
+    public GameObject territoryPlayManagerObj;
+    public GameObject player0Obj;
+    public GameObject player1Obj;
 
     public actionCardsPlayingState currentActionCardsPlayingState;
 
@@ -93,28 +93,37 @@ public class ActionCardsPlayManager : MonoBehaviour
         selectedCardNo = cardNo;
         selectedCoinCost = Cost;
 
+        PlayerManager player0Manager = player0Obj.GetComponent<PlayerManager>();
+        PlayerManager player1Manager = player1Obj.GetComponent<PlayerManager>();
+
         if (playerNo == 0)
         {
-            player0.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Action, selectedCoinCost, false, false);
-            player1.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Hold, 0, true, false);
+            player0Manager.SetPlayerStatus(playerStatus.Action, selectedCoinCost, false, false);
+            player0Manager.SetPlayerStatus(playerStatus.Hold, 0, true, false);
         }
         else if (playerNo == 1)
         {
-            player1.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Hold, 0, true, false);
-            player1.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Action, selectedCoinCost, false, false);
+            player1Manager.SetPlayerStatus(playerStatus.Hold, 0, true, false);
+            player1Manager.SetPlayerStatus(playerStatus.Action, selectedCoinCost, false, false);
         }
     }
 
     public void CompleteActions(int playerNo)
     {
+        PlayerManager player0Manager = player0Obj.GetComponent<PlayerManager>();
+        PlayerManager player1Manager = player1Obj.GetComponent<PlayerManager>();
+
+        PointGridPlayManager pointGridManager = pointGridPlayManagerObj.GetComponent<PointGridPlayManager>();
+        TerritoryPlayManager territoryManager = territoryPlayManagerObj.GetComponent<TerritoryPlayManager>();
+        
         if (playerNo == 0)
         {
             //change cost -> onClick Land
-            player0.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Hold, selectedCoinCost, true, true);
+            player0Manager.SetPlayerStatus(playerStatus.Hold, selectedCoinCost, true, true);
             
             //reset UI
-            player0.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Hold, 0, true, false);
-            player1.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Action, 0, false, false);
+            player0Manager.SetPlayerStatus(playerStatus.Hold, 0, true, false);
+            player1Manager.SetPlayerStatus(playerStatus.Action, 0, false, false);
             
             // reset action cards
             deSelectAllCards();
@@ -122,18 +131,18 @@ public class ActionCardsPlayManager : MonoBehaviour
 
             //update games
             setActionCardsPlayingState(actionCardsPlayingState.Waiting);
-            territoryPlayManager.GetComponent<TerritoryPlayManager>().SetTerritoryPlayingState(territoryPlayingState.None);
-            pointGridPlayManager.GetComponent<PointGridPlayManager>().SetGridPlayingState(pointGridPlayingState.ResultAction);
+            territoryManager.SetTerritoryPlayingState(territoryPlayingState.None);
+            pointGridManager.SetGridPlayingState(pointGridPlayingState.ResultAction);
 
         }
         else if (playerNo == 1)
         {
             //change cost -> onClick Land
-            player1.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Action, selectedCoinCost, false, true);           
+            player1Manager.SetPlayerStatus(playerStatus.Action, selectedCoinCost, false, true);           
             
             //reset UI
-            player0.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Selecting, 0, true, false);            
-            player1.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Selecting, 0, true, false);
+            player0Manager.SetPlayerStatus(playerStatus.Selecting, 0, true, false);            
+            player1Manager.SetPlayerStatus(playerStatus.Selecting, 0, true, false);
             
             //reset action cards
             deSelectAllCards();
@@ -141,11 +150,11 @@ public class ActionCardsPlayManager : MonoBehaviour
 
             //update games
             setActionCardsPlayingState(actionCardsPlayingState.None);
-            territoryPlayManager.GetComponent<TerritoryPlayManager>().SetTerritoryPlayingState(territoryPlayingState.None);
-            pointGridPlayManager.GetComponent<PointGridPlayManager>().SetGridPlayingState(pointGridPlayingState.None);
+            territoryManager.SetTerritoryPlayingState(territoryPlayingState.None);
+            pointGridManager.SetGridPlayingState(pointGridPlayingState.None);
 
             //restart the game
-            pointGridPlayManager.GetComponent<PointGridPlayManager>().StartPointGridGame();
+            pointGridManager.StartPointGridGame();
         }
     }
 
