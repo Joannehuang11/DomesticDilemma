@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UpdateActionCardsPlayBg : MonoBehaviour
+public class UpdateTerritoryPlayBg : MonoBehaviour
 {
     public Sprite activeBgImg;
     public Sprite inactiveBgImg;
@@ -22,15 +22,15 @@ public class UpdateActionCardsPlayBg : MonoBehaviour
         
     }
 
-    public void UpdateBg(actionCardsPlayingState state)
+    public void UpdateBg(territoryPlayingState state)
     {
-        if (state == actionCardsPlayingState.Waiting)
+        if (state == territoryPlayingState.None)
         {
-            GamePlayBg.sprite = activeBgImg;
+            GamePlayBg.sprite = inactiveBgImg;
         }
         else
         {
-            GamePlayBg.sprite = inactiveBgImg;
+            GamePlayBg.sprite = activeBgImg;
         }
     }
 }

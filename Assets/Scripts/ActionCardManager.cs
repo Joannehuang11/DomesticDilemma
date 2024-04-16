@@ -10,6 +10,7 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
     public int cardNo;
 
     public GameObject ActionCardsPlayManager;
+    public GameObject TerritoryPlayManager;
     public GameObject ActionCardsDatas;
     private string actionName;
     private Sprite image;
@@ -57,23 +58,35 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
                 // Debug.Log("OnPointerClick fail");
                 break;
             case actionCardsPlayingState.Waiting:
+                //set this card selected
                 ActionCardsPlayManager.GetComponent<ActionCardsPlayManager>().deSelectAllCards();
                 SetSelected(true);
-                SetActionCardsPlayingState(actionCardsPlayingState.P0Selected);
                 ActionCardsPlayManager.GetComponent<ActionCardsPlayManager>().SetSelectedCard(selectingPlayerNo, cardNo, coinCost);
-                // Debug.Log("OnPointerClick");
+
+                //update game states
+                SetActionCardsPlayingState(actionCardsPlayingState.P0Selected);
+                TerritoryPlayManager.GetComponent<TerritoryPlayManager>().SetTerritoryPlayingState(territoryPlayingState.Waiting);
+
                 break;
             case actionCardsPlayingState.P0Selected:
+                //set this card selected
                 ActionCardsPlayManager.GetComponent<ActionCardsPlayManager>().deSelectAllCards();
                 SetSelected(true);
                 ActionCardsPlayManager.GetComponent<ActionCardsPlayManager>().SetSelectedCard(selectingPlayerNo, cardNo, coinCost);
-                // Debug.Log("OnPointerClick");
+                
+                //update game states
+                SetActionCardsPlayingState(actionCardsPlayingState.P0Selected);
+                TerritoryPlayManager.GetComponent<TerritoryPlayManager>().SetTerritoryPlayingState(territoryPlayingState.Waiting);
                 break;
             case actionCardsPlayingState.P1Selected:
+                //set this card selected
                 ActionCardsPlayManager.GetComponent<ActionCardsPlayManager>().deSelectAllCards();
                 SetSelected(true);
                 ActionCardsPlayManager.GetComponent<ActionCardsPlayManager>().SetSelectedCard(selectingPlayerNo, cardNo, coinCost);
-                // Debug.Log("OnPointerClick");
+                
+                //update game states
+                SetActionCardsPlayingState(actionCardsPlayingState.P1Selected);
+                TerritoryPlayManager.GetComponent<TerritoryPlayManager>().SetTerritoryPlayingState(territoryPlayingState.Waiting);
                 break;
         }
     }
@@ -97,7 +110,7 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
 
         if (selected)
         {
-             Debug.Log("Card " + cardNo + "  " + actionName + " isSelected: " + isSelected);
+            //  Debug.Log("Card " + cardNo + "  " + actionName + " isSelected: " + isSelected);
         }
     }
 

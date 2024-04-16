@@ -32,6 +32,7 @@ public class PointGridPlayManager : MonoBehaviour
     public GameObject player0;
     public GameObject player1;
     public GameObject actionCardsPlayManager;
+    public GameObject territoryPlayManager;
 
 
     // Start is called before the first frame update
@@ -79,14 +80,18 @@ public class PointGridPlayManager : MonoBehaviour
             currentRound++;
             Debug.Log("Start Round" + currentRound);
             
-            //reset player call
+            //reset player call and status
             player0.GetComponent<PlayerManager>().SetPlayerCall(playerCall.None);
             player0.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Selecting, 0, true, false);
             player1.GetComponent<PlayerManager>().SetPlayerCall(playerCall.None);
             player1.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Selecting, 0, true, false);
 
-            //reset game status
+            //update games
             SetGridPlayingState(pointGridPlayingState.Selecting);
+            actionCardsPlayManager.GetComponent<ActionCardsPlayManager>().setActionCardsPlayingState(actionCardsPlayingState.None);
+            territoryPlayManager.GetComponent<TerritoryPlayManager>().SetTerritoryPlayingState(territoryPlayingState.None);
+
+            //start game
             PointGridUI.GetComponent<UpdatePointGridImg>().startCountDown();
         }
         else
@@ -120,17 +125,21 @@ public class PointGridPlayManager : MonoBehaviour
             player0.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Action, 3, false, true);
             player1.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Hold, 3, false, true);
             
+            //update games
             SetGridPlayingState(pointGridPlayingState.ResultAction);
             actionCardsPlayManager.GetComponent<ActionCardsPlayManager>().setActionCardsPlayingState(actionCardsPlayingState.Waiting);
+            territoryPlayManager.GetComponent<TerritoryPlayManager>().SetTerritoryPlayingState(territoryPlayingState.None);        
         }
         else if (player0.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.NotCollab && player1.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.Collab)
                 {
             SetGridPlayResult(pointGridPlayResult.P0Win);
             player0.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Action, 5, false, true);
             player1.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Hold, 0, false, true);
-        
+
+            //update games
             SetGridPlayingState(pointGridPlayingState.ResultAction);
             actionCardsPlayManager.GetComponent<ActionCardsPlayManager>().setActionCardsPlayingState(actionCardsPlayingState.Waiting);        
+            territoryPlayManager.GetComponent<TerritoryPlayManager>().SetTerritoryPlayingState(territoryPlayingState.None);        
         }
         else if (player0.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.Collab && player1.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.NotCollab)
         {
@@ -138,8 +147,10 @@ public class PointGridPlayManager : MonoBehaviour
             player0.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Action, 0, false, true);
             player1.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Hold, 5, false, true);
 
+            //update games
             SetGridPlayingState(pointGridPlayingState.ResultAction);
             actionCardsPlayManager.GetComponent<ActionCardsPlayManager>().setActionCardsPlayingState(actionCardsPlayingState.Waiting);        
+            territoryPlayManager.GetComponent<TerritoryPlayManager>().SetTerritoryPlayingState(territoryPlayingState.None);            
         }
         else if (player0.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.NotCollab && player1.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.NotCollab)
         {
@@ -147,8 +158,10 @@ public class PointGridPlayManager : MonoBehaviour
             player0.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Action, 1, false, true);
             player1.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Hold, 1, false, true);
         
+            //update games
             SetGridPlayingState(pointGridPlayingState.ResultAction);
-            actionCardsPlayManager.GetComponent<ActionCardsPlayManager>().setActionCardsPlayingState(actionCardsPlayingState.Waiting);        
+            actionCardsPlayManager.GetComponent<ActionCardsPlayManager>().setActionCardsPlayingState(actionCardsPlayingState.Waiting);
+            territoryPlayManager.GetComponent<TerritoryPlayManager>().SetTerritoryPlayingState(territoryPlayingState.None);        
         }
         else
         {
@@ -194,19 +207,19 @@ public class PointGridPlayManager : MonoBehaviour
         switch (currentGridPlayResult)
         {
             case pointGridPlayResult.None:
-                Debug.Log("pointGridPlayResult is None.");
+                // Debug.Log("pointGridPlayResult is None.");
                 break;
             case pointGridPlayResult.P0Win:
-                Debug.Log("pointGridPlayResult is P1Win.");
+                // Debug.Log("pointGridPlayResult is P1Win.");
                 break;
             case pointGridPlayResult.P1Win:
-                Debug.Log("pointGridPlayResult is P2Win.");
+                // Debug.Log("pointGridPlayResult is P2Win.");
                 break;
             case pointGridPlayResult.P0P1Draw:
-                Debug.Log("pointGridPlayResult is P1P2Draw.");
+                // Debug.Log("pointGridPlayResult is P1P2Draw.");
                 break;
             case pointGridPlayResult.P0P1GiveUp:
-                Debug.Log("pointGridPlayResult is P1P2GiveUp.");
+                // Debug.Log("pointGridPlayResult is P1P2GiveUp.");
                 break;
         }
     }

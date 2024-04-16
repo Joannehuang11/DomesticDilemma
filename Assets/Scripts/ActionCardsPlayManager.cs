@@ -15,6 +15,7 @@ public enum actionCardsPlayingState
 public class ActionCardsPlayManager : MonoBehaviour
 {
     public GameObject pointGridPlayManager;
+    public GameObject territoryPlayManager;
     public GameObject player0;
     public GameObject player1;
 
@@ -34,6 +35,7 @@ public class ActionCardsPlayManager : MonoBehaviour
     void Start()
     {
         setActionCardsPlayingState(actionCardsPlayingState.None);
+        selectedCardNo = -1;
     }
 
     // Update is called once per frame
@@ -107,20 +109,26 @@ public class ActionCardsPlayManager : MonoBehaviour
     {
         if (playerNo == 0)
         {
-            // change cost
+            //change cost -> onClick Land
             player0.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Hold, selectedCoinCost, true, true);
             
-            // reset UI
+            //reset UI
             player0.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Hold, 0, true, false);
             player1.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Action, 0, false, false);
             
             // reset action cards
             deSelectAllCards();
             selectingPlayerNo = 1;
+
+            //update games
+            setActionCardsPlayingState(actionCardsPlayingState.Waiting);
+            territoryPlayManager.GetComponent<TerritoryPlayManager>().SetTerritoryPlayingState(territoryPlayingState.None);
+            pointGridPlayManager.GetComponent<PointGridPlayManager>().SetGridPlayingState(pointGridPlayingState.ResultAction);
+
         }
         else if (playerNo == 1)
         {
-            // change cost
+            //change cost -> onClick Land
             player1.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Action, selectedCoinCost, false, true);           
             
             //reset UI
@@ -130,6 +138,14 @@ public class ActionCardsPlayManager : MonoBehaviour
             //reset action cards
             deSelectAllCards();
             selectingPlayerNo = 0;
+
+            //update games
+            setActionCardsPlayingState(actionCardsPlayingState.None);
+            territoryPlayManager.GetComponent<TerritoryPlayManager>().SetTerritoryPlayingState(territoryPlayingState.None);
+            pointGridPlayManager.GetComponent<PointGridPlayManager>().SetGridPlayingState(pointGridPlayingState.None);
+
+            //restart the game
+            pointGridPlayManager.GetComponent<PointGridPlayManager>().StartPointGridGame();
         }
     }
 
