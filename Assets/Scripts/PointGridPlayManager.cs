@@ -123,8 +123,8 @@ public class PointGridPlayManager : MonoBehaviour
             SetGridPlayingState(pointGridPlayingState.ResultAction);
             actionCardsPlayManager.GetComponent<ActionCardsPlayManager>().setActionCardsPlayingState(actionCardsPlayingState.Waiting);
         }
-        else if (player0.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.Collab && player1.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.NotCollab)
-        {
+        else if (player0.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.NotCollab && player1.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.Collab)
+                {
             SetGridPlayResult(pointGridPlayResult.P0Win);
             player0.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Action, 5, false, true);
             player1.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Hold, 0, false, true);
@@ -132,7 +132,7 @@ public class PointGridPlayManager : MonoBehaviour
             SetGridPlayingState(pointGridPlayingState.ResultAction);
             actionCardsPlayManager.GetComponent<ActionCardsPlayManager>().setActionCardsPlayingState(actionCardsPlayingState.Waiting);        
         }
-        else if (player0.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.NotCollab && player1.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.Collab)
+        else if (player0.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.Collab && player1.GetComponent<PlayerManager>().GetPlayerCall() == playerCall.NotCollab)
         {
             SetGridPlayResult(pointGridPlayResult.P1Win);
             player0.GetComponent<PlayerManager>().SetPlayerStatus(playerStatus.Action, 0, false, true);
