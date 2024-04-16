@@ -38,6 +38,8 @@ public class PlayerManager : MonoBehaviour
     private TextMeshProUGUI playerStatusSignCoinText;
     public GameObject playerStatusSignSymbol;
     public GameObject playerStatusCard;
+    public GameObject instructionsUI;
+    public GameObject actionDoneUI;
 
 
     //game costing
@@ -116,6 +118,17 @@ public class PlayerManager : MonoBehaviour
             playerStatusSignSymbol.SetActive(false);
         }
 
+        if (playerStatus == playerStatus.Action)
+        {
+            instructionsUI.SetActive(false);
+            actionDoneUI.SetActive(true);
+        }
+        else
+        {
+            instructionsUI.SetActive(true);
+            actionDoneUI.SetActive(false);
+        }
+
         switch (state)
         {
             case playerStatus.Selecting:
@@ -127,7 +140,7 @@ public class PlayerManager : MonoBehaviour
                 // Debug.Log("Player " + playerNo + " is ready");
                 break;
             case playerStatus.Action:
-                playerStatusText.text = "Action"; 
+                playerStatusText.text = "Action";
                 // Debug.Log("Player " + playerNo + " is action");
                 break;
             case playerStatus.Hold:
