@@ -28,6 +28,10 @@ public class ProgressManager : MonoBehaviour
 
     public int currentRound;
     private int maxRound;
+
+    //test
+    public float inputBlockTimeTest = 10;
+    public bool isInputBlock = false;
     
     // Start is called before the first frame update
     void Start()
@@ -112,50 +116,60 @@ public class ProgressManager : MonoBehaviour
 
     public void startGame()
     {
-        if (currentRound < maxRound)
+        if (!isInputBlock)
         {
-                currentRound++;
-                SetCurrentRound(currentRound);            
-            
-            if (currentRound % (roundsPerSection + 1) == 0)
+            if (currentRound < maxRound)
             {
-                //start break
-                Debug.Log("Start Break");
+                    currentRound++;
+                    SetCurrentRound(currentRound);            
+                
+                if (currentRound % (roundsPerSection + 1) == 0)
+                {
+                    //start break
+                    Debug.Log("Start Break");
 
-                pointGridPlayManager.BreakPointGridGame();
+                    pointGridPlayManager.BreakPointGridGame();
+                    inputBlock(inputBlockTimeTest);
 
-                //reset
-                pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.None);
-                actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.None);
-                territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.None);
+                    //reset
+                    pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.None);
+                    actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.None);
+                    territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.None);
+                }
+                else
+                {
+                    //start games
+                    Debug.Log("Start Round");
+
+                    pointGridPlayManager.StartPointGridGame();
+
+                    //update games
+                    pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.Selecting);
+                    actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.None);
+                    territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.None);
+                }
             }
             else
             {
-                //start games
-                Debug.Log("Start Round");
-
-                pointGridPlayManager.StartPointGridGame();
-
-                //update games
-                pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.Selecting);
-                actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.None);
-                territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.None);
-
-            }
+                Debug.Log("Game Over");
+            } 
         }
-        else
-        {
-            Debug.Log("Game Over");
-        } 
     }
 
-    public void startPlay()
+    public void inputBlock(float time)
     {
-
+        StartCoroutine(inputBlockCoroutine(time));
     }
 
-    public void startBreak()
+    IEnumerator inputBlockCoroutine(float time)
     {
+        isInputBlock = true;
+        yield return new WaitForSeconds(time);
+        isInputBlock = false;
+    }
 
+    public bool getIsInputBlock()
+    {
+        return isInputBlock;
     }
 }
