@@ -23,8 +23,8 @@ public class ActionCardsPlayManager : MonoBehaviour
     PointGridPlayManager pointGridPlayManager;
     public GameObject territoryPlayManagerObj;
     TerritoryPlayManager territoryPlayManager;
-    // public GameObject progressManagerObj;
-    // ProgressManager progressManager;
+    public GameObject progressManagerObj;
+    ProgressManager progressManager;
 
     public actionCardsPlayingState currentActionCardsPlayingState;
 
@@ -41,15 +41,15 @@ public class ActionCardsPlayManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        setActionCardsPlayingState(actionCardsPlayingState.None);
-        selectedCardNo = -1;
-
         player0Manager = player0Obj.GetComponent<PlayerManager>();
         player1Manager = player1Obj.GetComponent<PlayerManager>();
         
         pointGridPlayManager = pointGridPlayManagerObj.GetComponent<PointGridPlayManager>();
         territoryPlayManager = territoryPlayManagerObj.GetComponent<TerritoryPlayManager>();
-        // progressManager = progressManagerObj.GetComponent<ProgressManager>();
+        progressManager = progressManagerObj.GetComponent<ProgressManager>();
+
+        setActionCardsPlayingState(actionCardsPlayingState.None);
+        selectedCardNo = -1;
     }
 
     // Update is called once per frame
@@ -68,6 +68,7 @@ public class ActionCardsPlayManager : MonoBehaviour
         switch (currentActionCardsPlayingState)
         {
             case actionCardsPlayingState.None:
+                deSelectAllCards();
                 Debug.Log("actionCardsPlayingState is None");
                 break;
             case actionCardsPlayingState.Waiting:
@@ -110,11 +111,11 @@ public class ActionCardsPlayManager : MonoBehaviour
         if (playerNo == 0)
         {
             player0Manager.SetPlayerStatus(playerStatus.Action, selectedCoinCost, false, false);
-            player0Manager.SetPlayerStatus(playerStatus.Hold, 0, true, false);
+            player1Manager.SetPlayerStatus(playerStatus.Hold, 0, true, false);
         }
         else if (playerNo == 1)
         {
-            player1Manager.SetPlayerStatus(playerStatus.Hold, 0, true, false);
+            player0Manager.SetPlayerStatus(playerStatus.Hold, 0, true, false);
             player1Manager.SetPlayerStatus(playerStatus.Action, selectedCoinCost, false, false);
         }
     }
@@ -159,7 +160,7 @@ public class ActionCardsPlayManager : MonoBehaviour
             pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.None);
 
             //restart the game
-            pointGridPlayManager.StartPointGridGame();
+            progressManager.startGame();
         }
     }
 

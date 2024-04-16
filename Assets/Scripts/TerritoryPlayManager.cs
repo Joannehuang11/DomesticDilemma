@@ -12,8 +12,6 @@ public enum territoryPlayingState
 
 public class TerritoryPlayManager : MonoBehaviour
 {
-    public GameObject pointGridPlayManager;
-    public GameObject actionCardsPlayManager;
     public GameObject player0;
     public GameObject player1;
 

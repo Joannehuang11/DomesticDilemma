@@ -45,15 +45,15 @@ public class PointGridPlayManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetGridPlayingState(pointGridPlayingState.None);
-        SetGridPlayResult(pointGridPlayResult.None);
-
         player0Manager = player0Obj.GetComponent<PlayerManager>();
         player1Manager = player1Obj.GetComponent<PlayerManager>();
         
         actionCardsPlayManager = actionCardsPlayManagerObj.GetComponent<ActionCardsPlayManager>();
         territoryPlayManager = territoryPlayManagerObj.GetComponent<TerritoryPlayManager>();
         progressManager = progressManagerObj.GetComponent<ProgressManager>();
+
+        SetGridPlayingState(pointGridPlayingState.None);
+        SetGridPlayResult(pointGridPlayResult.None);
     }
 
     // Update is called once per frame
@@ -93,16 +93,16 @@ public class PointGridPlayManager : MonoBehaviour
         player1Manager.SetPlayerStatus(playerStatus.Selecting, 0, true, false);
 
         //update UI countdonw
-        PointGridUI.GetComponent<UpdatePointGridImg>().startCountDown();
+        PointGridUI.GetComponent<UpdatePointGridImg>().startCountDownSelecting();
     }
 
-    public void BreakPointGridGame()
+    public void BreakPointGridGame(int min)
     {
         player0Manager.SetPlayerStatus(playerStatus.Break, 0, true, false);
         player1Manager.SetPlayerStatus(playerStatus.Break, 0, true, false);
 
         //update UI
-        PointGridUI.GetComponent<UpdatePointGridImg>().SetPointGridImg(pointGridPlayResult.None);
+        PointGridUI.GetComponent<UpdatePointGridImg>().startCountDownBreak(min);
     }
 
     //update game result

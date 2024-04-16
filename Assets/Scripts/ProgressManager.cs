@@ -127,8 +127,8 @@ public class ProgressManager : MonoBehaviour
                 {
                     //start break
                     Debug.Log("Start Break");
-
-                    pointGridPlayManager.BreakPointGridGame();
+                    Debug.Log("Break Time: " + breakTimes[(currentRound / (roundsPerSection + 1)) - 1]);
+                    pointGridPlayManager.BreakPointGridGame(breakTimes[(currentRound / (roundsPerSection + 1)) - 1]);
                     inputBlock(inputBlockTimeTest);
 
                     //reset

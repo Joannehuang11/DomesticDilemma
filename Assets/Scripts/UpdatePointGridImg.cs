@@ -13,19 +13,25 @@ public class UpdatePointGridImg : MonoBehaviour
     public Sprite giveUpImg;
     
     //countdown images
-    public Sprite countdownImg5;
-    public Sprite countdownImg4;
-    public Sprite countdownImg3;
-    public Sprite countdownImg2;
-    public Sprite countdownImg1;
+    public List<Sprite> countdownImgs;
 
-    //callback
-    public GameObject pointGridPlayManager;
+    //interface
+    public GameObject pointGridPlayManagerObj;
+    PointGridPlayManager pointGridPlayManager;
+    // public GameObject territoryPlayManagerObj;
+    // TerritoryPlayManager territoryPlayManager;
+    public GameObject progressManagerObj;
+    ProgressManager progressManager;
+    
     Image pointGridImg;
     
     // Start is called before the first frame update
     void Start()
     {
+        pointGridPlayManager = pointGridPlayManagerObj.GetComponent<PointGridPlayManager>();
+        // territoryPlayManager = territoryPlayManagerObj.GetComponent<TerritoryPlayManager>();
+        progressManager = progressManagerObj.GetComponent<ProgressManager>();
+        
         pointGridImg = GetComponent<Image>();
     }
 
@@ -61,30 +67,36 @@ public class UpdatePointGridImg : MonoBehaviour
         }
     }
 
-    public void startCountDown()
+    public void startCountDownSelecting()
     {
-        StartCoroutine(updateCountDownImg());
+        StartCoroutine(updateCountDownImgSelecting());
     }
     
-    private IEnumerator updateCountDownImg()
+    private IEnumerator updateCountDownImgSelecting()
     {
         // Debug.Log("Start Countdown Img Update");
-        
-        pointGridImg.sprite = countdownImg5;
-        yield return new WaitForSeconds(1f);
+        for (int i = 4; i >= 0; i--)
+        {
+            pointGridImg.sprite = countdownImgs[i];
+            yield return new WaitForSeconds(1f);
+        }
+        pointGridPlayManager.UpdateGridGameResult();
+    }
 
-        pointGridImg.sprite = countdownImg4;
-        yield return new WaitForSeconds(1f);
+    public void startCountDownBreak(int min)
+    {
+        StartCoroutine(updateCountDownImgBreak(min));
+    }
 
-        pointGridImg.sprite = countdownImg3;
-        yield return new WaitForSeconds(1f);
+    private IEnumerator updateCountDownImgBreak(int min)
+    {
+        // Debug.Log("Start Countdown Img Update");
+        for (int i = min-1; i >= 0; i--)
+        {
+            pointGridImg.sprite = countdownImgs[i];
+            yield return new WaitForSeconds(60f);
+        }
 
-        pointGridImg.sprite = countdownImg2;
-        yield return new WaitForSeconds(1f);
-
-        pointGridImg.sprite = countdownImg1;
-        yield return new WaitForSeconds(1f);
-
-        pointGridPlayManager.GetComponent<PointGridPlayManager>().UpdateGridGameResult();
+        progressManager.startGame();
     }
 }

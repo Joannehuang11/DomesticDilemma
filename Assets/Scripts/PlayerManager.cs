@@ -25,7 +25,6 @@ public enum playerStatus
 public class PlayerManager : MonoBehaviour
 {
     public int playerNo;
-
     public int playerCoin;
     public playerCall playerCall;
     public playerStatus playerStatus;
