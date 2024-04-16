@@ -38,7 +38,7 @@ public class UpdateStatusSignSymbol : MonoBehaviour
                 StatusSignSymbolImg.sprite = null;
                 break;
             case playerStatus.Hold:
-                StatusSignSymbolImg.sprite = null;
+                StatusSignSymbolImg.sprite = questionImg;
                 break;
             default:
                 Debug.Log("fail to set StatusSignSymbolImg");
