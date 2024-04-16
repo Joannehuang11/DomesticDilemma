@@ -8,6 +8,7 @@ public class UpdateStatusSignSymbol : MonoBehaviour
     //status images
     public Sprite questionImg;
     public Sprite checkImg;
+    public Sprite timeImg;
     
     public GameObject playerManager;
     Image StatusSignSymbolImg;
@@ -39,6 +40,9 @@ public class UpdateStatusSignSymbol : MonoBehaviour
                 break;
             case playerStatus.Hold:
                 StatusSignSymbolImg.sprite = questionImg;
+                break;
+            case playerStatus.Break:
+                StatusSignSymbolImg.sprite = timeImg;
                 break;
             default:
                 Debug.Log("fail to set StatusSignSymbolImg");

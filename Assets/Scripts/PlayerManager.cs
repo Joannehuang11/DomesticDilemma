@@ -19,6 +19,7 @@ public enum playerStatus
     Ready,
     Action,
     Hold,
+    Break,
 }
 
 public class PlayerManager : MonoBehaviour
@@ -147,6 +148,10 @@ public class PlayerManager : MonoBehaviour
                 playerStatusText.text = "Hold";
                 // Debug.Log("Player " + playerNo + " is hold");
                 break;
+            case playerStatus.Break:
+                playerStatusText.text = "Break";
+                // Debug.Log("Player " + playerNo + " is hold");
+                break;                
         }
 
         if (isCostChange)

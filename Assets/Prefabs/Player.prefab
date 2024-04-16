@@ -1719,6 +1719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questionImg: {fileID: 21300000, guid: 472c99c678583403789dfdfd9f5cb6ce, type: 3}
   checkImg: {fileID: 21300000, guid: f806d5a3f6ee34eb2a46ad33598c16b7, type: 3}
+  timeImg: {fileID: 21300000, guid: 95ef24623a71c4e00908e445fad8a863, type: 3}
   playerManager: {fileID: 0}
 --- !u!1 &8962525820216793704
 GameObject:

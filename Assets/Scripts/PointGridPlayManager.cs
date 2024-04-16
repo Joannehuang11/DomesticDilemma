@@ -85,34 +85,65 @@ public class PointGridPlayManager : MonoBehaviour
         }
     }
 
-    public void StartGame()
-    {
-        int currentRound = progressManager.GetCurrentRound();
-        int maxRound = progressManager.GetMaxRound();
+    // public void StartGame()
+    // {
+    //     int currentRound = progressManager.GetCurrentRound();
+    //     int maxRound = progressManager.GetMaxRound();
+    //     int roundsPerSection = progressManager.GetRoundsPerSection();
         
-        if (currentRound < maxRound)
-        {
-            currentRound++;
-            progressManager.SetCurrentRound(currentRound);
-            
-            //reset player call and status
-            player0Manager.SetPlayerCall(playerCall.None);
-            player0Manager.SetPlayerStatus(playerStatus.Selecting, 0, true, false);
-            player1Manager.SetPlayerCall(playerCall.None);
-            player1Manager.SetPlayerStatus(playerStatus.Selecting, 0, true, false);
+    //     if (currentRound < maxRound)
+    //     {
+    //         if (currentRound % (roundsPerSection + 1) == 0)
+    //         {
+    //             //start break
+    //             SetGridPlayingState(pointGridPlayingState.None);
+    //             actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.None);
+    //             territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.None);
+    //         }
+    //         else
+    //         {
+    //             currentRound++;
+    //             progressManager.SetCurrentRound(currentRound);
+                
+    //             //reset player call and status
+    //             player0Manager.SetPlayerCall(playerCall.None);
+    //             player0Manager.SetPlayerStatus(playerStatus.Selecting, 0, true, false);
+    //             player1Manager.SetPlayerCall(playerCall.None);
+    //             player1Manager.SetPlayerStatus(playerStatus.Selecting, 0, true, false);
 
-            //update games
-            SetGridPlayingState(pointGridPlayingState.Selecting);
-            actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.None);
-            territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.None);
+    //             //update games
+    //             SetGridPlayingState(pointGridPlayingState.Selecting);
+    //             actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.None);
+    //             territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.None);
 
-            //start game
-            PointGridUI.GetComponent<UpdatePointGridImg>().startCountDown();
-        }
-        else
-        {
-            Debug.Log("Game Over");
-        } 
+    //             //start game
+    //             PointGridUI.GetComponent<UpdatePointGridImg>().startCountDown();
+    //         }
+    //     }
+    //     else
+    //     {
+    //         Debug.Log("Game Over");
+    //     } 
+    // }
+    public void StartPointGridGame()
+    {
+        //reset players call and status
+        player0Manager.SetPlayerCall(playerCall.None);
+        player0Manager.SetPlayerStatus(playerStatus.Selecting, 0, true, false);
+        player1Manager.SetPlayerCall(playerCall.None);
+        player1Manager.SetPlayerStatus(playerStatus.Selecting, 0, true, false);
+
+        //update UI countdonw
+        PointGridUI.GetComponent<UpdatePointGridImg>().startCountDown();
+    }
+
+    public void BreakPointGridGame()
+    {
+        player0Manager.SetPlayerStatus(playerStatus.Break, 0, true, false);
+        player1Manager.SetPlayerStatus(playerStatus.Break, 0, true, false);
+
+        //update UI
+        PointGridUI.GetComponent<UpdatePointGridImg>().SetPointGridImg(pointGridPlayResult.None);
     }
 
     //update game result

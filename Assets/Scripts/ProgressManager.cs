@@ -4,6 +4,20 @@ using UnityEngine;
 
 public class ProgressManager : MonoBehaviour
 {
+    //interfaces
+    public GameObject player0Obj;
+    PlayerManager player0Manager;
+    public GameObject player1Obj;
+    PlayerManager player1Manager;
+    public GameObject pointGridPlayManagerObj;
+    PointGridPlayManager pointGridPlayManager;    
+    public GameObject actionCardsPlayManagerObj;
+    ActionCardsPlayManager actionCardsPlayManager;
+    public GameObject territoryPlayManagerObj;
+    TerritoryPlayManager territoryPlayManager;
+    
+    
+    //progress bar
     public GameObject progressBarUI;
     public GameObject roundUnit;
     public GameObject breakUnit;
@@ -18,6 +32,13 @@ public class ProgressManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player0Manager = player0Obj.GetComponent<PlayerManager>();
+        player1Manager = player1Obj.GetComponent<PlayerManager>();
+        
+        pointGridPlayManager = pointGridPlayManagerObj.GetComponent<PointGridPlayManager>();
+        actionCardsPlayManager = actionCardsPlayManagerObj.GetComponent<ActionCardsPlayManager>();
+        territoryPlayManager = territoryPlayManagerObj.GetComponent<TerritoryPlayManager>();
+        
         maxRound = roundsPerSection * (breakTimes.Count+1) + breakTimes.Count;
         currentRound = 0;
 
@@ -46,6 +67,11 @@ public class ProgressManager : MonoBehaviour
     public int GetMaxRound()
     {
         return maxRound;
+    }
+
+    public int GetRoundsPerSection()
+    {
+        return roundsPerSection;
     }
 
     public void initiateProgressBarUI()
@@ -82,5 +108,54 @@ public class ProgressManager : MonoBehaviour
         {
             progressBarUI.transform.GetChild(currentRound - 1).GetComponent<RoundProgressUnit>().updateImg(true);
         }
+    }
+
+    public void startGame()
+    {
+        if (currentRound < maxRound)
+        {
+                currentRound++;
+                SetCurrentRound(currentRound);            
+            
+            if (currentRound % (roundsPerSection + 1) == 0)
+            {
+                //start break
+                Debug.Log("Start Break");
+
+                pointGridPlayManager.BreakPointGridGame();
+
+                //reset
+                pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.None);
+                actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.None);
+                territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.None);
+            }
+            else
+            {
+                //start games
+                Debug.Log("Start Round");
+
+                pointGridPlayManager.StartPointGridGame();
+
+                //update games
+                pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.Selecting);
+                actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.None);
+                territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.None);
+
+            }
+        }
+        else
+        {
+            Debug.Log("Game Over");
+        } 
+    }
+
+    public void startPlay()
+    {
+
+    }
+
+    public void startBreak()
+    {
+
     }
 }

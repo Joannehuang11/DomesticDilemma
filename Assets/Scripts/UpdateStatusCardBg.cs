@@ -48,6 +48,9 @@ public class UpdateStatusCardBg : MonoBehaviour
             case playerStatus.Hold:
                 StatusCardBg.sprite = InactiveStatusCardBg;
                 break;
+            case playerStatus.Break:
+                StatusCardBg.sprite = InactiveStatusCardBg;
+                break;
         }
     }
 }
