@@ -9,9 +9,21 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
 {
     public int cardNo;
 
-    public GameObject ActionCardsPlayManager;
-    public GameObject TerritoryPlayManager;
-    public GameObject ActionCardsDatas;
+
+    // interface
+    // public GameObject player0Obj;
+    // PlayerManager player0Manager;
+    // public GameObject player1Obj;
+    // PlayerManager player1Manager;
+    public GameObject actionCardsPlayManagerObj;
+    ActionCardsPlayManager actionCardsPlayManager;
+    public GameObject territoryPlayManagerObj;
+    TerritoryPlayManager territoryPlayManager;
+    // public GameObject progressManagerObj;
+    // ProgressManager progressManager;
+    public GameObject actionCardsDatasObj;
+    ActionCardsDatas actionCardsDatas;
+
     private string actionName;
     private Sprite image;
     private int coinCost;
@@ -29,10 +41,15 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
     // Start is called before the first frame update
     void Start()
     {
-        actionName = ActionCardsDatas.GetComponent<ActionCardsDatas>().getName(cardNo);
-        image = ActionCardsDatas.GetComponent<ActionCardsDatas>().getImg(cardNo);
-        coinCost = - ActionCardsDatas.GetComponent<ActionCardsDatas>().getCoinCost(cardNo);
-        gridCount = ActionCardsDatas.GetComponent<ActionCardsDatas>().getGridCount(cardNo);
+        actionCardsPlayManager = actionCardsPlayManagerObj.GetComponent<ActionCardsPlayManager>();
+        territoryPlayManager = territoryPlayManagerObj.GetComponent<TerritoryPlayManager>();
+        actionCardsDatas = actionCardsDatasObj.GetComponent<ActionCardsDatas>();
+
+        
+        actionName = actionCardsDatas.getName(cardNo);
+        image = actionCardsDatas.getImg(cardNo);
+        coinCost = - actionCardsDatas.getCoinCost(cardNo);
+        gridCount = actionCardsDatas.getGridCount(cardNo);
         bgImg = GetComponent<Image>();
         
         isSelected = false;
@@ -50,18 +67,18 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        int selectingPlayerNo = ActionCardsPlayManager.GetComponent<ActionCardsPlayManager>().selectingPlayerNo;
+        int selectingPlayerNo = actionCardsPlayManager.selectingPlayerNo;
         
-        switch (ActionCardsPlayManager.GetComponent<ActionCardsPlayManager>().currentActionCardsPlayingState)
+        switch (actionCardsPlayManager.currentActionCardsPlayingState)
         {
             case actionCardsPlayingState.None:
                 // Debug.Log("OnPointerClick fail");
                 break;
             case actionCardsPlayingState.Waiting:
                 //set this card selected
-                ActionCardsPlayManager.GetComponent<ActionCardsPlayManager>().deSelectAllCards();
+                actionCardsPlayManager.deSelectAllCards();
                 SetSelected(true);
-                ActionCardsPlayManager.GetComponent<ActionCardsPlayManager>().SetSelectedCard(selectingPlayerNo, cardNo, coinCost);
+                actionCardsPlayManager.SetSelectedCard(selectingPlayerNo, cardNo, coinCost);
 
                 //update game states
                 if (selectingPlayerNo == 0)
@@ -72,28 +89,28 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
                 {
                     SetActionCardsPlayingState(actionCardsPlayingState.P1Selected);
                 }
-                TerritoryPlayManager.GetComponent<TerritoryPlayManager>().SetTerritoryPlayingState(territoryPlayingState.Waiting);
+                territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.Waiting);
 
                 break;
             case actionCardsPlayingState.P0Selected:
                 //set this card selected
-                ActionCardsPlayManager.GetComponent<ActionCardsPlayManager>().deSelectAllCards();
+                actionCardsPlayManager.deSelectAllCards();
                 SetSelected(true);
-                ActionCardsPlayManager.GetComponent<ActionCardsPlayManager>().SetSelectedCard(selectingPlayerNo, cardNo, coinCost);
+                actionCardsPlayManager.SetSelectedCard(selectingPlayerNo, cardNo, coinCost);
                 
                 //update game states
                 SetActionCardsPlayingState(actionCardsPlayingState.P0Selected);
-                TerritoryPlayManager.GetComponent<TerritoryPlayManager>().SetTerritoryPlayingState(territoryPlayingState.Waiting);
+                territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.Waiting);
                 break;
             case actionCardsPlayingState.P1Selected:
                 //set this card selected
-                ActionCardsPlayManager.GetComponent<ActionCardsPlayManager>().deSelectAllCards();
+                actionCardsPlayManager.deSelectAllCards();
                 SetSelected(true);
-                ActionCardsPlayManager.GetComponent<ActionCardsPlayManager>().SetSelectedCard(selectingPlayerNo, cardNo, coinCost);
+                actionCardsPlayManager.SetSelectedCard(selectingPlayerNo, cardNo, coinCost);
                 
                 //update game states
                 SetActionCardsPlayingState(actionCardsPlayingState.P1Selected);
-                TerritoryPlayManager.GetComponent<TerritoryPlayManager>().SetTerritoryPlayingState(territoryPlayingState.Waiting);
+                territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.Waiting);
                 break;
         }
     }
@@ -123,6 +140,6 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
 
     public void SetActionCardsPlayingState(actionCardsPlayingState newState)
     {
-        ActionCardsPlayManager.GetComponent<ActionCardsPlayManager>().setActionCardsPlayingState(newState);
+        actionCardsPlayManager.setActionCardsPlayingState(newState);
     }
 }

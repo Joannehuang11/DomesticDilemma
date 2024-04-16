@@ -13,11 +13,18 @@ public enum actionCardsPlayingState
 }
 
 public class ActionCardsPlayManager : MonoBehaviour
-{
-    public GameObject pointGridPlayManagerObj;
-    public GameObject territoryPlayManagerObj;
+{    
+    // interface
     public GameObject player0Obj;
+    PlayerManager player0Manager;
     public GameObject player1Obj;
+    PlayerManager player1Manager;
+    public GameObject pointGridPlayManagerObj;
+    PointGridPlayManager pointGridPlayManager;
+    public GameObject territoryPlayManagerObj;
+    TerritoryPlayManager territoryPlayManager;
+    // public GameObject progressManagerObj;
+    // ProgressManager progressManager;
 
     public actionCardsPlayingState currentActionCardsPlayingState;
 
@@ -36,6 +43,13 @@ public class ActionCardsPlayManager : MonoBehaviour
     {
         setActionCardsPlayingState(actionCardsPlayingState.None);
         selectedCardNo = -1;
+
+        player0Manager = player0Obj.GetComponent<PlayerManager>();
+        player1Manager = player1Obj.GetComponent<PlayerManager>();
+        
+        pointGridPlayManager = pointGridPlayManagerObj.GetComponent<PointGridPlayManager>();
+        territoryPlayManager = territoryPlayManagerObj.GetComponent<TerritoryPlayManager>();
+        // progressManager = progressManagerObj.GetComponent<ProgressManager>();
     }
 
     // Update is called once per frame
@@ -93,9 +107,6 @@ public class ActionCardsPlayManager : MonoBehaviour
         selectedCardNo = cardNo;
         selectedCoinCost = Cost;
 
-        PlayerManager player0Manager = player0Obj.GetComponent<PlayerManager>();
-        PlayerManager player1Manager = player1Obj.GetComponent<PlayerManager>();
-
         if (playerNo == 0)
         {
             player0Manager.SetPlayerStatus(playerStatus.Action, selectedCoinCost, false, false);
@@ -110,12 +121,6 @@ public class ActionCardsPlayManager : MonoBehaviour
 
     public void CompleteActions(int playerNo)
     {
-        PlayerManager player0Manager = player0Obj.GetComponent<PlayerManager>();
-        PlayerManager player1Manager = player1Obj.GetComponent<PlayerManager>();
-
-        PointGridPlayManager pointGridManager = pointGridPlayManagerObj.GetComponent<PointGridPlayManager>();
-        TerritoryPlayManager territoryManager = territoryPlayManagerObj.GetComponent<TerritoryPlayManager>();
-        
         if (playerNo == 0)
         {
             //change cost -> onClick Land
@@ -131,8 +136,8 @@ public class ActionCardsPlayManager : MonoBehaviour
 
             //update games
             setActionCardsPlayingState(actionCardsPlayingState.Waiting);
-            territoryManager.SetTerritoryPlayingState(territoryPlayingState.None);
-            pointGridManager.SetGridPlayingState(pointGridPlayingState.ResultAction);
+            territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.None);
+            pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.ResultAction);
 
         }
         else if (playerNo == 1)
@@ -150,11 +155,11 @@ public class ActionCardsPlayManager : MonoBehaviour
 
             //update games
             setActionCardsPlayingState(actionCardsPlayingState.None);
-            territoryManager.SetTerritoryPlayingState(territoryPlayingState.None);
-            pointGridManager.SetGridPlayingState(pointGridPlayingState.None);
+            territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.None);
+            pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.None);
 
             //restart the game
-            pointGridManager.StartPointGridGame();
+            pointGridPlayManager.StartPointGridGame();
         }
     }
 

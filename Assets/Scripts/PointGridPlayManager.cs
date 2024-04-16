@@ -93,7 +93,6 @@ public class PointGridPlayManager : MonoBehaviour
         if (currentRound < maxRound)
         {
             currentRound++;
-            Debug.Log("Start Round from pointGrid: " + currentRound);
             progressManager.SetCurrentRound(currentRound);
             
             //reset player call and status
