@@ -51,22 +51,22 @@ public class PointGridPlayManager : MonoBehaviour
             
             if (Input.GetKeyDown(KeyCode.Q))
             {
-                Debug.Log("Q key was pressed.");
+                // Debug.Log("Q key was pressed.");
                 player0.GetComponent<PlayerManager>().SetPlayerCall(playerCall.Collab);
             } 
             else if (Input.GetKeyDown(KeyCode.W))
             {
-                Debug.Log("W key was pressed.");
+                // Debug.Log("W key was pressed.");
                 player0.GetComponent<PlayerManager>().SetPlayerCall(playerCall.NotCollab);
             }
             else if (Input.GetKeyDown(KeyCode.O))
             {
-                Debug.Log("O key was pressed.");
+                // Debug.Log("O key was pressed.");
                 player1.GetComponent<PlayerManager>().SetPlayerCall(playerCall.Collab);
             }
             else if (Input.GetKeyDown(KeyCode.P))
             {
-                Debug.Log("P key was pressed.");
+                // Debug.Log("P key was pressed.");
                 player1.GetComponent<PlayerManager>().SetPlayerCall(playerCall.NotCollab);
             }   
         }
