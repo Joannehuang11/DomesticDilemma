@@ -20,7 +20,6 @@ public class BreakProgressUnit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        unitImg = GetComponent<Image>();
         waitTimeText.text = waitTime.ToString();
     }
 

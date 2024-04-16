@@ -85,7 +85,7 @@ public class PointGridPlayManager : MonoBehaviour
         }
     }
 
-    public void StartPointGridGame()
+    public void StartGame()
     {
         int currentRound = progressManager.GetCurrentRound();
         int maxRound = progressManager.GetMaxRound();

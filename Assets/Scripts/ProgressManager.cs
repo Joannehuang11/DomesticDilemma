@@ -10,6 +10,7 @@ public class ProgressManager : MonoBehaviour
 
     public int roundsPerSection;
     public List<int> breakTimes;
+    public List<GameObject> roundUnits;
 
     public int currentRound;
     private int maxRound;
@@ -32,7 +33,9 @@ public class ProgressManager : MonoBehaviour
     public void SetCurrentRound(int round)
     {
         currentRound = round;
-        // Debug.Log("Start Round from progressManager: " + currentRound);
+        Debug.Log("Start Round from progressManager: " + currentRound);
+
+        updateProgressBarUI(currentRound);
     }
     
     public int GetCurrentRound()
@@ -53,7 +56,7 @@ public class ProgressManager : MonoBehaviour
         {
             GameObject unit;
 
-            if (i % (roundsPerSection+1) == 0)
+            if (i % (roundsPerSection + 1) == 0)
             {
                 unit = Instantiate(breakUnit, progressBarUI.transform);
                 unit.GetComponent<BreakProgressUnit>().setUnit(i - 1, breakTimes[breakRound], false);
@@ -71,6 +74,13 @@ public class ProgressManager : MonoBehaviour
     
     public void updateProgressBarUI(int currentRound)
     {
-
+        if (currentRound % (roundsPerSection + 1) == 0)
+        {
+            progressBarUI.transform.GetChild(currentRound - 1).GetComponent<BreakProgressUnit>().updateImg(true);
+        }
+        else
+        {
+            progressBarUI.transform.GetChild(currentRound - 1).GetComponent<RoundProgressUnit>().updateImg(true);
+        }
     }
 }
