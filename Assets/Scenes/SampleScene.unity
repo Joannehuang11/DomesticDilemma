@@ -356,6 +356,11 @@ PrefabInstance:
       objectReference: {fileID: 913156780}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
+      propertyPath: TerritoryPlayManager
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
+        type: 3}
       propertyPath: ActionCardsPlayManager
       value: 
       objectReference: {fileID: 1055735904}
@@ -862,6 +867,11 @@ PrefabInstance:
       objectReference: {fileID: 913156780}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
+      propertyPath: TerritoryPlayManager
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
+        type: 3}
       propertyPath: ActionCardsPlayManager
       value: 
       objectReference: {fileID: 1055735904}
@@ -1184,6 +1194,11 @@ PrefabInstance:
       objectReference: {fileID: 913156780}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
+      propertyPath: TerritoryPlayManager
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
+        type: 3}
       propertyPath: ActionCardsPlayManager
       value: 
       objectReference: {fileID: 1055735904}
@@ -1367,6 +1382,11 @@ PrefabInstance:
       propertyPath: ActionCardsDatas
       value: 
       objectReference: {fileID: 913156780}
+    - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
+        type: 3}
+      propertyPath: TerritoryPlayManager
+      value: 
+      objectReference: {fileID: 220041613}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: ActionCardsPlayManager
@@ -2021,6 +2041,11 @@ PrefabInstance:
       objectReference: {fileID: 913156780}
     - target: {fileID: 3144703108040385127, guid: f6eded6ff5d1842d086108a99e0e92ce,
         type: 3}
+      propertyPath: TerritoryPlayManager
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 3144703108040385127, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
       propertyPath: ActionCardsPlayManager
       value: 
       objectReference: {fileID: 1055735904}
@@ -2350,6 +2375,11 @@ PrefabInstance:
       objectReference: {fileID: 913156780}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
+      propertyPath: TerritoryPlayManager
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
+        type: 3}
       propertyPath: ActionCardsPlayManager
       value: 
       objectReference: {fileID: 1055735904}
@@ -2648,6 +2678,11 @@ PrefabInstance:
       objectReference: {fileID: 913156780}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
+      propertyPath: TerritoryPlayManager
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
+        type: 3}
       propertyPath: ActionCardsPlayManager
       value: 
       objectReference: {fileID: 1055735904}
@@ -2812,6 +2847,11 @@ PrefabInstance:
       propertyPath: ActionCardsDatas
       value: 
       objectReference: {fileID: 913156780}
+    - target: {fileID: 3144703108040385127, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: TerritoryPlayManager
+      value: 
+      objectReference: {fileID: 220041613}
     - target: {fileID: 3144703108040385127, guid: f6eded6ff5d1842d086108a99e0e92ce,
         type: 3}
       propertyPath: ActionCardsPlayManager
@@ -3096,6 +3136,11 @@ PrefabInstance:
       objectReference: {fileID: 913156780}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
+      propertyPath: TerritoryPlayManager
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
+        type: 3}
       propertyPath: ActionCardsPlayManager
       value: 
       objectReference: {fileID: 1055735904}
@@ -3342,6 +3387,11 @@ PrefabInstance:
       propertyPath: ActionCardsDatas
       value: 
       objectReference: {fileID: 913156780}
+    - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
+        type: 3}
+      propertyPath: TerritoryPlayManager
+      value: 
+      objectReference: {fileID: 220041613}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: ActionCardsPlayManager
@@ -3664,6 +3714,11 @@ PrefabInstance:
       objectReference: {fileID: 913156780}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
+      propertyPath: TerritoryPlayManager
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
+        type: 3}
       propertyPath: ActionCardsPlayManager
       value: 
       objectReference: {fileID: 1055735904}
@@ -3952,6 +4007,11 @@ PrefabInstance:
       propertyPath: ActionCardsDatas
       value: 
       objectReference: {fileID: 913156780}
+    - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
+        type: 3}
+      propertyPath: TerritoryPlayManager
+      value: 
+      objectReference: {fileID: 220041613}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: ActionCardsPlayManager
@@ -4340,6 +4400,11 @@ PrefabInstance:
       objectReference: {fileID: 913156780}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
+      propertyPath: TerritoryPlayManager
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
+        type: 3}
       propertyPath: ActionCardsPlayManager
       value: 
       objectReference: {fileID: 1055735904}
@@ -4525,6 +4590,11 @@ PrefabInstance:
       objectReference: {fileID: 913156780}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
+      propertyPath: TerritoryPlayManager
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
+        type: 3}
       propertyPath: ActionCardsPlayManager
       value: 
       objectReference: {fileID: 1055735904}
@@ -4708,6 +4778,11 @@ PrefabInstance:
       propertyPath: ActionCardsDatas
       value: 
       objectReference: {fileID: 913156780}
+    - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
+        type: 3}
+      propertyPath: TerritoryPlayManager
+      value: 
+      objectReference: {fileID: 220041613}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: ActionCardsPlayManager
@@ -5012,6 +5087,11 @@ PrefabInstance:
       propertyPath: ActionCardsDatas
       value: 
       objectReference: {fileID: 913156780}
+    - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
+        type: 3}
+      propertyPath: TerritoryPlayManager
+      value: 
+      objectReference: {fileID: 220041613}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: ActionCardsPlayManager
@@ -5995,6 +6075,11 @@ PrefabInstance:
       objectReference: {fileID: 913156780}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
+      propertyPath: TerritoryPlayManager
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
+        type: 3}
       propertyPath: ActionCardsPlayManager
       value: 
       objectReference: {fileID: 1055735904}
@@ -6179,6 +6264,11 @@ PrefabInstance:
       propertyPath: ActionCardsDatas
       value: 
       objectReference: {fileID: 913156780}
+    - target: {fileID: 3144703108040385127, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: TerritoryPlayManager
+      value: 
+      objectReference: {fileID: 220041613}
     - target: {fileID: 3144703108040385127, guid: f6eded6ff5d1842d086108a99e0e92ce,
         type: 3}
       propertyPath: ActionCardsPlayManager

@@ -64,7 +64,14 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
                 ActionCardsPlayManager.GetComponent<ActionCardsPlayManager>().SetSelectedCard(selectingPlayerNo, cardNo, coinCost);
 
                 //update game states
-                SetActionCardsPlayingState(actionCardsPlayingState.P0Selected);
+                if (selectingPlayerNo == 0)
+                {
+                    SetActionCardsPlayingState(actionCardsPlayingState.P0Selected);
+                }
+                else if (selectingPlayerNo == 1)
+                {
+                    SetActionCardsPlayingState(actionCardsPlayingState.P1Selected);
+                }
                 TerritoryPlayManager.GetComponent<TerritoryPlayManager>().SetTerritoryPlayingState(territoryPlayingState.Waiting);
 
                 break;
