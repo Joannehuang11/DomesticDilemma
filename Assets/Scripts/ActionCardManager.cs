@@ -30,14 +30,14 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
     {
         actionName = ActionCardsDatas.GetComponent<ActionCardsDatas>().getName(cardNo);
         image = ActionCardsDatas.GetComponent<ActionCardsDatas>().getImg(cardNo);
-        coinCost = ActionCardsDatas.GetComponent<ActionCardsDatas>().getCoinCost(cardNo);
+        coinCost = - ActionCardsDatas.GetComponent<ActionCardsDatas>().getCoinCost(cardNo);
         gridCount = ActionCardsDatas.GetComponent<ActionCardsDatas>().getGridCount(cardNo);
         bgImg = GetComponent<Image>();
         
         isSelected = false;
         thumbnailImg.sprite = image;
         nameText.text = actionName;
-        coinCostText.text = coinCost.ToString();
+        coinCostText.text = (coinCost* -1).ToString();
         UpdateBg(isSelected);
     }
 
