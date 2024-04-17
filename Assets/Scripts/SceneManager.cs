@@ -7,10 +7,16 @@ public class SceneManager : MonoBehaviour
 {
     public List<GameObject> scenes;
     public int currentSceneIndex = 0;
+
+    public GameObject progressManagerObj;
+    ProgressManager progressManager;
     
     // Start is called before the first frame update
     void Start()
     {
+        progressManager = progressManagerObj.GetComponent<ProgressManager>();
+
+        progressManager.setIsInputBlock(true);
         setScene(currentSceneIndex);
     }
 
@@ -27,6 +33,7 @@ public class SceneManager : MonoBehaviour
             if (i == scenes.Count)
             {
                 scenes[i].SetActive(false);
+                progressManager.setIsInputBlock(false);
             }
             else
             {

@@ -177,4 +177,9 @@ public class ProgressManager : MonoBehaviour
     {
         return isInputBlock;
     }
+
+    public void setIsInputBlock(bool value)
+    {
+        isInputBlock = value;
+    }
 }
