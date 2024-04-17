@@ -659,6 +659,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -874,6 +889,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1014,6 +1044,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1154,6 +1199,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1294,6 +1354,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1478,7 +1553,7 @@ MonoBehaviour:
   player0: {fileID: 956680845}
   player1: {fileID: 1433295384}
   currentTerritoryPlayingState: 0
-  landCardsDatasObj: {fileID: 0}
+  landCardsDatasObj: {fileID: 1011542164}
   GamePlayUI: {fileID: 1650856435}
 --- !u!4 &220041615
 Transform:
@@ -1618,6 +1693,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1646,7 +1736,7 @@ PrefabInstance:
     - target: {fileID: 36241831126544825, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: m_Name
-      value: ActionCard12
+      value: ActionCard10
       objectReference: {fileID: 0}
     - target: {fileID: 1974907012880276610, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
@@ -1791,7 +1881,7 @@ PrefabInstance:
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: cardNo
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
@@ -1968,6 +2058,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2108,6 +2213,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2456,6 +2576,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2596,6 +2731,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3086,6 +3236,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3226,6 +3391,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3437,6 +3617,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3577,6 +3772,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3717,6 +3927,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3745,7 +3970,7 @@ PrefabInstance:
     - target: {fileID: 36241831126544825, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: m_Name
-      value: ActionCard10
+      value: ActionCard9
       objectReference: {fileID: 0}
     - target: {fileID: 1974907012880276610, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
@@ -3890,7 +4115,7 @@ PrefabInstance:
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: cardNo
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
@@ -4073,6 +4298,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4400,6 +4640,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4602,6 +4857,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4948,6 +5218,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5247,6 +5532,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5552,6 +5852,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2868766}
     m_Modifications:
+    - target: {fileID: 522287568681865773, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 522287568681865773, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 522287568681865773, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 522287568681865773, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041735788357993572, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041735788357993572, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041735788357993572, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041735788357993572, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1989608438857035108, guid: f6eded6ff5d1842d086108a99e0e92ce,
         type: 3}
       propertyPath: m_Pivot.x
@@ -5733,6 +6073,26 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4664625335616906279, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558800426213013004, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558800426213013004, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558800426213013004, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558800426213013004, guid: f6eded6ff5d1842d086108a99e0e92ce,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
@@ -6136,6 +6496,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6276,6 +6651,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6304,7 +6694,7 @@ PrefabInstance:
     - target: {fileID: 36241831126544825, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: m_Name
-      value: ActionCard6
+      value: ActionCard5
       objectReference: {fileID: 0}
     - target: {fileID: 1974907012880276610, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
@@ -6449,7 +6839,7 @@ PrefabInstance:
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: cardNo
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
@@ -6686,6 +7076,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6927,40 +7332,43 @@ MonoBehaviour:
   - Grass
   - Garden
   - Sandbox
-  - Playground
   - Seating
   - Dog park
-  - Tree
-  - Tree
-  - Tree
-  - Tree
-  - Tree
-  - Tree
-  - Tree
-  - Tree
-  - Tree
-  - Tree
+  - BBQ
+  - Pool
+  - Fitness
+  - Gate
+  - Deck
+  - Storage
+  - Road
+  - Trail
+  - Playground
+  - SportCourt
+  - ParkingLot
   imgs:
   - {fileID: 21300000, guid: 47646c2e33c2a4d4eb1262d9b85f72ee, type: 3}
   - {fileID: 21300000, guid: f7b831d4c38ab4f15b0534ea3431b001, type: 3}
   - {fileID: 21300000, guid: 466fae5d1097c4b0da6dfe7ada110710, type: 3}
   - {fileID: 21300000, guid: 496eca7216cd24d1fbe43a22403dabab, type: 3}
   - {fileID: 21300000, guid: 75527d6d644ed4225a63e260f31133e6, type: 3}
-  - {fileID: 21300000, guid: 1a29141b3c9164373bdbdd9ee692bd60, type: 3}
   - {fileID: 21300000, guid: 225fbb56d934c4283b5f39f9c83bb6d7, type: 3}
   - {fileID: 21300000, guid: e5c1a47d40ae6461faf43b8ec1234dce, type: 3}
   - {fileID: 21300000, guid: 659b8fcb99f4b45b187e91bcc97fdce2, type: 3}
   - {fileID: 21300000, guid: 40ebeefb13a33428d8d0f25dd50d8a45, type: 3}
   - {fileID: 21300000, guid: 5aa93b63d17f1414491e7c79b4ca255d, type: 3}
-  - {fileID: 21300000, guid: 2e92caa654243417798370833d435ee8, type: 3}
   - {fileID: 21300000, guid: 04892a2f2c1f542b9a265832fad6d91f, type: 3}
   - {fileID: 21300000, guid: c2bfe7326e4ce4fb58bba95d2181fde0, type: 3}
   - {fileID: 21300000, guid: d15d46e912cc04f03a2bccba4c0b667f, type: 3}
   - {fileID: 21300000, guid: 117e6e18b04994e0b88215326bbb9f11, type: 3}
   - {fileID: 21300000, guid: 69a449e1d49a84f3c92a58e31ed06381, type: 3}
-  - {fileID: 21300000, guid: 9dc3c5ebb9a5b49608f4ec6043e9b8ce, type: 3}
-  coinCosts: 0200000004000000040000000600000008000000100000000600000008000000060000000c0000000a00000018000000040000000a00000006000000020000000200000010000000
-  gridCounts: 010000000100000001000000010000000100000002000000010000000100000001000000010000000100000002000000010000000100000001000000010000000100000002000000
+  - {fileID: 21300000, guid: bf5244d845177456eb2409dd9cf8cff9, type: 3}
+  - {fileID: 21300000, guid: 36989bbfa79a44ccaab04a720aeb75ea, type: 3}
+  - {fileID: 21300000, guid: 26799ed16c934474183fc38a535865c4, type: 3}
+  - {fileID: 21300000, guid: a2ac0b7410c694ea39069dc3b6f4f924, type: 3}
+  - {fileID: 21300000, guid: ba09f4fa6e93745118222f159b97b5b3, type: 3}
+  - {fileID: 21300000, guid: e1f55f57b93824023a698c14aed90011, type: 3}
+  coinCosts: 02000000040000000400000006000000080000000600000008000000060000000c0000000a000000040000000a000000060000000200000002000000100000001800000010000000
+  gridCounts: 010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000020000000200000002000000
 --- !u!1001 &948664596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7366,6 +7774,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7391,6 +7814,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 517885494}
     m_Modifications:
+    - target: {fileID: 522287568681865773, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 522287568681865773, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 522287568681865773, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 522287568681865773, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041735788357993572, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041735788357993572, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041735788357993572, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041735788357993572, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1989608438857035108, guid: f6eded6ff5d1842d086108a99e0e92ce,
         type: 3}
       propertyPath: m_Pivot.x
@@ -7514,7 +7977,7 @@ PrefabInstance:
     - target: {fileID: 3144703108040385127, guid: f6eded6ff5d1842d086108a99e0e92ce,
         type: 3}
       propertyPath: cardNo
-      value: 11
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3144703108040385127, guid: f6eded6ff5d1842d086108a99e0e92ce,
         type: 3}
@@ -7554,7 +8017,7 @@ PrefabInstance:
     - target: {fileID: 4559728811279576197, guid: f6eded6ff5d1842d086108a99e0e92ce,
         type: 3}
       propertyPath: m_Name
-      value: ActionCard11
+      value: ActionCard16
       objectReference: {fileID: 0}
     - target: {fileID: 4664625335616906279, guid: f6eded6ff5d1842d086108a99e0e92ce,
         type: 3}
@@ -7572,6 +8035,26 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4664625335616906279, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558800426213013004, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558800426213013004, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558800426213013004, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558800426213013004, guid: f6eded6ff5d1842d086108a99e0e92ce,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
@@ -7644,7 +8127,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011542164}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da1217bc3ef8f4d1ca8eb238249ca65c, type: 3}
   m_Name: 
@@ -7861,6 +8344,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8001,6 +8499,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8059,18 +8572,18 @@ MonoBehaviour:
   - {fileID: 1596774261}
   - {fileID: 1435219770}
   - {fileID: 10390509}
-  - {fileID: 2648018788282157542}
   - {fileID: 873213357}
   - {fileID: 1368619803}
   - {fileID: 1584030447}
   - {fileID: 1060440507}
   - {fileID: 500111016}
-  - {fileID: 999411551}
   - {fileID: 254661218}
   - {fileID: 1551877364}
   - {fileID: 1109270273}
   - {fileID: 1839838736}
   - {fileID: 2133169283}
+  - {fileID: 2648018788282157542}
+  - {fileID: 999411551}
   - {fileID: 747017007}
   selectedCoinCost: 0
   selectedCardNo: 0
@@ -8102,7 +8615,7 @@ PrefabInstance:
     - target: {fileID: 36241831126544825, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: m_Name
-      value: ActionCard9
+      value: ActionCard8
       objectReference: {fileID: 0}
     - target: {fileID: 1974907012880276610, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
@@ -8247,7 +8760,7 @@ PrefabInstance:
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: cardNo
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
@@ -8375,7 +8888,7 @@ PrefabInstance:
     - target: {fileID: 36241831126544825, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: m_Name
-      value: ActionCard14
+      value: ActionCard12
       objectReference: {fileID: 0}
     - target: {fileID: 1974907012880276610, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
@@ -8520,7 +9033,7 @@ PrefabInstance:
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: cardNo
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
@@ -8697,6 +9210,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8972,6 +9500,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9112,6 +9655,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9392,6 +9950,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9532,6 +10105,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9560,7 +10148,7 @@ PrefabInstance:
     - target: {fileID: 36241831126544825, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: m_Name
-      value: ActionCard7
+      value: ActionCard6
       objectReference: {fileID: 0}
     - target: {fileID: 1974907012880276610, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
@@ -9705,7 +10293,7 @@ PrefabInstance:
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: cardNo
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
@@ -9882,6 +10470,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10472,6 +11075,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10568,7 +11186,7 @@ PrefabInstance:
     - target: {fileID: 36241831126544825, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: m_Name
-      value: ActionCard13
+      value: ActionCard11
       objectReference: {fileID: 0}
     - target: {fileID: 1974907012880276610, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
@@ -10713,7 +11331,7 @@ PrefabInstance:
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: cardNo
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
@@ -10815,7 +11433,7 @@ PrefabInstance:
     - target: {fileID: 36241831126544825, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: m_Name
-      value: ActionCard8
+      value: ActionCard7
       objectReference: {fileID: 0}
     - target: {fileID: 1974907012880276610, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
@@ -10960,7 +11578,7 @@ PrefabInstance:
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: cardNo
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
@@ -11347,6 +11965,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11623,6 +12256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeBgImg: {fileID: 21300000, guid: f8593b38c129546b9bf26c5a0722ac6b, type: 3}
   inactiveBgImg: {fileID: 21300000, guid: 55768f6ab50844f6e97ab1ca3b9736b8, type: 3}
+  GamePlayBg: {fileID: 1650856439}
 --- !u!1001 &1652234165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11957,6 +12591,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11985,7 +12634,7 @@ PrefabInstance:
     - target: {fileID: 36241831126544825, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: m_Name
-      value: ActionCard15
+      value: ActionCard13
       objectReference: {fileID: 0}
     - target: {fileID: 1974907012880276610, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
@@ -12130,7 +12779,7 @@ PrefabInstance:
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: cardNo
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
@@ -12307,6 +12956,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12512,6 +13176,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12652,6 +13331,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12932,6 +13626,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13147,6 +13856,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13355,6 +14079,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13495,6 +14234,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14296,6 +15050,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14436,6 +15205,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14464,7 +15248,7 @@ PrefabInstance:
     - target: {fileID: 36241831126544825, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: m_Name
-      value: ActionCard16
+      value: ActionCard14
       objectReference: {fileID: 0}
     - target: {fileID: 1974907012880276610, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
@@ -14609,7 +15393,7 @@ PrefabInstance:
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
       propertyPath: cardNo
-      value: 16
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8360861672195274472, guid: e06491d527a7741778ba6b21c0d49ebb,
         type: 3}
@@ -14786,6 +15570,21 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14837,6 +15636,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1938906076}
     m_Modifications:
+    - target: {fileID: 522287568681865773, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 522287568681865773, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 522287568681865773, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 522287568681865773, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041735788357993572, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041735788357993572, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041735788357993572, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041735788357993572, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1989608438857035108, guid: f6eded6ff5d1842d086108a99e0e92ce,
         type: 3}
       propertyPath: m_Pivot.x
@@ -14960,7 +15799,7 @@ PrefabInstance:
     - target: {fileID: 3144703108040385127, guid: f6eded6ff5d1842d086108a99e0e92ce,
         type: 3}
       propertyPath: cardNo
-      value: 5
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3144703108040385127, guid: f6eded6ff5d1842d086108a99e0e92ce,
         type: 3}
@@ -15000,7 +15839,7 @@ PrefabInstance:
     - target: {fileID: 4559728811279576197, guid: f6eded6ff5d1842d086108a99e0e92ce,
         type: 3}
       propertyPath: m_Name
-      value: ActionCard5
+      value: ActionCard15
       objectReference: {fileID: 0}
     - target: {fileID: 4664625335616906279, guid: f6eded6ff5d1842d086108a99e0e92ce,
         type: 3}
@@ -15018,6 +15857,26 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4664625335616906279, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558800426213013004, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558800426213013004, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558800426213013004, guid: f6eded6ff5d1842d086108a99e0e92ce,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558800426213013004, guid: f6eded6ff5d1842d086108a99e0e92ce,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0

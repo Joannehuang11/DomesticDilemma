@@ -8,12 +8,12 @@ public class UpdateTerritoryPlayBg : MonoBehaviour
     public Sprite activeBgImg;
     public Sprite inactiveBgImg;
 
-    Image GamePlayBg;
+    public Image GamePlayBg;
     
     // Start is called before the first frame update
     void Start()
     {
-        GamePlayBg = GetComponent<Image>();
+        
     }
 
     // Update is called once per frame

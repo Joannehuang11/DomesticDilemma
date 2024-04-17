@@ -26,9 +26,33 @@ public class ActionCardsDatas : MonoBehaviour
         return names[cardNo];
     }
 
-    public Sprite getImg(int cardNo)
+    public List<Sprite> getImgs(int cardNo)
     {
-        return imgs[cardNo];
+        List<Sprite> thumbnailImgs = new List<Sprite>();
+
+        if (cardNo == 15)
+        {
+            thumbnailImgs.Add(imgs[15]);
+            thumbnailImgs.Add(imgs[16]);
+            return thumbnailImgs;
+        }
+        else if (cardNo == 16)
+        {
+            thumbnailImgs.Add(imgs[17]);
+            thumbnailImgs.Add(imgs[18]);
+            return thumbnailImgs;
+        }
+        else if (cardNo == 17)
+        {
+            thumbnailImgs.Add(imgs[19]);
+            thumbnailImgs.Add(imgs[20]);
+            return thumbnailImgs;
+        }
+        else
+        {
+            thumbnailImgs.Add(imgs[cardNo]);
+            return thumbnailImgs;
+        }
     }
 
     public int getCoinCost(int cardNo)

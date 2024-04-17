@@ -25,16 +25,16 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
     ActionCardsDatas actionCardsDatas;
 
     private string actionName;
-    private Sprite image;
+    private List<Sprite> images;
     private int coinCost;
     private int gridCount;
     public bool isSelected;
 
     //UI
-    public Image thumbnailImg;
+    public List<Image> thumbnailImgs;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI coinCostText;
-    private Image bgImg;
+    public Image bgImg;
     public Sprite activeBgImg;
     public Sprite inactiveBgImg;
     
@@ -47,15 +47,22 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
         territoryPlayManager = territoryPlayManagerObj.GetComponent<TerritoryPlayManager>();
         actionCardsDatas = actionCardsDatasObj.GetComponent<ActionCardsDatas>();
         progressManager = progressManagerObj.GetComponent<ProgressManager>();
-        
+    
         actionName = actionCardsDatas.getName(cardNo);
-        image = actionCardsDatas.getImg(cardNo);
+        images = actionCardsDatas.getImgs(cardNo);
         coinCost = - actionCardsDatas.getCoinCost(cardNo);
         gridCount = actionCardsDatas.getGridCount(cardNo);
-        bgImg = GetComponent<Image>();
         
         isSelected = false;
-        thumbnailImg.sprite = image;
+        if (thumbnailImgs.Count > 1)
+        {
+            thumbnailImgs[0].sprite = images[0];
+            thumbnailImgs[1].sprite = images[1];
+        }
+        else
+        {
+            thumbnailImgs[0].sprite = images[0];
+        }
         nameText.text = actionName;
         coinCostText.text = (coinCost* -1).ToString();
         UpdateBg(isSelected);
@@ -146,5 +153,10 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
     public void SetActionCardsPlayingState(actionCardsPlayingState newState)
     {
         actionCardsPlayManager.setActionCardsPlayingState(newState);
+    }
+
+    public List<Sprite> GetCardImages()
+    {
+        return images;
     }
 }

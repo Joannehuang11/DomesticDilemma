@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting.Antlr3.Runtime;
 
 public enum actionCardsPlayingState
 {
@@ -173,5 +174,10 @@ public class ActionCardsPlayManager : MonoBehaviour
         {
             card.GetComponent<ActionCardManager>().SetSelected(false);
         }
+    }
+
+    public List<Sprite> GetSelectedCardImgs()
+    {
+        return actionCards[selectedCardNo].GetComponent<ActionCardManager>().GetCardImages();
     }
 }
