@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LandCardsDatas : MonoBehaviour
-{
+{   
     public List<GameObject> landCards;
     
     // Start is called before the first frame update
@@ -11,7 +11,7 @@ public class LandCardsDatas : MonoBehaviour
     {
         for (int i = 0; i < landCards.Count; i++)
         {
-            landCards[i].GetComponent<LandUnit>().setLandCard(i, -1, null);
+            landCards[i].GetComponent<LandUnit>().setStartLandCard(i, -1);
         }
     }
 
