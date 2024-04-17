@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 659b8fcb99f4b45b187e91bcc97fdce2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2b0999b223dec4561b9241c72fd0aeb6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landNo: 0
   ownerNo: 0
-  landImg: {fileID: 0}
+  landImg: {fileID: 5086238420338805672}
   player0Obj: {fileID: 0}
   player1Obj: {fileID: 0}
   territoryPlayManagerObj: {fileID: 0}

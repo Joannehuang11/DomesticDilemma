@@ -61,7 +61,6 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
                 switch (currentTerritoryPlayingState)
                 {
                     case territoryPlayingState.None:
-                        // Debug.Log("territoryPlayingState is None");
                         break;
                     case territoryPlayingState.Waiting:
                         //set own
@@ -92,13 +91,10 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
                             player1Manager.SetPlayerStatus(playerStatus.Action, 0, true, false);
                             actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.Waiting);
                         }
-                        // Debug.Log("territoryPlayingState is Waiting");
                         break;
                     case territoryPlayingState.P0Placed:
-                        // Debug.Log("territoryPlayingState is P0Placed");
                         break;
                     case territoryPlayingState.P1Placed:                    
-                        // Debug.Log("territoryPlayingState is P1Placed");
                         break;
                 }
             }
@@ -119,6 +115,7 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
 
     public void setOwnLandCards(int playerNo, List<Sprite> imgs)
     {
+        Debug.Log("setOwnLandCards: PlayerNo"+ playerNo + "LandNo: "+ landNo + "ImgCount: "+ imgs.Count);
         if (imgs.Count > 1 && landNo % 9 < 7)
         {
             GameObject nextLandCard = landCardsDatas.GetLandCard(landNo + 1);
