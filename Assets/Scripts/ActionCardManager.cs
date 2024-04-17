@@ -99,16 +99,34 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
 
                     //update game states
                     if (selectingPlayerNo == 0)
-                    {
-                        SetActionCardsPlayingState(actionCardsPlayingState.P0Selected);
-                        player0Manager.checkBudget(coinCost);
+                    {                        
+                        //if selected cannot afford, then wait
+                        if (player0Manager.checkBudget(coinCost))
+                        {
+                            territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.Waiting);
+                            SetActionCardsPlayingState(actionCardsPlayingState.P0Selected, true);
+
+                        } 
+                        else
+                        {
+                            territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
+                            SetActionCardsPlayingState(actionCardsPlayingState.Waiting, false);
+                        }
                     }
                     else if (selectingPlayerNo == 1)
                     {
-                        SetActionCardsPlayingState(actionCardsPlayingState.P1Selected);
-                        player1Manager.checkBudget(coinCost);
+                        //if selected cannot afford, then wait
+                        if (player1Manager.checkBudget(coinCost))
+                        {
+                            territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.Waiting);
+                            SetActionCardsPlayingState(actionCardsPlayingState.P1Selected, true);
+                        }
+                        else
+                        {
+                            territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
+                            SetActionCardsPlayingState(actionCardsPlayingState.Waiting, false);
+                        }
                     }
-                    territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.Waiting);
                     pointGridPlayManager.SetGridPlayResult(pointGridPlayResult.None);
                     break;
                 case actionCardsPlayingState.P0Selected:
@@ -118,9 +136,17 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
                     actionCardsPlayManager.SetSelectedCard(selectingPlayerNo, cardNo, coinCost);
                     
                     //update game states
-                    player0Manager.checkBudget(coinCost);
-                    SetActionCardsPlayingState(actionCardsPlayingState.P0Selected);
-                    territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.Waiting);
+                    //if selected cannot afford, then wait
+                    if (player0Manager.checkBudget(coinCost))
+                    {
+                        territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.Waiting);
+                        SetActionCardsPlayingState(actionCardsPlayingState.P0Selected, true);
+                    }
+                    else
+                    {
+                        territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
+                        SetActionCardsPlayingState(actionCardsPlayingState.P0Selected, false);
+                    }
                     break;
                 case actionCardsPlayingState.P1Selected:
                     //set this card selected
@@ -129,9 +155,16 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
                     actionCardsPlayManager.SetSelectedCard(selectingPlayerNo, cardNo, coinCost);
                     
                     //update game states
-                    player1Manager.checkBudget(coinCost);
-                    SetActionCardsPlayingState(actionCardsPlayingState.P1Selected);
-                    territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.Waiting);
+                    if (player1Manager.checkBudget(coinCost))
+                    {
+                        territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.Waiting);
+                        SetActionCardsPlayingState(actionCardsPlayingState.P1Selected, true);
+                    }
+                    else
+                    {
+                        territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
+                        SetActionCardsPlayingState(actionCardsPlayingState.P1Selected, false);                        
+                    }
                     break;
             }
         }
@@ -160,9 +193,9 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    public void SetActionCardsPlayingState(actionCardsPlayingState newState)
+    public void SetActionCardsPlayingState(actionCardsPlayingState newState, bool canMoveOn)
     {
-        actionCardsPlayManager.setActionCardsPlayingState(newState);
+        actionCardsPlayManager.setActionCardsPlayingState(newState, canMoveOn);
     }
 
     public List<Sprite> GetCardImages()

@@ -133,7 +133,7 @@ public class PointGridPlayManager : MonoBehaviour
             
             //update games
             SetGridPlayingState(pointGridPlayingState.ResultAction);
-            actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.Waiting);
+            actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.Waiting, true);
             // territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);        
         }
         else if (player0Manager.GetPlayerCall() == playerCall.NotCollab && player1Manager.GetPlayerCall() == playerCall.Collab)
@@ -144,7 +144,7 @@ public class PointGridPlayManager : MonoBehaviour
 
             //update games
             SetGridPlayingState(pointGridPlayingState.ResultAction);
-            actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.Waiting);        
+            actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.Waiting, true);        
             // territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);        
         }
         else if (player0Manager.GetPlayerCall() == playerCall.Collab && player1Manager.GetPlayerCall() == playerCall.NotCollab)
@@ -155,7 +155,7 @@ public class PointGridPlayManager : MonoBehaviour
 
             //update games
             SetGridPlayingState(pointGridPlayingState.ResultAction);
-            actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.Waiting);        
+            actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.Waiting, true);        
             // territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);            
         }
         else if (player0Manager.GetPlayerCall() == playerCall.NotCollab && player1Manager.GetPlayerCall() == playerCall.NotCollab)
@@ -166,7 +166,7 @@ public class PointGridPlayManager : MonoBehaviour
         
             //update games
             SetGridPlayingState(pointGridPlayingState.ResultAction);
-            actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.Waiting);
+            actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.Waiting, true);
             // territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);        
         }
         else
@@ -174,7 +174,6 @@ public class PointGridPlayManager : MonoBehaviour
             Debug.Log("fail to update grid game result");
         }
         // Debug.Log("Update game: Player 0 call:" + player0.GetComponent<PlayerManager>().GetPlayerCall() + " Player 1 call:" + player1.GetComponent<PlayerManager>().GetPlayerCall() + " Result:" + currentGridPlayResult);
-
 
         //update game UI
         SetPointGridImg(currentGridPlayResult);

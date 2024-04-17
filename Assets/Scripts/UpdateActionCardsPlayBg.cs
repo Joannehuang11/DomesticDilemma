@@ -22,15 +22,22 @@ public class UpdateActionCardsPlayBg : MonoBehaviour
         
     }
 
-    public void UpdateBg(actionCardsPlayingState state)
+    public void UpdateBg(actionCardsPlayingState state, bool canMoveOn)
     {
-        if (state == actionCardsPlayingState.Waiting)
+        switch(state)
         {
-            GamePlayBg.sprite = activeBgImg;
-        }
-        else
-        {
-            GamePlayBg.sprite = inactiveBgImg;
+            case actionCardsPlayingState.None:
+                GamePlayBg.sprite = inactiveBgImg;
+                break;
+            case actionCardsPlayingState.P0Selected:
+                GamePlayBg.sprite = canMoveOn ? inactiveBgImg : activeBgImg;
+                break;
+            case actionCardsPlayingState.P1Selected:
+                GamePlayBg.sprite = canMoveOn ? inactiveBgImg : activeBgImg;
+                break;
+            case actionCardsPlayingState.Waiting:
+                GamePlayBg.sprite = activeBgImg;
+                break;
         }
     }
 }

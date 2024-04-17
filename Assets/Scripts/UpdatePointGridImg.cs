@@ -43,7 +43,6 @@ public class UpdatePointGridImg : MonoBehaviour
 
     public void SetPointGridImg(pointGridPlayResult result)
     {
-        
         switch (result)
         {
             case pointGridPlayResult.None:

@@ -133,7 +133,7 @@ public class ProgressManager : MonoBehaviour
 
                     //reset
                     pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.None);
-                    actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.None);
+                    actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.None, false);
                     territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
                     pointGridPlayManager.SetGridPlayResult(pointGridPlayResult.None);
                 }
@@ -146,7 +146,7 @@ public class ProgressManager : MonoBehaviour
 
                     //update games
                     pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.Selecting);
-                    actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.None);
+                    actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.None, false);
                     territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
                 }
             }

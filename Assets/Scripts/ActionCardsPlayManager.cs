@@ -49,7 +49,7 @@ public class ActionCardsPlayManager : MonoBehaviour
         territoryPlayManager = territoryPlayManagerObj.GetComponent<TerritoryPlayManager>();
         progressManager = progressManagerObj.GetComponent<ProgressManager>();
 
-        setActionCardsPlayingState(actionCardsPlayingState.None);
+        setActionCardsPlayingState(actionCardsPlayingState.None, false);
         selectedActionCardNo = -1;
     }
 
@@ -59,12 +59,12 @@ public class ActionCardsPlayManager : MonoBehaviour
 
     }
 
-    public void setActionCardsPlayingState(actionCardsPlayingState newState)
+    public void setActionCardsPlayingState(actionCardsPlayingState newState, bool canMoveOn)
     {
         currentActionCardsPlayingState = newState;
         
         //update UI
-        GamePlayUI.GetComponent<UpdateActionCardsPlayBg>().UpdateBg(currentActionCardsPlayingState);
+        GamePlayUI.GetComponent<UpdateActionCardsPlayBg>().UpdateBg(currentActionCardsPlayingState, canMoveOn);
 
         switch (currentActionCardsPlayingState)
         {
@@ -144,7 +144,7 @@ public class ActionCardsPlayManager : MonoBehaviour
             selectingPlayerNo = 1;
 
             //update games
-            setActionCardsPlayingState(actionCardsPlayingState.Waiting);
+            setActionCardsPlayingState(actionCardsPlayingState.Waiting, true);
             territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
             // pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.ResultAction);
 
@@ -165,7 +165,7 @@ public class ActionCardsPlayManager : MonoBehaviour
             selectingPlayerNo = 0;
 
             //update games
-            setActionCardsPlayingState(actionCardsPlayingState.None);
+            setActionCardsPlayingState(actionCardsPlayingState.None, true);
             territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
             pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.None);
 
