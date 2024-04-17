@@ -136,6 +136,8 @@ public class ActionCardsPlayManager : MonoBehaviour
             //reset UI
             player0Manager.SetPlayerStatus(playerStatus.Hold, 0, true, false);
             player1Manager.SetPlayerStatus(playerStatus.Action, 0, false, false);
+            player0Manager.setNeedMoreCoinsText(false);
+            player1Manager.setNeedMoreCoinsText(false);
             
             // reset action cards
             deSelectAllCards();
@@ -155,6 +157,8 @@ public class ActionCardsPlayManager : MonoBehaviour
             //reset UI
             player0Manager.SetPlayerStatus(playerStatus.Selecting, 0, true, false);            
             player1Manager.SetPlayerStatus(playerStatus.Selecting, 0, true, false);
+            player0Manager.setNeedMoreCoinsText(false);
+            player1Manager.setNeedMoreCoinsText(false);
             
             //reset action cards
             deSelectAllCards();

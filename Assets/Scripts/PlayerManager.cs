@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using Unity.VisualScripting;
 
 public enum playerCall
 {
@@ -40,6 +38,8 @@ public class PlayerManager : MonoBehaviour
     public GameObject playerStatusCard;
     public GameObject instructionsUI;
     public GameObject actionDoneUI;
+    public TextMeshProUGUI moreCoinsTextTMP;
+    public string moreCoinsText = "Need more coins";
 
 
     //game costing
@@ -118,37 +118,36 @@ public class PlayerManager : MonoBehaviour
             playerStatusSignSymbol.SetActive(false);
         }
 
-        if (playerStatus == playerStatus.Action)
-        {
-            instructionsUI.SetActive(false);
-            actionDoneUI.SetActive(true);
-        }
-        else
-        {
-            instructionsUI.SetActive(true);
-            actionDoneUI.SetActive(false);
-        }
-
         switch (state)
         {
             case playerStatus.Selecting:
                 playerStatusText.text = "Selecting";
+                instructionsUI.SetActive(true);
+                actionDoneUI.SetActive(false);
                 // Debug.Log("Player " + playerNo + " is selecting");
                 break;
             case playerStatus.Ready:
                 playerStatusText.text = "Ready";
+                instructionsUI.SetActive(false);
+                actionDoneUI.SetActive(false);                
                 // Debug.Log("Player " + playerNo + " is ready");
                 break;
             case playerStatus.Action:
                 playerStatusText.text = "Action";
+                instructionsUI.SetActive(false);
+                actionDoneUI.SetActive(true);
                 // Debug.Log("Player " + playerNo + " is action");
                 break;
             case playerStatus.Hold:
                 playerStatusText.text = "Hold";
+                instructionsUI.SetActive(false);
+                actionDoneUI.SetActive(false);
                 // Debug.Log("Player " + playerNo + " is hold");
                 break;
             case playerStatus.Break:
                 playerStatusText.text = "Break";
+                instructionsUI.SetActive(false);
+                actionDoneUI.SetActive(false);                
                 // Debug.Log("Player " + playerNo + " is hold");
                 break;                
         }
@@ -167,16 +166,29 @@ public class PlayerManager : MonoBehaviour
     public bool checkBudget(int cost)
     {
         // Debug.Log("PlayerCoin is " + playerCoin + " and cost is " + cost + " so the remaining is " + (playerCoin + cost));
-
         if (playerCoin + cost > 0)
         {
+            setNeedMoreCoinsText(false);
             Debug.Log("Player " + playerNo + " has enough budget");
             return true;
         }
         else
         {
+            setNeedMoreCoinsText(true);
             Debug.Log("Player " + playerNo + " has not enough budget");
             return false;
+        }
+    }
+
+    public void setNeedMoreCoinsText(bool isShow)
+    {
+        if (isShow)
+        {
+            moreCoinsTextTMP.text = moreCoinsText;
+        }
+        else
+        {
+            moreCoinsTextTMP.text = "";
         }
     }
 }

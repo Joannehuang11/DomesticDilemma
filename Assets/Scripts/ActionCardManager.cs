@@ -11,10 +11,10 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
 
 
     // interface
-    // public GameObject player0Obj;
-    // PlayerManager player0Manager;
-    // public GameObject player1Obj;
-    // PlayerManager player1Manager;
+    public GameObject player0Obj;
+    PlayerManager player0Manager;
+    public GameObject player1Obj;
+    PlayerManager player1Manager;
     public GameObject actionCardsPlayManagerObj;
     ActionCardsPlayManager actionCardsPlayManager;
     public GameObject territoryPlayManagerObj;
@@ -41,8 +41,8 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
     // Start is called before the first frame update
     void Start()
     {
-        // player0Manager = player0Obj.GetComponent<PlayerManager>();
-        // player1Manager = player1Obj.GetComponent<PlayerManager>();
+        player0Manager = player0Obj.GetComponent<PlayerManager>();
+        player1Manager = player1Obj.GetComponent<PlayerManager>();
         actionCardsPlayManager = actionCardsPlayManagerObj.GetComponent<ActionCardsPlayManager>();
         territoryPlayManager = territoryPlayManagerObj.GetComponent<TerritoryPlayManager>();
         actionCardsDatas = actionCardsDatasObj.GetComponent<ActionCardsDatas>();
@@ -98,10 +98,12 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
                     if (selectingPlayerNo == 0)
                     {
                         SetActionCardsPlayingState(actionCardsPlayingState.P0Selected);
+                        player0Manager.checkBudget(coinCost);
                     }
                     else if (selectingPlayerNo == 1)
                     {
                         SetActionCardsPlayingState(actionCardsPlayingState.P1Selected);
+                        player1Manager.checkBudget(coinCost);
                     }
                     territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.Waiting);
 
@@ -113,6 +115,7 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
                     actionCardsPlayManager.SetSelectedCard(selectingPlayerNo, cardNo, coinCost);
                     
                     //update game states
+                    player0Manager.checkBudget(coinCost);
                     SetActionCardsPlayingState(actionCardsPlayingState.P0Selected);
                     territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.Waiting);
                     break;
@@ -123,6 +126,7 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
                     actionCardsPlayManager.SetSelectedCard(selectingPlayerNo, cardNo, coinCost);
                     
                     //update game states
+                    player1Manager.checkBudget(coinCost);
                     SetActionCardsPlayingState(actionCardsPlayingState.P1Selected);
                     territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.Waiting);
                     break;
