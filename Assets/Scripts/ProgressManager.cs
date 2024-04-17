@@ -128,26 +128,29 @@ public class ProgressManager : MonoBehaviour
                     //start break
                     Debug.Log("Start Break");
                     // Debug.Log("Break Time: " + breakTimes[(currentRound / (roundsPerSection + 1)) - 1]);
-                    pointGridPlayManager.BreakPointGridGame(breakTimes[(currentRound / (roundsPerSection + 1)) - 1]);
-                    inputBlock(inputBlockTimeTest);
 
                     //reset
                     pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.None);
                     actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.None, false);
                     territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
                     pointGridPlayManager.SetGridPlayResult(pointGridPlayResult.None);
+
+                    //break function
+                    pointGridPlayManager.BreakPointGridGame(breakTimes[(currentRound / (roundsPerSection + 1)) - 1]);
+                    inputBlock(inputBlockTimeTest);
                 }
                 else
                 {
                     //start games
                     Debug.Log("Start Round");
 
-                    pointGridPlayManager.StartPointGridGame();
-
                     //update games
                     pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.Selecting);
                     actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.None, false);
                     territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
+
+                    //start function
+                    pointGridPlayManager.StartPointGridGame();
                 }
             }
             else
