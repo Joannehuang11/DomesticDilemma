@@ -76,7 +76,7 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("Click on ActionCard: " + cardNo);
+        // Debug.Log("Click on ActionCard: " + cardNo);
 
         if (!progressManager.isInputBlock)
         {

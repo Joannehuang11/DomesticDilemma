@@ -164,4 +164,19 @@ public class PlayerManager : MonoBehaviour
         return playerStatus;
     }
 
+    public bool checkBudget(int cost)
+    {
+        // Debug.Log("PlayerCoin is " + playerCoin + " and cost is " + cost + " so the remaining is " + (playerCoin + cost));
+
+        if (playerCoin + cost > 0)
+        {
+            Debug.Log("Player " + playerNo + " has enough budget");
+            return true;
+        }
+        else
+        {
+            Debug.Log("Player " + playerNo + " has not enough budget");
+            return false;
+        }
+    }
 }
