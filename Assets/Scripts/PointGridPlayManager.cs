@@ -4,7 +4,8 @@ public enum pointGridPlayingState
 {
     None,
     Selecting,
-    ResultAction
+    ResultAction,
+    Break,
 }
 
 public enum pointGridPlayResult
@@ -92,7 +93,7 @@ public class PointGridPlayManager : MonoBehaviour
         player1Manager.SetPlayerCall(playerCall.None);
         player1Manager.SetPlayerStatus(playerStatus.Selecting, 0, true, false);
 
-        //update UI countdonw
+        //update UI countdown
         PointGridUI.GetComponent<UpdatePointGridImg>().startCountDownSelecting();
     }
 
@@ -199,6 +200,9 @@ public class PointGridPlayManager : MonoBehaviour
                 break;
             case pointGridPlayingState.ResultAction:
                 Debug.Log("pointGridPlayingState is Result Action.");
+                break;
+            case pointGridPlayingState.Break:
+                Debug.Log("pointGridPlayingState is Break.");
                 break;
         }
     }

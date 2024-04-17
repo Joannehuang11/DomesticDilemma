@@ -29,6 +29,9 @@ public class UpdateGridGameplayBg : MonoBehaviour
             case pointGridPlayingState.ResultAction:
                 GamePlayBg.sprite = inactiveBgImg;
                 break;
+            case pointGridPlayingState.Break:
+                GamePlayBg.sprite = activeBgImg;
+                break;
         }
     }
 }

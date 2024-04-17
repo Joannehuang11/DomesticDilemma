@@ -132,9 +132,10 @@ public class ProgressManager : MonoBehaviour
                     inputBlock(inputBlockTimeTest);
 
                     //reset
-                    pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.None);
+                    pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.Break);
                     actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.None);
                     territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.None);
+                    pointGridPlayManager.SetGridPlayResult(pointGridPlayResult.None);
                 }
                 else
                 {
