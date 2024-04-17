@@ -70,16 +70,16 @@ public class ActionCardsPlayManager : MonoBehaviour
         {
             case actionCardsPlayingState.None:
                 deSelectAllCards();
-                Debug.Log("actionCardsPlayingState is None");
+                // Debug.Log("actionCardsPlayingState is None");
                 break;
             case actionCardsPlayingState.Waiting:
-                Debug.Log("actionCardsPlayingState is Waiting");
+                // Debug.Log("actionCardsPlayingState is Waiting");
                 break;
             case actionCardsPlayingState.P0Selected:
-                Debug.Log("actionCardsPlayingState is P0Selected");
+                // Debug.Log("actionCardsPlayingState is P0Selected");
                 break;
             case actionCardsPlayingState.P1Selected:
-                Debug.Log("actionCardsPlayingState is P1Selected");
+                // Debug.Log("actionCardsPlayingState is P1Selected");
                 break;
         }
     }

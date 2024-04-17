@@ -44,9 +44,6 @@ public class UpdateStatusSignSymbol : MonoBehaviour
             case playerStatus.Break:
                 StatusSignSymbolImg.sprite = timeImg;
                 break;
-            default:
-                Debug.Log("fail to set StatusSignSymbolImg");
-                break;
         }
     }
 }

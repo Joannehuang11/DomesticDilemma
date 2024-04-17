@@ -45,16 +45,16 @@ public class TerritoryPlayManager : MonoBehaviour
         switch (currentTerritoryPlayingState)
         {
             case territoryPlayingState.None:
-                Debug.Log("territoryPlayingState is None");
+                // Debug.Log("territoryPlayingState is None");
                 break;
             case territoryPlayingState.Waiting:
-                Debug.Log("territoryPlayingState is Waiting");
+                // Debug.Log("territoryPlayingState is Waiting");
                 break;
             case territoryPlayingState.P0Placed:
-                Debug.Log("territoryPlayingState is P0Placed");
+                // Debug.Log("territoryPlayingState is P0Placed");
                 break;
             case territoryPlayingState.P1Placed:
-                Debug.Log("territoryPlayingState is P1Placed");
+                // Debug.Log("territoryPlayingState is P1Placed");
                 break;
         }
     }

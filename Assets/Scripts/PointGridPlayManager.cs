@@ -192,16 +192,16 @@ public class PointGridPlayManager : MonoBehaviour
         switch (currentGridPlayingState)
         {
             case pointGridPlayingState.None:
-                Debug.Log("pointGridPlayingState is None.");
+                // Debug.Log("pointGridPlayingState is None.");
                 break;
             case pointGridPlayingState.Selecting:
-                Debug.Log("pointGridPlayingState is Selecting.");
+                // Debug.Log("pointGridPlayingState is Selecting.");
                 break;
             case pointGridPlayingState.ResultAction:
-                Debug.Log("pointGridPlayingState is Result Action.");
+                // Debug.Log("pointGridPlayingState is Result Action.");
                 break;
             case pointGridPlayingState.Break:
-                Debug.Log("pointGridPlayingState is Break.");
+                // Debug.Log("pointGridPlayingState is Break.");
                 break;
         }
     }
