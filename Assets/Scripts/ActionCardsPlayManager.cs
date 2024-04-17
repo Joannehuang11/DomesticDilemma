@@ -32,7 +32,7 @@ public class ActionCardsPlayManager : MonoBehaviour
     public List<GameObject> actionCards;
     
     public int selectedCoinCost;
-    public int selectedCardNo;
+    public int selectedActionCardNo;
     public int selectingPlayerNo;
 
     //UI
@@ -50,7 +50,7 @@ public class ActionCardsPlayManager : MonoBehaviour
         progressManager = progressManagerObj.GetComponent<ProgressManager>();
 
         setActionCardsPlayingState(actionCardsPlayingState.None);
-        selectedCardNo = -1;
+        selectedActionCardNo = -1;
     }
 
     // Update is called once per frame
@@ -106,7 +106,7 @@ public class ActionCardsPlayManager : MonoBehaviour
     
     public void SetSelectedCard(int playerNo, int cardNo, int Cost)
     {
-        selectedCardNo = cardNo;
+        selectedActionCardNo = cardNo;
         selectedCoinCost = Cost;
 
         if (playerNo == 0)
@@ -121,12 +121,17 @@ public class ActionCardsPlayManager : MonoBehaviour
         }
     }
 
+    public int getSelectedCoinCost()
+    {
+        return selectedCoinCost;
+    }
+
     public void CompleteActions(int playerNo)
     {
         if (playerNo == 0)
         {
             //change cost -> onClick Land
-            player0Manager.SetPlayerStatus(playerStatus.Hold, selectedCoinCost, true, true);
+            // player0Manager.SetPlayerStatus(playerStatus.Hold, selectedCoinCost, false, true);
             
             //reset UI
             player0Manager.SetPlayerStatus(playerStatus.Hold, 0, true, false);
@@ -138,14 +143,14 @@ public class ActionCardsPlayManager : MonoBehaviour
 
             //update games
             setActionCardsPlayingState(actionCardsPlayingState.Waiting);
-            territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.None);
-            pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.ResultAction);
+            territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
+            // pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.ResultAction);
 
         }
         else if (playerNo == 1)
         {
             //change cost -> onClick Land
-            player1Manager.SetPlayerStatus(playerStatus.Action, selectedCoinCost, false, true);           
+            // player1Manager.SetPlayerStatus(playerStatus.Action, selectedCoinCost, false, true);           
             
             //reset UI
             player0Manager.SetPlayerStatus(playerStatus.Selecting, 0, true, false);            
@@ -157,7 +162,7 @@ public class ActionCardsPlayManager : MonoBehaviour
 
             //update games
             setActionCardsPlayingState(actionCardsPlayingState.None);
-            territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.None);
+            territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
             pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.None);
 
             //restart the game
@@ -167,7 +172,7 @@ public class ActionCardsPlayManager : MonoBehaviour
 
     public void deSelectAllCards()
     {
-        selectedCardNo = -1;
+        selectedActionCardNo = -1;
         selectedCoinCost = 0;
         
         foreach (GameObject card in actionCards)
@@ -176,8 +181,8 @@ public class ActionCardsPlayManager : MonoBehaviour
         }
     }
 
-    public List<Sprite> GetSelectedCardImgs()
+    public List<Sprite> getSelectedCardImgs()
     {
-        return actionCards[selectedCardNo].GetComponent<ActionCardManager>().GetCardImages();
+        return actionCards[selectedActionCardNo].GetComponent<ActionCardManager>().GetCardImages();
     }
 }

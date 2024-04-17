@@ -134,7 +134,7 @@ public class PointGridPlayManager : MonoBehaviour
             //update games
             SetGridPlayingState(pointGridPlayingState.ResultAction);
             actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.Waiting);
-            territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.None);        
+            // territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);        
         }
         else if (player0Manager.GetPlayerCall() == playerCall.NotCollab && player1Manager.GetPlayerCall() == playerCall.Collab)
                 {
@@ -145,7 +145,7 @@ public class PointGridPlayManager : MonoBehaviour
             //update games
             SetGridPlayingState(pointGridPlayingState.ResultAction);
             actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.Waiting);        
-            territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.None);        
+            // territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);        
         }
         else if (player0Manager.GetPlayerCall() == playerCall.Collab && player1Manager.GetPlayerCall() == playerCall.NotCollab)
         {
@@ -156,7 +156,7 @@ public class PointGridPlayManager : MonoBehaviour
             //update games
             SetGridPlayingState(pointGridPlayingState.ResultAction);
             actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.Waiting);        
-            territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.None);            
+            // territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);            
         }
         else if (player0Manager.GetPlayerCall() == playerCall.NotCollab && player1Manager.GetPlayerCall() == playerCall.NotCollab)
         {
@@ -167,7 +167,7 @@ public class PointGridPlayManager : MonoBehaviour
             //update games
             SetGridPlayingState(pointGridPlayingState.ResultAction);
             actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.Waiting);
-            territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.None);        
+            // territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);        
         }
         else
         {

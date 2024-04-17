@@ -58,7 +58,7 @@ public class ProgressManager : MonoBehaviour
     public void SetCurrentRound(int round)
     {
         currentRound = round;
-        Debug.Log("Start Round from progressManager: " + currentRound);
+        // Debug.Log("Start Round from progressManager: " + currentRound);
 
         updateProgressBarUI(currentRound);
     }
@@ -132,9 +132,9 @@ public class ProgressManager : MonoBehaviour
                     inputBlock(inputBlockTimeTest);
 
                     //reset
-                    pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.Break);
+                    pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.None);
                     actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.None);
-                    territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.None);
+                    territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
                     pointGridPlayManager.SetGridPlayResult(pointGridPlayResult.None);
                 }
                 else
@@ -147,7 +147,7 @@ public class ProgressManager : MonoBehaviour
                     //update games
                     pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.Selecting);
                     actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.None);
-                    territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.None);
+                    territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
                 }
             }
             else

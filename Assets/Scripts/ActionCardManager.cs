@@ -76,11 +76,14 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        Debug.Log("Click on ActionCard: " + cardNo);
+
         if (!progressManager.isInputBlock)
         {
             int selectingPlayerNo = actionCardsPlayManager.selectingPlayerNo;
+            actionCardsPlayingState currentActionCardsPlayingState = actionCardsPlayManager.currentActionCardsPlayingState;
         
-            switch (actionCardsPlayManager.currentActionCardsPlayingState)
+            switch (currentActionCardsPlayingState)
             {
                 case actionCardsPlayingState.None:
                     // Debug.Log("OnPointerClick fail");
@@ -100,7 +103,7 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
                     {
                         SetActionCardsPlayingState(actionCardsPlayingState.P1Selected);
                     }
-                    territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.Waiting);
+                    territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.Waiting);
 
                     break;
                 case actionCardsPlayingState.P0Selected:
@@ -111,7 +114,7 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
                     
                     //update game states
                     SetActionCardsPlayingState(actionCardsPlayingState.P0Selected);
-                    territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.Waiting);
+                    territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.Waiting);
                     break;
                 case actionCardsPlayingState.P1Selected:
                     //set this card selected
@@ -121,7 +124,7 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
                     
                     //update game states
                     SetActionCardsPlayingState(actionCardsPlayingState.P1Selected);
-                    territoryPlayManager.SetTerritoryPlayingState(territoryPlayingState.Waiting);
+                    territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.Waiting);
                     break;
             }
         }

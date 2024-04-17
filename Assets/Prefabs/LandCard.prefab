@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5361323684737073833}
   - component: {fileID: 5086238420338805672}
   - component: {fileID: 6652465278348946885}
-  - component: {fileID: 2465832251491006743}
+  - component: {fileID: 6032017338528996854}
   m_Layer: 5
   m_Name: LandCard
   m_TagString: Untagged
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2b0999b223dec4561b9241c72fd0aeb6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 659b8fcb99f4b45b187e91bcc97fdce2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -91,14 +91,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   landNo: 0
+  ownerNo: 0
   landImg: {fileID: 0}
-  owner: 0
   player0Obj: {fileID: 0}
   player1Obj: {fileID: 0}
   territoryPlayManagerObj: {fileID: 0}
   progressManagerObj: {fileID: 0}
   actionCardsPlayManagerObj: {fileID: 0}
---- !u!114 &2465832251491006743
+  landCardsDatasObj: {fileID: 0}
+--- !u!114 &6032017338528996854
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

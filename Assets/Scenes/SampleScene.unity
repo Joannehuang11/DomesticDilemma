@@ -661,6 +661,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -691,6 +696,124 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 22680817}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &41383451
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1569972181}
+    m_Modifications:
+    - target: {fileID: 4487807066486753198, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_Name
+      value: LandCard
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -204
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9cf9abf2f97e24f2f9c1d95b5a101406, type: 3}
 --- !u!1 &57056147
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,6 +1014,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -1044,6 +1172,11 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
       propertyPath: progressManagerObj
@@ -1201,6 +1334,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -1354,6 +1492,11 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
       propertyPath: progressManagerObj
@@ -1693,6 +1836,11 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
       propertyPath: progressManagerObj
@@ -2060,6 +2208,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -2213,6 +2366,11 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
       propertyPath: progressManagerObj
@@ -2578,6 +2736,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -2731,6 +2894,11 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
       propertyPath: progressManagerObj
@@ -3096,6 +3264,26 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3236,6 +3424,11 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
       propertyPath: progressManagerObj
@@ -3391,6 +3584,11 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
       propertyPath: progressManagerObj
@@ -3619,6 +3817,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -3774,6 +3977,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -3927,6 +4135,11 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
       propertyPath: progressManagerObj
@@ -4300,6 +4513,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -4642,6 +4860,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -4857,6 +5080,11 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
       propertyPath: progressManagerObj
@@ -5220,6 +5448,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -5534,6 +5767,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -5687,6 +5925,26 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5827,6 +6085,26 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6356,6 +6634,26 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6496,6 +6794,11 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
       propertyPath: progressManagerObj
@@ -6651,6 +6954,11 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
       propertyPath: progressManagerObj
@@ -7078,6 +7386,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -7231,6 +7544,26 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7776,6 +8109,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -8113,6 +8451,7 @@ RectTransform:
   - {fileID: 2003247621}
   - {fileID: 950520587}
   - {fileID: 1770760023}
+  - {fileID: 1927382298}
   m_Father: {fileID: 1569972181}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -8138,7 +8477,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: -1
+  m_Spacing: 0
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -8346,6 +8685,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -8501,6 +8845,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -8586,7 +8935,7 @@ MonoBehaviour:
   - {fileID: 999411551}
   - {fileID: 747017007}
   selectedCoinCost: 0
-  selectedCardNo: 0
+  selectedActionCardNo: 0
   selectingPlayerNo: 0
   GamePlayUI: {fileID: 760521939}
 --- !u!4 &1055735906
@@ -9212,6 +9561,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -9502,6 +9856,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -9657,6 +10016,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -9810,6 +10174,26 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9950,6 +10334,11 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
       propertyPath: progressManagerObj
@@ -10105,6 +10494,11 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
       propertyPath: progressManagerObj
@@ -10470,6 +10864,11 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
       propertyPath: progressManagerObj
@@ -11077,6 +11476,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -11413,6 +11817,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1887887128}
   - {fileID: 1011542165}
   - {fileID: 57056148}
   m_Father: {fileID: 1991487731}
@@ -11967,6 +12372,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -12120,6 +12530,26 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12380,6 +12810,26 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12591,6 +13041,11 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
       propertyPath: progressManagerObj
@@ -12958,6 +13413,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -13178,6 +13638,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -13333,6 +13798,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -13362,6 +13832,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4487807066486753198, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
     type: 3}
   m_PrefabInstance: {fileID: 1885818430}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1887887128 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+    type: 3}
+  m_PrefabInstance: {fileID: 41383451}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1906375514
 PrefabInstance:
@@ -13486,6 +13962,26 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: progressManagerObj
+      value: 
+      objectReference: {fileID: 887260320}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: territoryPlayManagerObj
+      value: 
+      objectReference: {fileID: 220041613}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: actionCardsPlayManagerObj
+      value: 
+      objectReference: {fileID: 1055735904}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13628,6 +14124,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -13733,6 +14234,130 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1911719843}
   m_CullTransparentMesh: 1
+--- !u!1001 &1927382297
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1011542165}
+    m_Modifications:
+    - target: {fileID: 4487807066486753198, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_Name
+      value: LandCard (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9cf9abf2f97e24f2f9c1d95b5a101406, type: 3}
+--- !u!224 &1927382298 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5988070678392490159, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+    type: 3}
+  m_PrefabInstance: {fileID: 1927382297}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1932037429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13856,6 +14481,11 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
       propertyPath: progressManagerObj
@@ -14081,6 +14711,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -14234,6 +14869,11 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
       propertyPath: progressManagerObj
@@ -15052,6 +15692,11 @@ PrefabInstance:
       objectReference: {fileID: 1433295384}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
       propertyPath: progressManagerObj
       value: 
       objectReference: {fileID: 887260320}
@@ -15205,6 +15850,11 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
       propertyPath: progressManagerObj
@@ -15570,6 +16220,11 @@ PrefabInstance:
       propertyPath: player1Obj
       value: 
       objectReference: {fileID: 1433295384}
+    - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
+        type: 3}
+      propertyPath: landCardsDatasObj
+      value: 
+      objectReference: {fileID: 1011542164}
     - target: {fileID: 6652465278348946885, guid: 9cf9abf2f97e24f2f9c1d95b5a101406,
         type: 3}
       propertyPath: progressManagerObj

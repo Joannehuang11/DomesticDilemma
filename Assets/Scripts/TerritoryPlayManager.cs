@@ -26,7 +26,7 @@ public class TerritoryPlayManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {        
-        SetTerritoryPlayingState(territoryPlayingState.None);
+        setTerritoryPlayingState(territoryPlayingState.None);
     }
 
     // Update is called once per frame
@@ -35,7 +35,7 @@ public class TerritoryPlayManager : MonoBehaviour
         
     }
 
-    public void SetTerritoryPlayingState(territoryPlayingState newState)
+    public void setTerritoryPlayingState(territoryPlayingState newState)
     {
         currentTerritoryPlayingState = newState;
 
@@ -59,6 +59,7 @@ public class TerritoryPlayManager : MonoBehaviour
         }
     }
 
+    
     public territoryPlayingState GetTerritoryPlayingState()
     {
         return currentTerritoryPlayingState;
