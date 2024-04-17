@@ -18,14 +18,14 @@ public class TerritoryPlayManager : MonoBehaviour
 
     public territoryPlayingState currentTerritoryPlayingState;
 
-    public List<GameObject> lands;
+    public GameObject landCardsDatasObj;
 
     //UI
     public GameObject GamePlayUI;
     
     // Start is called before the first frame update
     void Start()
-    {
+    {        
         SetTerritoryPlayingState(territoryPlayingState.None);
     }
 
