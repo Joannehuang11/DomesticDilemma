@@ -75,7 +75,7 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
 
                             //reset status card
                             actionCardsPlayManager.deSelectAllCards();
-                            player0Manager.SetPlayerStatus(playerStatus.Action, 0, true, false);
+                            player0Manager.SetPlayerStatus(playerStatus.Action, 0, false, false);
                             actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.Waiting);
 
                         }
@@ -88,7 +88,7 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
 
                             //reset status card
                             actionCardsPlayManager.deSelectAllCards();
-                            player1Manager.SetPlayerStatus(playerStatus.Action, 0, true, false);
+                            player1Manager.SetPlayerStatus(playerStatus.Action, 0, false, false);
                             actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.Waiting);
                         }
                         break;
