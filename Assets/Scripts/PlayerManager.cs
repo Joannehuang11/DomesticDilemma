@@ -166,7 +166,7 @@ public class PlayerManager : MonoBehaviour
     public bool checkBudget(int cost)
     {
         // Debug.Log("PlayerCoin is " + playerCoin + " and cost is " + cost + " so the remaining is " + (playerCoin + cost));
-        if (playerCoin + cost > 0)
+        if (playerCoin + cost >= 0)
         {
             setNeedMoreCoinsText(false);
             // Debug.Log("Player " + playerNo + " has enough budget");
