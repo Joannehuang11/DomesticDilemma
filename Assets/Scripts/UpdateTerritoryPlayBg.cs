@@ -24,13 +24,13 @@ public class UpdateTerritoryPlayBg : MonoBehaviour
 
     public void UpdateBg(territoryPlayingState state)
     {
-        if (state == territoryPlayingState.None)
+        if (state == territoryPlayingState.Waiting)
         {
-            GamePlayBg.sprite = inactiveBgImg;
+            GamePlayBg.sprite = activeBgImg;
         }
         else
         {
-            GamePlayBg.sprite = activeBgImg;
+            GamePlayBg.sprite = inactiveBgImg;
         }
     }
 }
