@@ -169,13 +169,13 @@ public class PlayerManager : MonoBehaviour
         if (playerCoin + cost > 0)
         {
             setNeedMoreCoinsText(false);
-            Debug.Log("Player " + playerNo + " has enough budget");
+            // Debug.Log("Player " + playerNo + " has enough budget");
             return true;
         }
         else
         {
             setNeedMoreCoinsText(true);
-            Debug.Log("Player " + playerNo + " has not enough budget");
+            // Debug.Log("Player " + playerNo + " has not enough budget");
             return false;
         }
     }

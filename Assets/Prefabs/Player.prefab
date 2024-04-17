@@ -966,7 +966,7 @@ MonoBehaviour:
   instructionsUI: {fileID: 3425838431708933873}
   actionDoneUI: {fileID: 4919961464157928380}
   moreCoinsTextTMP: {fileID: 2416490580148342998}
-  moreCoinsText: moreCoinsText
+  moreCoinsText: Need more coins
 --- !u!1 &4381847838113459294
 GameObject:
   m_ObjectHideFlags: 0
