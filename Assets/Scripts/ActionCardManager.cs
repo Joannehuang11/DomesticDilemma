@@ -23,6 +23,8 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
     ProgressManager progressManager;
     public GameObject actionCardsDatasObj;
     ActionCardsDatas actionCardsDatas;
+    public GameObject pointGridPlayManagerObj;
+    PointGridPlayManager pointGridPlayManager;
 
     private string actionName;
     private List<Sprite> images;
@@ -47,6 +49,7 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
         territoryPlayManager = territoryPlayManagerObj.GetComponent<TerritoryPlayManager>();
         actionCardsDatas = actionCardsDatasObj.GetComponent<ActionCardsDatas>();
         progressManager = progressManagerObj.GetComponent<ProgressManager>();
+        pointGridPlayManager = pointGridPlayManagerObj.GetComponent<PointGridPlayManager>();
     
         actionName = actionCardsDatas.getName(cardNo);
         images = actionCardsDatas.getImgs(cardNo);
@@ -106,7 +109,7 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
                         player1Manager.checkBudget(coinCost);
                     }
                     territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.Waiting);
-
+                    pointGridPlayManager.SetGridPlayResult(pointGridPlayResult.None);
                     break;
                 case actionCardsPlayingState.P0Selected:
                     //set this card selected

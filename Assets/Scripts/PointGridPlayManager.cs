@@ -54,7 +54,7 @@ public class PointGridPlayManager : MonoBehaviour
         progressManager = progressManagerObj.GetComponent<ProgressManager>();
 
         SetGridPlayingState(pointGridPlayingState.None);
-        SetGridPlayResult(pointGridPlayResult.None);
+        // SetGridPlayResult(pointGridPlayResult.None);
     }
 
     // Update is called once per frame
@@ -177,7 +177,7 @@ public class PointGridPlayManager : MonoBehaviour
 
 
         //update game UI
-        PointGridUI.GetComponent<UpdatePointGridImg>().SetPointGridImg(currentGridPlayResult);
+        SetPointGridImg(currentGridPlayResult);
 
     }
 
@@ -211,6 +211,7 @@ public class PointGridPlayManager : MonoBehaviour
     public void SetGridPlayResult (pointGridPlayResult newResult)
     {
         currentGridPlayResult = newResult;
+        SetPointGridImg(currentGridPlayResult);
 
         // Handle the new result
         switch (currentGridPlayResult)
@@ -231,5 +232,10 @@ public class PointGridPlayManager : MonoBehaviour
                 // Debug.Log("pointGridPlayResult is P1P2GiveUp.");
                 break;
         }
+    }
+
+    public void SetPointGridImg(pointGridPlayResult result)
+    {
+        PointGridUI.GetComponent<UpdatePointGridImg>().SetPointGridImg(result);
     }
 }
