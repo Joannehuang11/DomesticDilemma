@@ -116,6 +116,7 @@ public class ProgressManager : MonoBehaviour
 
     public void startGame()
     {
+        Debug.Log("Start Game");
         if (!isInputBlock)
         {
             if (currentRound < maxRound)
