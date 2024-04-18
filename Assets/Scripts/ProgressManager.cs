@@ -24,7 +24,7 @@ public class ProgressManager : MonoBehaviour
 
     public int roundsPerSection;
     public List<int> breakTimes;
-    public List<GameObject> roundUnits;
+    // public List<GameObject> roundUnits;
 
     public int currentRound;
     private int maxRound;
@@ -121,7 +121,12 @@ public class ProgressManager : MonoBehaviour
             if (currentRound < maxRound)
             {
                     currentRound++;
-                    SetCurrentRound(currentRound);            
+                    SetCurrentRound(currentRound);
+
+                if (currentRound == maxRound -1)
+                {
+                    actionCardsPlayManager.setReadyEndGame(true);
+                }                            
                 
                 if (currentRound % (roundsPerSection + 1) == 0)
                 {
@@ -136,8 +141,10 @@ public class ProgressManager : MonoBehaviour
                     pointGridPlayManager.SetGridPlayResult(pointGridPlayResult.None);
 
                     //break function
-                    pointGridPlayManager.BreakPointGridGame(breakTimes[(currentRound / (roundsPerSection + 1)) - 1]);
-                    inputBlock(inputBlockTimeTest);
+                    int breakRound = (currentRound / (roundsPerSection + 1)) - 1;
+                    pointGridPlayManager.BreakPointGridGame(breakTimes[breakRound]);
+                    // inputBlock(inputBlockTimeTest);
+                    inputBlock(breakTimes[breakRound]);
                 }
                 else
                 {
@@ -181,5 +188,10 @@ public class ProgressManager : MonoBehaviour
     {
         isInputBlock = value;
         Debug.Log("Set isInputBlock to " + value);
+    }
+
+    public void endGame()
+    {
+        Debug.Log("Game Over");
     }
 }
