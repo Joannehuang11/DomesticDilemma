@@ -229,4 +229,9 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
     {
         buttonComponent.enabled = isEnable;
     }
+    
+    public int getCoinCost()
+    {
+        return coinCost;
+    }
 }

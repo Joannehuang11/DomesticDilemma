@@ -58,4 +58,10 @@ public class SceneManager : MonoBehaviour
 
         audioManager.playClickSound();
     }
+
+    public void skipIntro()
+    {
+        currentSceneIndex = 4;
+        setScene(currentSceneIndex);
+    }
 }

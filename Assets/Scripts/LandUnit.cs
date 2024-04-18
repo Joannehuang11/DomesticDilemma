@@ -25,6 +25,7 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
     public GameObject landCardsDatasObj;
     LandCardsDatas landCardsDatas;
     Button buttonComponent;
+    public List<GameObject> linesObj;
 
     
     // Start is called before the first frame update
@@ -57,13 +58,13 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
             territoryPlayingState currentTerritoryPlayingState = territoryPlayManager.currentTerritoryPlayingState;
             int selectedActionCardNo = actionCardsPlayManager.selectedActionCardNo;
 
-            if (selectedActionCardNo != -1 && currentTerritoryPlayingState == territoryPlayingState.Waiting)
+            if (selectedActionCardNo > 0 && currentTerritoryPlayingState == territoryPlayingState.Waiting)
             {
                 int selectingPlayerNo = actionCardsPlayManager.getSelectingPlayerNo();
                 int selectingCoinCost = actionCardsPlayManager.getSelectedCoinCost();
                 List<Sprite> selectedCardImgs = actionCardsPlayManager.getSelectedCardImgs();
 
-                if (ownerNo == -1)
+                if (ownerNo < 0)
                 {
                     ownerNo = selectingPlayerNo;
                     isPlaced = true;
@@ -143,7 +144,9 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
 
     public void setButtonEnabled(bool isEnable)
     {
-        if (isPlaced)
+        int selectedActionCardNo = actionCardsPlayManager.selectedActionCardNo;
+
+        if (isPlaced || selectedActionCardNo == 0)
         {
             buttonComponent.enabled = false;
         }
