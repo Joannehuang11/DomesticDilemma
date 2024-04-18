@@ -2024,6 +2024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioManagerObj: {fileID: 1420976722}
+  LandCardsDatasObk: {fileID: 1011542164}
   currentTerritoryPlayingState: 0
   GamePlayUI: {fileID: 1650856435}
 --- !u!4 &220041615

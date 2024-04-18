@@ -16,6 +16,9 @@ public class TerritoryPlayManager : MonoBehaviour
     // public GameObject player1;
     public GameObject audioManagerObj;
     AudioManager audioManager;
+    public GameObject LandCardsDatasObk;
+    LandCardsDatas landCardsDatas;
+    private List<GameObject> landCards;
 
     public territoryPlayingState currentTerritoryPlayingState;
 
@@ -28,6 +31,9 @@ public class TerritoryPlayManager : MonoBehaviour
     void Start()
     {   
         audioManager = audioManagerObj.GetComponent<AudioManager>();
+        landCardsDatas = LandCardsDatasObk.GetComponent<LandCardsDatas>();
+        landCards = landCardsDatas.landCards;
+
         setTerritoryPlayingState(territoryPlayingState.None);
     }
 
@@ -47,15 +53,19 @@ public class TerritoryPlayManager : MonoBehaviour
         switch (currentTerritoryPlayingState)
         {
             case territoryPlayingState.None:
+                setLandCardsButtonEnabled(false);
                 // Debug.Log("territoryPlayingState is None");
                 break;
             case territoryPlayingState.Waiting:
+                setLandCardsButtonEnabled(true);
                 // Debug.Log("territoryPlayingState is Waiting");
                 break;
             case territoryPlayingState.P0Placed:
+                setLandCardsButtonEnabled(false);
                 // Debug.Log("territoryPlayingState is P0Placed");
                 break;
             case territoryPlayingState.P1Placed:
+                setLandCardsButtonEnabled(false);
                 // Debug.Log("territoryPlayingState is P1Placed");
                 break;
         }
@@ -70,6 +80,14 @@ public class TerritoryPlayManager : MonoBehaviour
     public void clickLandCardSoundPlay()
     {
         audioManager.playClickSound();
-        Debug.Log("clickLandCardSoundPlay");
+        // Debug.Log("clickLandCardSoundPlay");
+    }
+
+    public void setLandCardsButtonEnabled(bool isEnable)
+    {
+        foreach (GameObject card in landCards)
+        {
+            card.GetComponent<LandUnit>().setButtonEnabled(isEnable);
+        }
     }
 }

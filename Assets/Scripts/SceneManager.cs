@@ -35,7 +35,7 @@ public class SceneManager : MonoBehaviour
         if (index == scenes.Count - 1)
         {
             progressManager.setIsInputBlock(false);
-            Debug.Log("End of intro.");
+            // Debug.Log("End of intro.");
         }
         
         for (int i = 0; i < scenes.Count; i++)

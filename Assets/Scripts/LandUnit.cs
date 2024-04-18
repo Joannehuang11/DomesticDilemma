@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using Unity.VisualScripting;
 
 public class LandUnit : MonoBehaviour, IPointerClickHandler
 {
     public int landNo;
     public int ownerNo;
     public Image landImg;
+    public bool isPlaced;
 
     //interface
     public GameObject player0Obj;
@@ -24,6 +24,7 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
     ActionCardsPlayManager actionCardsPlayManager;
     public GameObject landCardsDatasObj;
     LandCardsDatas landCardsDatas;
+    Button buttonComponent;
 
     
     // Start is called before the first frame update
@@ -36,6 +37,9 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
         territoryPlayManager = territoryPlayManagerObj.GetComponent<TerritoryPlayManager>();
         progressManager = progressManagerObj.GetComponent<ProgressManager>();   
         landCardsDatas = landCardsDatasObj.GetComponent<LandCardsDatas>();   
+        buttonComponent = GetComponent<Button>();
+
+        isPlaced = false;
     }
 
     // Update is called once per frame
@@ -62,6 +66,7 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
                 if (ownerNo == -1)
                 {
                     ownerNo = selectingPlayerNo;
+                    isPlaced = true;
 
                     if (setOwnLandCards(selectingPlayerNo, selectedCardImgs))
                     {
@@ -133,6 +138,18 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
         else
         {
             return false;
+        }
+    }
+
+    public void setButtonEnabled(bool isEnable)
+    {
+        if (isPlaced)
+        {
+            buttonComponent.enabled = false;
+        }
+        else 
+        {
+            buttonComponent.enabled = isEnable;
         }
     }
 }
