@@ -28,23 +28,21 @@ public class SceneManager : MonoBehaviour
 
     public void setScene(int index)
     {
+        if (index == scenes.Count - 1)
+        {
+            progressManager.setIsInputBlock(false);
+            Debug.Log("End of intro.");
+        }
+        
         for (int i = 0; i < scenes.Count; i++)
         {
-            if (i == scenes.Count)
+            if (i != index)
             {
                 scenes[i].SetActive(false);
-                progressManager.setIsInputBlock(false);
             }
-            else
+            else 
             {
-                if (i != index)
-                {
-                    scenes[i].SetActive(false);
-                }
-                else 
-                {
-                    scenes[i].SetActive(true);
-                }
+                scenes[i].SetActive(true);
             }
         }
     }

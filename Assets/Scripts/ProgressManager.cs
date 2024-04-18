@@ -113,10 +113,9 @@ public class ProgressManager : MonoBehaviour
             progressBarUI.transform.GetChild(currentRound - 1).GetComponent<RoundProgressUnit>().updateImg(true);
         }
     }
-
+    
     public void startGame()
     {
-        Debug.Log("Start Game");
         if (!isInputBlock)
         {
             if (currentRound < maxRound)
@@ -181,5 +180,6 @@ public class ProgressManager : MonoBehaviour
     public void setIsInputBlock(bool value)
     {
         isInputBlock = value;
+        Debug.Log("Set isInputBlock to " + value);
     }
 }
