@@ -5,7 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 
-public class ActionCardManager : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
+public class ActionCardManager : MonoBehaviour, IPointerClickHandler
+//IPointerEnterHandler, IPointerExitHandler
 {
     public int cardNo;
 
