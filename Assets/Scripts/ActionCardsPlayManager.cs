@@ -1,9 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using TMPro;
-using Unity.VisualScripting.Antlr3.Runtime;
 
 public enum actionCardsPlayingState
 {
@@ -26,6 +23,8 @@ public class ActionCardsPlayManager : MonoBehaviour
     TerritoryPlayManager territoryPlayManager;
     public GameObject progressManagerObj;
     ProgressManager progressManager;
+    public GameObject audioManagerObj;
+    AudioManager audioManager;
 
     public actionCardsPlayingState currentActionCardsPlayingState;
 
@@ -48,6 +47,7 @@ public class ActionCardsPlayManager : MonoBehaviour
         pointGridPlayManager = pointGridPlayManagerObj.GetComponent<PointGridPlayManager>();
         territoryPlayManager = territoryPlayManagerObj.GetComponent<TerritoryPlayManager>();
         progressManager = progressManagerObj.GetComponent<ProgressManager>();
+        audioManager = audioManagerObj.GetComponent<AudioManager>();
 
         setActionCardsPlayingState(actionCardsPlayingState.None, false);
         selectedActionCardNo = -1;
@@ -148,6 +148,8 @@ public class ActionCardsPlayManager : MonoBehaviour
             territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
             // pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.ResultAction);
 
+            //play click sound
+            audioManager.playClickSound();
         }
         else if (playerNo == 1)
         {
@@ -171,6 +173,9 @@ public class ActionCardsPlayManager : MonoBehaviour
 
             //restart the game
             progressManager.startGame();
+
+            //play click sound
+            audioManager.playClickSound();
         }
     }
 
@@ -188,5 +193,17 @@ public class ActionCardsPlayManager : MonoBehaviour
     public List<Sprite> getSelectedCardImgs()
     {
         return actionCards[selectedActionCardNo].GetComponent<ActionCardManager>().GetCardImages();
+    }
+
+    public void clickActionCardSoundPlay(bool isSelected)
+    {
+        if (isSelected)
+        {
+            audioManager.playClickSound();
+        }
+        else
+        {
+            audioManager.playErrorSound();
+        }
     }
 }

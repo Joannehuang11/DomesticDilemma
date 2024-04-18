@@ -12,20 +12,22 @@ public enum territoryPlayingState
 
 public class TerritoryPlayManager : MonoBehaviour
 {
-    public GameObject player0;
-    public GameObject player1;
-
+    // public GameObject player0;
+    // public GameObject player1;
+    public GameObject audioManagerObj;
+    AudioManager audioManager;
 
     public territoryPlayingState currentTerritoryPlayingState;
 
-    public GameObject landCardsDatasObj;
+    // public GameObject landCardsDatasObj;
 
     //UI
     public GameObject GamePlayUI;
     
     // Start is called before the first frame update
     void Start()
-    {        
+    {   
+        audioManager = audioManagerObj.GetComponent<AudioManager>();
         setTerritoryPlayingState(territoryPlayingState.None);
     }
 
@@ -63,5 +65,11 @@ public class TerritoryPlayManager : MonoBehaviour
     public territoryPlayingState GetTerritoryPlayingState()
     {
         return currentTerritoryPlayingState;
+    }
+
+    public void clickLandCardSoundPlay()
+    {
+        audioManager.playClickSound();
+        Debug.Log("clickLandCardSoundPlay");
     }
 }

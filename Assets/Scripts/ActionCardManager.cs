@@ -110,11 +110,14 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
                             territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.Waiting);
                             SetActionCardsPlayingState(actionCardsPlayingState.P0Selected, true);
 
+                            actionCardsPlayManager.clickActionCardSoundPlay(true);
                         } 
                         else
                         {
                             territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
                             SetActionCardsPlayingState(actionCardsPlayingState.Waiting, false);
+
+                            actionCardsPlayManager.clickActionCardSoundPlay(false);
                         }
                     }
                     else if (selectingPlayerNo == 1)
@@ -124,11 +127,15 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
                         {
                             territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.Waiting);
                             SetActionCardsPlayingState(actionCardsPlayingState.P1Selected, true);
+
+                            actionCardsPlayManager.clickActionCardSoundPlay(true);
                         }
                         else
                         {
                             territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
                             SetActionCardsPlayingState(actionCardsPlayingState.Waiting, false);
+
+                            actionCardsPlayManager.clickActionCardSoundPlay(false);
                         }
                     }
                     pointGridPlayManager.SetGridPlayResult(pointGridPlayResult.None);
@@ -145,11 +152,15 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
                     {
                         territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.Waiting);
                         SetActionCardsPlayingState(actionCardsPlayingState.P0Selected, true);
+
+                        actionCardsPlayManager.clickActionCardSoundPlay(true);
                     }
                     else
                     {
                         territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
                         SetActionCardsPlayingState(actionCardsPlayingState.P0Selected, false);
+
+                        actionCardsPlayManager.clickActionCardSoundPlay(false);
                     }
                     break;
                 case actionCardsPlayingState.P1Selected:
@@ -163,11 +174,15 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
                     {
                         territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.Waiting);
                         SetActionCardsPlayingState(actionCardsPlayingState.P1Selected, true);
+
+                        actionCardsPlayManager.clickActionCardSoundPlay(true);
                     }
                     else
                     {
                         territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
-                        SetActionCardsPlayingState(actionCardsPlayingState.P1Selected, false);                        
+                        SetActionCardsPlayingState(actionCardsPlayingState.P1Selected, false);    
+
+                        actionCardsPlayManager.clickActionCardSoundPlay(false);                    
                     }
                     break;
             }

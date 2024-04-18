@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -76,7 +76,6 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
                             actionCardsPlayManager.deSelectAllCards();
                             player0Manager.SetPlayerStatus(playerStatus.Action, 0, false, false);
                             actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.Waiting, false);
-
                         }
                         else if (selectingPlayerNo == 1)
                         {
@@ -90,6 +89,9 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
                             player1Manager.SetPlayerStatus(playerStatus.Action, 0, false, false);
                             actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.Waiting, false);
                         }
+
+                        //play click sound
+                        territoryPlayManager.clickLandCardSoundPlay();
                     }
                 }
             }
