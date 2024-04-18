@@ -37,10 +37,10 @@ public class PointGridPlayManager : MonoBehaviour
     PlayerManager player1Manager;
     public GameObject actionCardsPlayManagerObj;
     ActionCardsPlayManager actionCardsPlayManager;
-    public GameObject territoryPlayManagerObj;
-    TerritoryPlayManager territoryPlayManager;
-    public GameObject progressManagerObj;
-    ProgressManager progressManager;
+    // public GameObject territoryPlayManagerObj;
+    // TerritoryPlayManager territoryPlayManager;
+    // private GameObject progressManagerObj;
+    // ProgressManager progressManager;
 
 
     // Start is called before the first frame update
@@ -48,10 +48,11 @@ public class PointGridPlayManager : MonoBehaviour
     {
         player0Manager = player0Obj.GetComponent<PlayerManager>();
         player1Manager = player1Obj.GetComponent<PlayerManager>();
-        
         actionCardsPlayManager = actionCardsPlayManagerObj.GetComponent<ActionCardsPlayManager>();
-        territoryPlayManager = territoryPlayManagerObj.GetComponent<TerritoryPlayManager>();
-        progressManager = progressManagerObj.GetComponent<ProgressManager>();
+        // territoryPlayManager = territoryPlayManagerObj.GetComponent<TerritoryPlayManager>();
+        
+        // progressManagerObj = GameObject.Find("ProgressManager");
+        // progressManager = progressManagerObj.GetComponent<ProgressManager>();
 
         SetGridPlayingState(pointGridPlayingState.None);
         // SetGridPlayResult(pointGridPlayResult.None);

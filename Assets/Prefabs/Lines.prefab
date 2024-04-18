@@ -90,8 +90,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 110c459a515484e1da973c7aa1783c29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ownerNo: 0
   lineType: 3
   placedLineThickness: 8
+  landCardObj: {fileID: 0}
 --- !u!114 &5623150459816260081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,8 +257,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 110c459a515484e1da973c7aa1783c29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ownerNo: 0
   lineType: 0
   placedLineThickness: 8
+  landCardObj: {fileID: 0}
 --- !u!114 &4970089719850144981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,8 +424,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 110c459a515484e1da973c7aa1783c29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ownerNo: 0
   lineType: 1
   placedLineThickness: 8
+  landCardObj: {fileID: 0}
 --- !u!114 &6952055706842203368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -585,8 +591,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 110c459a515484e1da973c7aa1783c29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ownerNo: 0
   lineType: 2
   placedLineThickness: 8
+  landCardObj: {fileID: 0}
 --- !u!114 &8994294634022854231
 MonoBehaviour:
   m_ObjectHideFlags: 0

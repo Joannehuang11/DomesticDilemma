@@ -14,7 +14,9 @@ public class TerritoryPlayManager : MonoBehaviour
 {
     // public GameObject player0;
     // public GameObject player1;
-    public GameObject audioManagerObj;
+    public GameObject actionCardsPlayManagerObj;
+    ActionCardsPlayManager actionCardsPlayManager;
+    private GameObject audioManagerObj;
     AudioManager audioManager;
     public GameObject LandCardsDatasObk;
     LandCardsDatas landCardsDatas;
@@ -30,7 +32,9 @@ public class TerritoryPlayManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
+        audioManagerObj = GameObject.Find("AudioManager");
         audioManager = audioManagerObj.GetComponent<AudioManager>();
+        actionCardsPlayManager = actionCardsPlayManagerObj.GetComponent<ActionCardsPlayManager>();
         landCardsDatas = LandCardsDatasObk.GetComponent<LandCardsDatas>();
         landCards = landCardsDatas.landCards;
 
@@ -46,6 +50,7 @@ public class TerritoryPlayManager : MonoBehaviour
     public void setTerritoryPlayingState(territoryPlayingState newState)
     {
         currentTerritoryPlayingState = newState;
+        int selectedActionCardNo = actionCardsPlayManager.selectedActionCardNo;
 
         //update UI
         GamePlayUI.GetComponent<UpdateTerritoryPlayBg>().UpdateBg(currentTerritoryPlayingState);
@@ -57,15 +62,24 @@ public class TerritoryPlayManager : MonoBehaviour
                 // Debug.Log("territoryPlayingState is None");
                 break;
             case territoryPlayingState.Waiting:
-                setLandCardsButtonEnabled(true);
+                if (selectedActionCardNo == 0)
+                {
+                    setLineCardButtonEnabled(true);
+                }
+                else
+                {
+                    setLandCardsButtonEnabled(true);
+                }
                 // Debug.Log("territoryPlayingState is Waiting");
                 break;
             case territoryPlayingState.P0Placed:
                 setLandCardsButtonEnabled(false);
+                setLineCardButtonEnabled(false);
                 // Debug.Log("territoryPlayingState is P0Placed");
                 break;
             case territoryPlayingState.P1Placed:
                 setLandCardsButtonEnabled(false);
+                setLineCardButtonEnabled(false);
                 // Debug.Log("territoryPlayingState is P1Placed");
                 break;
         }
@@ -88,6 +102,18 @@ public class TerritoryPlayManager : MonoBehaviour
         foreach (GameObject card in landCards)
         {
             card.GetComponent<LandUnit>().setButtonEnabled(isEnable);
+        }
+    }
+
+    public void setLineCardButtonEnabled(bool isEnable)
+    {
+        foreach (GameObject card in landCards)
+        {
+            foreach (GameObject line in card.GetComponent<LandUnit>().lineObjs)
+            {
+                line.GetComponent<LineUnitManager>().setButtonEnabled(isEnable);
+            }
+            
         }
     }
 }

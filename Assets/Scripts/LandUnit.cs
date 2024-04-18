@@ -25,7 +25,7 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
     public GameObject landCardsDatasObj;
     LandCardsDatas landCardsDatas;
     Button buttonComponent;
-    public List<GameObject> linesObj;
+    public List<GameObject> lineObjs;
 
     
     // Start is called before the first frame update

@@ -21,9 +21,9 @@ public class ActionCardsPlayManager : MonoBehaviour
     PointGridPlayManager pointGridPlayManager;
     public GameObject territoryPlayManagerObj;
     TerritoryPlayManager territoryPlayManager;
-    public GameObject progressManagerObj;
+    private GameObject progressManagerObj;
     ProgressManager progressManager;
-    public GameObject audioManagerObj;
+    private GameObject audioManagerObj;
     AudioManager audioManager;
 
     public actionCardsPlayingState currentActionCardsPlayingState;
@@ -46,7 +46,10 @@ public class ActionCardsPlayManager : MonoBehaviour
         
         pointGridPlayManager = pointGridPlayManagerObj.GetComponent<PointGridPlayManager>();
         territoryPlayManager = territoryPlayManagerObj.GetComponent<TerritoryPlayManager>();
+        
+        progressManagerObj = GameObject.Find("ProgressManager");  
         progressManager = progressManagerObj.GetComponent<ProgressManager>();
+        audioManagerObj = GameObject.Find("AudioManager");
         audioManager = audioManagerObj.GetComponent<AudioManager>();
 
         setActionCardsPlayingState(actionCardsPlayingState.None, false);

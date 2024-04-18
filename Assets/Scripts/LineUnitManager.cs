@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public enum lineType
 {
@@ -31,12 +32,14 @@ public class LineUnitManager : MonoBehaviour, IPointerClickHandler
     PlayerManager player0Manager;
     private GameObject player1Obj;
     PlayerManager player1Manager;
+    Button buttonComponent;
     
     
     // Start is called before the first frame update
     void Start()
     {
         lineRectTransform = GetComponent<RectTransform>();
+        buttonComponent = GetComponent<Button>();
         hoScale = new Vector3(1, placedLineThickness, 1);
         veScale = new Vector3(placedLineThickness, 1, 1);
 
@@ -132,5 +135,17 @@ public class LineUnitManager : MonoBehaviour, IPointerClickHandler
                 break;
         }
         
+    }
+
+    public void setButtonEnabled(bool isEnable)
+    {
+        if (ownerNo < 0)
+        {
+            buttonComponent.enabled = false;
+        }
+        else 
+        {
+            buttonComponent.enabled = isEnable;
+        }
     }
 }
