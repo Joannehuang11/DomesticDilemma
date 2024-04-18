@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class SceneManager : MonoBehaviour
 {
-    public List<GameObject> scenes;
+    public List<GameObject> introScenes;
+    public GameObject endScene;
     public int currentSceneIndex = 0;
 
     private GameObject progressManagerObj;
@@ -35,21 +36,23 @@ public class SceneManager : MonoBehaviour
 
     public void setScene(int index)
     {
-        if (index == scenes.Count - 1)
+        if (index == introScenes.Count - 1)
         {
             progressManager.setIsInputBlock(false);
             // Debug.Log("End of intro.");
         }
         
-        for (int i = 0; i < scenes.Count; i++)
+        for (int i = 0; i < introScenes.Count; i++)
         {
             if (i != index)
             {
-                scenes[i].SetActive(false);
+                introScenes[i].SetActive(false);
+                endScene.SetActive(false);
             }
             else 
             {
-                scenes[i].SetActive(true);
+                introScenes[i].SetActive(true);
+                endScene.SetActive(false);
             }
         }
     }
@@ -65,6 +68,18 @@ public class SceneManager : MonoBehaviour
     public void skipIntro()
     {
         currentSceneIndex = 4;
+        setScene(currentSceneIndex);
+    }
+
+    public void endGameScene()
+    {
+        progressManager.setIsInputBlock(true);
+        endScene.SetActive(true);
+    }
+
+    public void restartGameScene()
+    {
+        currentSceneIndex = introScenes.Count;
         setScene(currentSceneIndex);
     }
 }

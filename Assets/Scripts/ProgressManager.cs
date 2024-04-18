@@ -15,6 +15,8 @@ public class ProgressManager : MonoBehaviour
     ActionCardsPlayManager actionCardsPlayManager;
     public GameObject territoryPlayManagerObj;
     TerritoryPlayManager territoryPlayManager;
+    private GameObject sceneManagerObg;
+    SceneManager SceneManager;
     
     
     //progress bar
@@ -42,6 +44,9 @@ public class ProgressManager : MonoBehaviour
         pointGridPlayManager = pointGridPlayManagerObj.GetComponent<PointGridPlayManager>();
         actionCardsPlayManager = actionCardsPlayManagerObj.GetComponent<ActionCardsPlayManager>();
         territoryPlayManager = territoryPlayManagerObj.GetComponent<TerritoryPlayManager>();
+
+        sceneManagerObg = GameObject.Find("SceneManager");
+        SceneManager = sceneManagerObg.GetComponent<SceneManager>();
         
         maxRound = roundsPerSection * (breakTimes.Count+1) + breakTimes.Count;
         currentRound = 0;
@@ -57,10 +62,17 @@ public class ProgressManager : MonoBehaviour
 
     public void SetCurrentRound(int round)
     {
+        Debug.Log("Set Current Round: " + round);
+        
         currentRound = round;
-        // Debug.Log("Start Round from progressManager: " + currentRound);
-
-        updateProgressBarUI(currentRound);
+        if (currentRound == 0)
+        {
+            resetProgressBarUI();
+        }
+        else 
+        {
+            updateProgressBarUI(currentRound);
+        }
     }
     
     public int GetCurrentRound()
@@ -113,6 +125,21 @@ public class ProgressManager : MonoBehaviour
             progressBarUI.transform.GetChild(currentRound - 1).GetComponent<RoundProgressUnit>().updateImg(true);
         }
     }
+
+    public void resetProgressBarUI()
+    {
+        for (int i = 0; i < maxRound; i++)
+        {
+            if (i % (roundsPerSection + 1) == 5)
+            {
+                progressBarUI.transform.GetChild(i).GetComponent<BreakProgressUnit>().updateImg(false);
+            }
+            else
+            {
+                progressBarUI.transform.GetChild(i).GetComponent<RoundProgressUnit>().updateImg(false);
+            }
+        }
+    }
     
     public void startGame()
     {
@@ -121,12 +148,7 @@ public class ProgressManager : MonoBehaviour
             if (currentRound < maxRound)
             {
                     currentRound++;
-                    SetCurrentRound(currentRound);
-
-                if (currentRound == maxRound -1)
-                {
-                    actionCardsPlayManager.setReadyEndGame(true);
-                }                            
+                    SetCurrentRound(currentRound);                          
                 
                 if (currentRound % (roundsPerSection + 1) == 0)
                 {
@@ -162,7 +184,7 @@ public class ProgressManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("Game Over");
+                endGame();
             } 
         }
     }
@@ -192,6 +214,19 @@ public class ProgressManager : MonoBehaviour
 
     public void endGame()
     {
+        SceneManager.endGameScene();
         Debug.Log("Game Over");
+    }
+
+    public void restartGame()
+    {
+        currentRound = 0;
+        SetCurrentRound(currentRound);
+        setIsInputBlock(false);
+        resetProgressBarUI();
+        SceneManager.restartGameScene();
+
+        Debug.Log("Restart Game");
+        startGame();
     }
 }

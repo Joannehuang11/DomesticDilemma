@@ -65,7 +65,7 @@ public class LineUnitManager : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("Click on LineUnitType: " + lineType);
+        // Debug.Log("Click on LineUnitType: " + lineType);
 
         if(!progressManager.isInputBlock)
         {

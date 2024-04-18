@@ -33,7 +33,6 @@ public class ActionCardsPlayManager : MonoBehaviour
     public int selectedCoinCost;
     public int selectedActionCardNo;
     public int selectingPlayerNo;
-
     //UI
     public GameObject GamePlayUI;
 
@@ -136,10 +135,7 @@ public class ActionCardsPlayManager : MonoBehaviour
     public void CompleteActions(int playerNo)
     {
         if (playerNo == 0)
-        {
-            //change cost -> onClick Land
-            // player0Manager.SetPlayerStatus(playerStatus.Hold, selectedCoinCost, false, true);
-            
+        {   
             //reset UI
             player0Manager.SetPlayerStatus(playerStatus.Hold, 0, true, false);
             player1Manager.SetPlayerStatus(playerStatus.Action, 0, false, false);
@@ -159,10 +155,7 @@ public class ActionCardsPlayManager : MonoBehaviour
             audioManager.playClickSound();
         }
         else if (playerNo == 1)
-        {
-            //change cost -> onClick Land
-            // player1Manager.SetPlayerStatus(playerStatus.Action, selectedCoinCost, false, true);           
-            
+        {           
             //reset UI
             player0Manager.SetPlayerStatus(playerStatus.Selecting, 0, true, false);            
             player1Manager.SetPlayerStatus(playerStatus.Selecting, 0, true, false);
