@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 
-public class ActionCardManager : MonoBehaviour, IPointerClickHandler
+public class ActionCardManager : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public int cardNo;
 
@@ -39,6 +39,9 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
     public Image bgImg;
     public Sprite activeBgImg;
     public Sprite inactiveBgImg;
+
+    public Color hoverColor;
+    public Color originalColor;
     
     // Start is called before the first frame update
     void Start()
@@ -202,4 +205,22 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
     {
         return images;
     }
+
+    // public void OnPointerEnter(PointerEventData eventData)
+    // {
+    //     Debug.Log("Mouse Enter");
+    //     foreach(Image img in thumbnailImgs)
+    //     {
+    //         img.color = hoverColor;
+    //     }
+    // }
+
+    // public void OnPointerExit(PointerEventData eventData)
+    // {
+    //     Debug.Log("Mouse Exit");
+    //     foreach(Image img in thumbnailImgs)
+    //     {
+    //         img.color = originalColor;
+    //     }
+    // }
 }

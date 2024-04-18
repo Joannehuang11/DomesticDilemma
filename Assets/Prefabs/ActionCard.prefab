@@ -91,10 +91,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardNo: 0
+  player0Obj: {fileID: 0}
+  player1Obj: {fileID: 0}
   actionCardsPlayManagerObj: {fileID: 0}
   territoryPlayManagerObj: {fileID: 0}
   progressManagerObj: {fileID: 0}
   actionCardsDatasObj: {fileID: 0}
+  pointGridPlayManagerObj: {fileID: 0}
   isSelected: 0
   thumbnailImgs:
   - {fileID: 6639602717920542836}
@@ -103,6 +106,8 @@ MonoBehaviour:
   bgImg: {fileID: 4690905652525489982}
   activeBgImg: {fileID: 21300000, guid: 179b82c01d05b4c288a5e6ef7b909847, type: 3}
   inactiveBgImg: {fileID: 21300000, guid: e59938fa4a1b644098bfcb43c64fce0a, type: 3}
+  hoverColor: {r: 1, g: 0.9728835, b: 0, a: 0}
+  originalColor: {r: 1, g: 1, b: 1, a: 0}
 --- !u!114 &9026301609489340261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,6 +122,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates:
   - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 36241831126544825}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 36241831126544825}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
     callback:
       m_PersistentCalls:
         m_Calls:

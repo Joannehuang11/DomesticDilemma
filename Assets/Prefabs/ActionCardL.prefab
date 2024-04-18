@@ -165,10 +165,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardNo: 0
+  player0Obj: {fileID: 0}
+  player1Obj: {fileID: 0}
   actionCardsPlayManagerObj: {fileID: 0}
   territoryPlayManagerObj: {fileID: 0}
   progressManagerObj: {fileID: 0}
   actionCardsDatasObj: {fileID: 0}
+  pointGridPlayManagerObj: {fileID: 0}
   isSelected: 0
   thumbnailImgs:
   - {fileID: 1706098969035733014}
@@ -178,6 +181,8 @@ MonoBehaviour:
   bgImg: {fileID: 8661531456366115031}
   activeBgImg: {fileID: 21300000, guid: 21a2c8b63ed4246dcb798b7daaed3e80, type: 3}
   inactiveBgImg: {fileID: 21300000, guid: b6c47856324a74c8db2e5a9d71ff7ca8, type: 3}
+  hoverColor: {r: 1, g: 0.8533139, b: 0, a: 0}
+  originalColor: {r: 1, g: 1, b: 1, a: 0}
 --- !u!1 &4988024957700484504
 GameObject:
   m_ObjectHideFlags: 0
