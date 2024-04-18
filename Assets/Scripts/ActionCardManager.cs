@@ -26,6 +26,7 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
     ActionCardsDatas actionCardsDatas;
     public GameObject pointGridPlayManagerObj;
     PointGridPlayManager pointGridPlayManager;
+    Button buttonComponent;
 
     private string actionName;
     private List<Sprite> images;
@@ -40,9 +41,6 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
     public Image bgImg;
     public Sprite activeBgImg;
     public Sprite inactiveBgImg;
-
-    public Color hoverColor;
-    public Color originalColor;
     
     // Start is called before the first frame update
     void Start()
@@ -54,6 +52,7 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
         actionCardsDatas = actionCardsDatasObj.GetComponent<ActionCardsDatas>();
         progressManager = progressManagerObj.GetComponent<ProgressManager>();
         pointGridPlayManager = pointGridPlayManagerObj.GetComponent<PointGridPlayManager>();
+        buttonComponent = GetComponent<Button>();
     
         actionName = actionCardsDatas.getName(cardNo);
         images = actionCardsDatas.getImgs(cardNo);
@@ -226,21 +225,8 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
         return images;
     }
 
-    // public void OnPointerEnter(PointerEventData eventData)
-    // {
-    //     Debug.Log("Mouse Enter");
-    //     foreach(Image img in thumbnailImgs)
-    //     {
-    //         img.color = hoverColor;
-    //     }
-    // }
-
-    // public void OnPointerExit(PointerEventData eventData)
-    // {
-    //     Debug.Log("Mouse Exit");
-    //     foreach(Image img in thumbnailImgs)
-    //     {
-    //         img.color = originalColor;
-    //     }
-    // }
+    public void setButtonActive(bool isEnable)
+    {
+        buttonComponent.enabled = isEnable;
+    }
 }

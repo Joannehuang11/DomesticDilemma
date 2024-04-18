@@ -70,15 +70,19 @@ public class ActionCardsPlayManager : MonoBehaviour
         {
             case actionCardsPlayingState.None:
                 deSelectAllCards();
+                setActionCardsButtonEnabled(false);
                 // Debug.Log("actionCardsPlayingState is None");
                 break;
             case actionCardsPlayingState.Waiting:
+                setActionCardsButtonEnabled(true);
                 // Debug.Log("actionCardsPlayingState is Waiting");
                 break;
             case actionCardsPlayingState.P0Selected:
+                setActionCardsButtonEnabled(true);
                 // Debug.Log("actionCardsPlayingState is P0Selected");
                 break;
             case actionCardsPlayingState.P1Selected:
+                setActionCardsButtonEnabled(true);
                 // Debug.Log("actionCardsPlayingState is P1Selected");
                 break;
         }
@@ -204,6 +208,14 @@ public class ActionCardsPlayManager : MonoBehaviour
         else
         {
             audioManager.playErrorSound();
+        }
+    }
+
+    public void setActionCardsButtonEnabled(bool isEnable)
+    {
+        foreach (GameObject card in actionCards)
+        {
+            card.GetComponent<ActionCardManager>().setButtonActive(isEnable);
         }
     }
 }
