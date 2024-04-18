@@ -10,11 +10,15 @@ public class SceneManager : MonoBehaviour
 
     public GameObject progressManagerObj;
     ProgressManager progressManager;
+
+    public GameObject audioManagerObj;
+    AudioManager audioManager;
     
     // Start is called before the first frame update
     void Start()
     {
         progressManager = progressManagerObj.GetComponent<ProgressManager>();
+        audioManager = audioManagerObj.GetComponent<AudioManager>();
 
         progressManager.setIsInputBlock(true);
         setScene(currentSceneIndex);
@@ -51,5 +55,7 @@ public class SceneManager : MonoBehaviour
     {
         currentSceneIndex++;
         setScene(currentSceneIndex);
+
+        audioManager.playClickSound();
     }
 }
