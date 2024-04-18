@@ -12,13 +12,14 @@ GameObject:
   - component: {fileID: 1464797334366282429}
   - component: {fileID: 5588046646459159654}
   - component: {fileID: 4821618581751895271}
+  - component: {fileID: 7885462125398153202}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ActionDoneBTN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8129698072871039572
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32,11 +33,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1426759585757559162}
-  m_Father: {fileID: 8271414172175511752}
+  m_Father: {fileID: 4478855896993657891}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -20}
+  m_AnchoredPosition: {x: 80, y: -204}
   m_SizeDelta: {x: 100, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1464797334366282429
@@ -121,6 +122,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7885462125398153202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171770355612508181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86d46737ba2d747d49a30461b4062067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmount: 5
+  duration: 0.5
 --- !u!1 &1310419766596461830
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,7 +979,7 @@ MonoBehaviour:
   playerStatusSignSymbol: {fileID: 8867926463576749229}
   playerStatusCard: {fileID: 8962525820216793704}
   instructionsUI: {fileID: 3425838431708933873}
-  actionDoneUI: {fileID: 4919961464157928380}
+  actionDoneUI: {fileID: 171770355612508181}
   moreCoinsTextTMP: {fileID: 2416490580148342998}
   moreCoinsText: Need more coins
 --- !u!1 &4381847838113459294
@@ -1159,69 +1174,6 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 3
   m_Spacing: 12
-  m_ChildForceExpandWidth: 0
-  m_ChildForceExpandHeight: 0
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
---- !u!1 &4919961464157928380
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8271414172175511752}
-  - component: {fileID: 8581433166792472987}
-  m_Layer: 5
-  m_Name: ActionDones
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &8271414172175511752
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4919961464157928380}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8129698072871039572}
-  m_Father: {fileID: 4478855896993657891}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 80, y: -204}
-  m_SizeDelta: {x: 100, y: 40}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8581433166792472987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4919961464157928380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 1
-  m_Spacing: 0
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -1894,7 +1846,7 @@ RectTransform:
   - {fileID: 3384008595190522524}
   - {fileID: 2152969158836283103}
   - {fileID: 6094357065159236746}
-  - {fileID: 8271414172175511752}
+  - {fileID: 8129698072871039572}
   m_Father: {fileID: 7286266839245234857}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
