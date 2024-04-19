@@ -82,4 +82,11 @@ public class SceneManager : MonoBehaviour
         currentSceneIndex = introScenes.Count;
         setScene(currentSceneIndex);
     }
+
+    public void backHomeScene()
+    {
+        currentSceneIndex = 0;
+        // endScene.SetActive(false);
+        setScene(currentSceneIndex);
+    }
 }

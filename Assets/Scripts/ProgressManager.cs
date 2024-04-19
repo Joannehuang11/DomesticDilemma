@@ -229,4 +229,15 @@ public class ProgressManager : MonoBehaviour
         Debug.Log("Restart Game");
         startGame();
     }
+
+    public void backHome()
+    {
+        currentRound = 0;
+        SetCurrentRound(currentRound);
+        setIsInputBlock(true);
+        resetProgressBarUI();
+        SceneManager.backHomeScene();
+
+        Debug.Log("Back Home");
+    }
 }
