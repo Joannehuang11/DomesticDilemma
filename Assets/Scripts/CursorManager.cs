@@ -52,19 +52,23 @@ public class CursorManager : MonoBehaviour
         
         if (isMainGame)
         {
-            Debug.Log("Main game scene.");
+            // Debug.Log("Main game scene.");
             foreach (RaycastResult result in results)
             {
                 if (result.gameObject.GetComponent<Button>() != null)
                 {
-                    foundInteractable = true;
-                    break;
+                    if (result.gameObject.GetComponent<Button>().enabled == true)
+                    {
+                        Debug.Log("Found interactable button: " + result.gameObject.name);
+                        foundInteractable = true;
+                        break;
+                    }
                 }
             } 
         }
         else
         {
-            Debug.Log("Intro scene.");
+            // Debug.Log("Intro scene.");
             foreach (RaycastResult result in results)
             {
                 if (result.gameObject.layer == LayerMask.NameToLayer("MainBTNs"))

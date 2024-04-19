@@ -57,17 +57,20 @@ public class TerritoryPlayManager : MonoBehaviour
 
         switch (currentTerritoryPlayingState)
         {
-            case territoryPlayingState.None:
+            case territoryPlayingState.None:  
                 setLandCardsButtonEnabled(false);
+                setLineCardButtonEnabled(false);
                 // Debug.Log("territoryPlayingState is None");
                 break;
             case territoryPlayingState.Waiting:
                 if (selectedActionCardNo == 0)
                 {
                     setLineCardButtonEnabled(true);
+                    setLandCardsButtonEnabled(false);
                 }
                 else
                 {
+                    setLineCardButtonEnabled(false);
                     setLandCardsButtonEnabled(true);
                 }
                 // Debug.Log("territoryPlayingState is Waiting");
