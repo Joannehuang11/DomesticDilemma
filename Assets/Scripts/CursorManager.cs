@@ -59,7 +59,7 @@ public class CursorManager : MonoBehaviour
                 {
                     if (result.gameObject.GetComponent<Button>().enabled == true)
                     {
-                        Debug.Log("Found interactable button: " + result.gameObject.name);
+                        // Debug.Log("Found interactable button: " + result.gameObject.name);
                         foundInteractable = true;
                         break;
                     }

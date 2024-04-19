@@ -62,7 +62,7 @@ public class ProgressManager : MonoBehaviour
 
     public void SetCurrentRound(int round)
     {
-        Debug.Log("Set Current Round: " + round);
+        // Debug.Log("Set Current Round: " + round);
         
         currentRound = round;
         if (currentRound == 0)
@@ -153,7 +153,7 @@ public class ProgressManager : MonoBehaviour
                 if (currentRound % (roundsPerSection + 1) == 0)
                 {
                     //start break
-                    Debug.Log("Start Break");
+                    // Debug.Log("Start Break");
                     // Debug.Log("Break Time: " + breakTimes[(currentRound / (roundsPerSection + 1)) - 1]);
 
                     //reset
@@ -171,7 +171,7 @@ public class ProgressManager : MonoBehaviour
                 else
                 {
                     //start games
-                    Debug.Log("Start Round");
+                    // Debug.Log("Start Round");
 
                     //update games
                     pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.Selecting);
@@ -209,13 +209,13 @@ public class ProgressManager : MonoBehaviour
     public void setIsInputBlock(bool value)
     {
         isInputBlock = value;
-        Debug.Log("Set isInputBlock to " + value);
+        // Debug.Log("Set isInputBlock to " + value);
     }
 
     public void endGame()
     {
         SceneManager.endGameScene();
-        Debug.Log("Game Over");
+        // Debug.Log("Game Over");
     }
 
     public void restartGame()
@@ -226,7 +226,7 @@ public class ProgressManager : MonoBehaviour
         resetProgressBarUI();
         SceneManager.restartGameScene();
 
-        Debug.Log("Restart Game");
+        // Debug.Log("Restart Game");
         startGame();
     }
 
@@ -238,6 +238,6 @@ public class ProgressManager : MonoBehaviour
         resetProgressBarUI();
         SceneManager.backHomeScene();
 
-        Debug.Log("Back Home");
+        // Debug.Log("Back Home");
     }
 }
