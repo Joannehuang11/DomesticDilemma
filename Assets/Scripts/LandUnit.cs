@@ -98,7 +98,7 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
                         }
 
                         //play click sound
-                        territoryPlayManager.clickLandCardSoundPlay();
+                        territoryPlayManager.clickLandCardSoundPlay(true);
                     }
                 }
             }
@@ -148,6 +148,7 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
                     {
                         playerManager.setWarningText(true, playerManager.moreSpaceText);
                         player0Manager.warningTextUI.GetComponent<ButtonShaker>().ShakeButton();
+                        territoryPlayManager.clickLandCardSoundPlay(false);
                         return false;
                     }
                 }
@@ -155,6 +156,7 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
                 {
                     playerManager.setWarningText(true, playerManager.moreSpaceText);
                     player0Manager.warningTextUI.GetComponent<ButtonShaker>().ShakeButton();
+                    territoryPlayManager.clickLandCardSoundPlay(false);
                     return false;
                 }
             }

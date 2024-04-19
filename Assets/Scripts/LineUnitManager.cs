@@ -113,7 +113,7 @@ public class LineUnitManager : MonoBehaviour, IPointerClickHandler
                     }
 
                     //play audio
-                    territoryPlayManager.clickLandCardSoundPlay();
+                    territoryPlayManager.clickLandCardSoundPlay(true);
                 }
 
             }

@@ -109,9 +109,16 @@ public class TerritoryPlayManager : MonoBehaviour
         return currentTerritoryPlayingState;
     }
 
-    public void clickLandCardSoundPlay()
+    public void clickLandCardSoundPlay(bool isPlaced)
     {
-        audioManager.playClickSound();
+        if (isPlaced)
+        {
+            audioManager.playClickSound();
+        }
+        else
+        {
+            audioManager.playErrorSound();
+        }
         // Debug.Log("clickLandCardSoundPlay");
     }
 
