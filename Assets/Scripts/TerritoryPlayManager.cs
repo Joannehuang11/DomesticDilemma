@@ -145,7 +145,7 @@ public class TerritoryPlayManager : MonoBehaviour
     public void addPlacedCard(GameObject card)
     {
         lastCards.Add(card);
-        Debug.Log("addPlacedCard: " + card.name);
+        // Debug.Log("addPlacedCard: " + card.name);
         updateRedoUI();
     }
 
@@ -158,7 +158,7 @@ public class TerritoryPlayManager : MonoBehaviour
         {
             int lastPlacedCardCoin = lastCard.GetComponent<LandUnit>().coinCost;
             int lastPlacedCardGridCount = lastCard.GetComponent<LandUnit>().gridCount;
-            Debug.Log("lastPlacedCardGridCount: " + lastPlacedCardGridCount);
+            // Debug.Log("lastPlacedCardGridCount: " + lastPlacedCardGridCount);
 
             lastCard.GetComponent<LandUnit>().setOwnALandCard(-1, resetLandImg, 0, 0);
 
@@ -200,7 +200,7 @@ public class TerritoryPlayManager : MonoBehaviour
     {
         List<GameObject> emptyList = new List<GameObject>();
         lastCards = emptyList;
-        Debug.Log("resetPlacedCards");
+        // Debug.Log("resetPlacedCards");
         updateRedoUI();
     }
 
