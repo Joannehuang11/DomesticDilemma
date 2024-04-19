@@ -117,7 +117,8 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
                             SetActionCardsPlayingState(actionCardsPlayingState.Waiting, false);
 
                             actionCardsPlayManager.clickActionCardSoundPlay(false);
-                            player0Manager.actionDoneUI.GetComponent<ButtonShaker>().ShakeButton();
+                            // player0Manager.actionDoneUI.GetComponent<ButtonShaker>().ShakeButton();
+                            player0Manager.warningTextUI.GetComponent<ButtonShaker>().ShakeButton();
                         }
                     }
                     else if (selectingPlayerNo == 1)
@@ -136,7 +137,8 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
                             SetActionCardsPlayingState(actionCardsPlayingState.Waiting, false);
 
                             actionCardsPlayManager.clickActionCardSoundPlay(false);
-                            player1Manager.actionDoneUI.GetComponent<ButtonShaker>().ShakeButton();
+                            // player1Manager.actionDoneUI.GetComponent<ButtonShaker>().ShakeButton();
+                            player1Manager.warningTextUI.GetComponent<ButtonShaker>().ShakeButton();
                         }
                     }
                     pointGridPlayManager.SetGridPlayResult(pointGridPlayResult.None);
@@ -162,7 +164,8 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
                         SetActionCardsPlayingState(actionCardsPlayingState.P0Selected, false);
 
                         actionCardsPlayManager.clickActionCardSoundPlay(false);
-                        player0Manager.actionDoneUI.GetComponent<ButtonShaker>().ShakeButton();
+                        // player0Manager.actionDoneUI.GetComponent<ButtonShaker>().ShakeButton();
+                        player0Manager.warningTextUI.GetComponent<ButtonShaker>().ShakeButton();
                     }
                     break;
                 case actionCardsPlayingState.P1Selected:
@@ -185,7 +188,8 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
                         SetActionCardsPlayingState(actionCardsPlayingState.P1Selected, false);    
 
                         actionCardsPlayManager.clickActionCardSoundPlay(false);    
-                        player1Manager.actionDoneUI.GetComponent<ButtonShaker>().ShakeButton();                
+                        // player1Manager.actionDoneUI.GetComponent<ButtonShaker>().ShakeButton();    
+                        player1Manager.warningTextUI.GetComponent<ButtonShaker>().ShakeButton();                
                     }
                     break;
             }

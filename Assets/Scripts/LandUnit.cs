@@ -122,7 +122,7 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
         {
             territoryPlayManager.addPlacedCard(gameObject);
         }
-        Debug.Log("setOwnALandCard: "+ gameObject.name);
+        // Debug.Log("setOwnALandCard: "+ gameObject.name);
     }
 
     public bool setOwnLandCards(int playerNo, List<Sprite> imgs)
@@ -133,17 +133,31 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
 
         if (playerManager.checkBudget(selectingCoinCost))
         {
-            if (imgs.Count > 1 && landNo % 9 < 8)
+            if (imgs.Count > 1) // if two gridCount
             {
-                GameObject nextLandCard = landCardsDatas.GetLandCard(landNo + 1);
-                if (nextLandCard.GetComponent<LandUnit>().ownerNo == -1)
+                if (landNo % 9 < 8) //if not corner
                 {
-                    setOwnALandCard(playerNo, imgs[0], selectingCoinCost/2, 2);
-                    nextLandCard.GetComponent<LandUnit>().setOwnALandCard(playerNo, imgs[1], selectingCoinCost/2, 2);
-                    return true;
+                    GameObject nextLandCard = landCardsDatas.GetLandCard(landNo + 1);
+                    if (nextLandCard.GetComponent<LandUnit>().ownerNo == -1) //if next is not placed
+                    {
+                        setOwnALandCard(playerNo, imgs[0], selectingCoinCost/2, 2);
+                        nextLandCard.GetComponent<LandUnit>().setOwnALandCard(playerNo, imgs[1], selectingCoinCost/2, 2);
+                        return true;
+                    }
+                    else //if next card is placed
+                    {
+                        playerManager.setWarningText(true, playerManager.moreSpaceText);
+                        player0Manager.warningTextUI.GetComponent<ButtonShaker>().ShakeButton();
+                        return false;
+                    }
                 }
-                return false;
-            } 
+                else //if corner
+                {
+                    playerManager.setWarningText(true, playerManager.moreSpaceText);
+                    player0Manager.warningTextUI.GetComponent<ButtonShaker>().ShakeButton();
+                    return false;
+                }
+            }
             else if (imgs.Count == 1)
             {
                 setOwnALandCard(playerNo, imgs[0], selectingCoinCost, 1);

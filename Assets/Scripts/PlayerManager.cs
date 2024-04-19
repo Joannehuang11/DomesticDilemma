@@ -38,8 +38,10 @@ public class PlayerManager : MonoBehaviour
     public GameObject playerStatusCard;
     public GameObject instructionsUI;
     public GameObject actionDoneUI;
-    public TextMeshProUGUI moreCoinsTextTMP;
+    public GameObject warningTextUI;
+    private TextMeshProUGUI warningTextTMP;
     public string moreCoinsText = "Need more coins";
+    public string moreSpaceText = "Need more space";
 
 
     //game costing
@@ -51,6 +53,7 @@ public class PlayerManager : MonoBehaviour
     {
         //Get component
         playerStatusSignCoinText = playerStatusSignCoinTextObj.GetComponent<TextMeshProUGUI>();
+        warningTextTMP = warningTextUI.GetComponent<TextMeshProUGUI>();
         
         playerCoin = 0;
         playerCall = playerCall.None;
@@ -168,27 +171,27 @@ public class PlayerManager : MonoBehaviour
         // Debug.Log("PlayerCoin is " + playerCoin + " and cost is " + cost + " so the remaining is " + (playerCoin + cost));
         if (playerCoin + cost >= 0)
         {
-            setNeedMoreCoinsText(false);
+            setWarningText(false, moreCoinsText);
             // Debug.Log("Player " + playerNo + " has enough budget");
             return true;
         }
         else
         {
-            setNeedMoreCoinsText(true);
+            setWarningText(true, moreCoinsText);
             // Debug.Log("Player " + playerNo + " has not enough budget");
             return false;
         }
     }
 
-    public void setNeedMoreCoinsText(bool isShow)
+    public void setWarningText(bool isShow, string warningText)
     {
         if (isShow)
         {
-            moreCoinsTextTMP.text = moreCoinsText;
+            warningTextTMP.text = warningText;
         }
         else
         {
-            moreCoinsTextTMP.text = "";
+            warningTextTMP.text = "";
         }
     }
 }
