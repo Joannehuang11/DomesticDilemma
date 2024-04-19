@@ -150,6 +150,7 @@ public class ActionCardsPlayManager : MonoBehaviour
             setActionCardsPlayingState(actionCardsPlayingState.Waiting, true);
             territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
             // pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.ResultAction);
+            territoryPlayManager.resetPlacedCards();
 
             //play click sound
             audioManager.playClickSound();
@@ -170,6 +171,7 @@ public class ActionCardsPlayManager : MonoBehaviour
             setActionCardsPlayingState(actionCardsPlayingState.None, true);
             territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
             pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.None);
+            territoryPlayManager.resetPlacedCards();
 
             //restart the game
             progressManager.startGame();

@@ -30,7 +30,7 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
 
     private string actionName;
     private List<Sprite> images;
-    private int coinCost;
+    public int coinCost;
     private int gridCount;
     public bool isSelected;
 

@@ -9,7 +9,7 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
     public int landNo;
     public int ownerNo;
     public Image landImg;
-    public bool isPlaced;
+    public int coinCost;
 
     //interface
     public GameObject player0Obj;
@@ -40,7 +40,7 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
         landCardsDatas = landCardsDatasObj.GetComponent<LandCardsDatas>();   
         buttonComponent = GetComponent<Button>();
 
-        isPlaced = false;
+        coinCost = 0;
     }
 
     // Update is called once per frame
@@ -67,7 +67,6 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
                 if (ownerNo < 0)
                 {
                     ownerNo = selectingPlayerNo;
-                    isPlaced = true;
 
                     if (setOwnLandCards(selectingPlayerNo, selectedCardImgs))
                     {
@@ -110,10 +109,17 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
         ownerNo = playerNo;
     }
 
-    public void setOwnALandCard(int playerNo, Sprite img)
+    public void setOwnALandCard(int playerNo, Sprite img, int coin)
     {
         ownerNo = playerNo;
         landImg.sprite = img;
+        coinCost = coin;
+        
+        if (playerNo > -1)
+        {
+            territoryPlayManager.addPlacedCard(gameObject);
+        }
+        Debug.Log("setOwnALandCard: "+ gameObject.name);
     }
 
     public bool setOwnLandCards(int playerNo, List<Sprite> imgs)
@@ -127,12 +133,12 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
             if (imgs.Count > 1 && landNo % 9 < 8)
             {
                 GameObject nextLandCard = landCardsDatas.GetLandCard(landNo + 1);
-                setOwnALandCard(playerNo, imgs[0]);
-                nextLandCard.GetComponent<LandUnit>().setOwnALandCard(playerNo, imgs[1]);
+                setOwnALandCard(playerNo, imgs[0], selectingCoinCost/2);
+                nextLandCard.GetComponent<LandUnit>().setOwnALandCard(playerNo, imgs[1], selectingCoinCost/2);
             } 
             else if (imgs.Count == 1)
             {
-                setOwnALandCard(playerNo, imgs[0]);
+                setOwnALandCard(playerNo, imgs[0], selectingCoinCost);
             }
             return true;
         }
@@ -146,7 +152,7 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
     {
         int selectedActionCardNo = actionCardsPlayManager.selectedActionCardNo;
 
-        if (isPlaced || selectedActionCardNo == 0)
+        if (ownerNo < 0 || selectedActionCardNo == 0)
         {
             buttonComponent.enabled = false;
         }

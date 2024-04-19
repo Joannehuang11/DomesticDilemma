@@ -12,15 +12,18 @@ public enum territoryPlayingState
 
 public class TerritoryPlayManager : MonoBehaviour
 {
-    // public GameObject player0;
-    // public GameObject player1;
     public GameObject actionCardsPlayManagerObj;
     ActionCardsPlayManager actionCardsPlayManager;
     private GameObject audioManagerObj;
     AudioManager audioManager;
+    public GameObject player0Obj;
+    PlayerManager player0Manager;
+    public GameObject player1Obj;
+    PlayerManager player1Manager;
     public GameObject LandCardsDatasObk;
     LandCardsDatas landCardsDatas;
     private List<GameObject> landCards;
+    public List<GameObject> lastCards;
 
     public territoryPlayingState currentTerritoryPlayingState;
 
@@ -28,6 +31,8 @@ public class TerritoryPlayManager : MonoBehaviour
 
     //UI
     public GameObject GamePlayUI;
+    public GameObject UndoUI;
+    public Sprite resetLandImg;
     
     // Start is called before the first frame update
     void Start()
@@ -35,6 +40,8 @@ public class TerritoryPlayManager : MonoBehaviour
         audioManagerObj = GameObject.Find("AudioManager");
         audioManager = audioManagerObj.GetComponent<AudioManager>();
         actionCardsPlayManager = actionCardsPlayManagerObj.GetComponent<ActionCardsPlayManager>();
+        player0Manager = player0Obj.GetComponent<PlayerManager>();
+        player1Manager = player1Obj.GetComponent<PlayerManager>();
         landCardsDatas = LandCardsDatasObk.GetComponent<LandCardsDatas>();
         landCards = landCardsDatas.landCards;
 
@@ -61,6 +68,8 @@ public class TerritoryPlayManager : MonoBehaviour
                 setLandCardsButtonEnabled(false);
                 setLineCardButtonEnabled(false);
                 // Debug.Log("territoryPlayingState is None");
+
+                updateRedoUI();
                 break;
             case territoryPlayingState.Waiting:
                 if (selectedActionCardNo == 0)
@@ -73,16 +82,22 @@ public class TerritoryPlayManager : MonoBehaviour
                     setLineCardButtonEnabled(false);
                     setLandCardsButtonEnabled(true);
                 }
+
+                updateRedoUI();
                 // Debug.Log("territoryPlayingState is Waiting");
                 break;
             case territoryPlayingState.P0Placed:
                 setLandCardsButtonEnabled(false);
                 setLineCardButtonEnabled(false);
+
+                updateRedoUI();
                 // Debug.Log("territoryPlayingState is P0Placed");
                 break;
             case territoryPlayingState.P1Placed:
                 setLandCardsButtonEnabled(false);
                 setLineCardButtonEnabled(false);
+
+                updateRedoUI();
                 // Debug.Log("territoryPlayingState is P1Placed");
                 break;
         }
@@ -117,6 +132,71 @@ public class TerritoryPlayManager : MonoBehaviour
                 line.GetComponent<LineUnitManager>().setButtonEnabled(isEnable);
             }
             
+        }
+    }
+
+    public void addPlacedCard(GameObject card)
+    {
+        lastCards.Add(card);
+        Debug.Log("addPlacedCard: " + card.name);
+        updateRedoUI();
+    }
+
+    public void redoLastCards()
+    {
+        GameObject lastCard = lastCards[lastCards.Count - 1];
+        PlayerManager currentPlayerManager = (actionCardsPlayManager.getSelectingPlayerNo() == 0) ? player0Manager : player1Manager;
+
+        if (lastCard.GetComponent<LandUnit>() != null)
+        {
+            int lastSelectedCardCoin = lastCard.GetComponent<LandUnit>().coinCost;
+
+            lastCard.GetComponent<LandUnit>().setOwnALandCard(-1, resetLandImg, 0);
+
+            currentPlayerManager.SetPlayerStatus(playerStatus.Action, -lastSelectedCardCoin, false, true);
+            currentPlayerManager.SetPlayerStatus(playerStatus.Action, 0, false, false);
+        }
+        else if (lastCard.GetComponent<LineUnitManager>() != null)
+        {
+            int lastSelectedCardCoin = lastCard.GetComponent<LineUnitManager>().coinCost;
+            
+            lastCard.GetComponent<LineUnitManager>().setOwnLine(-1);
+
+            currentPlayerManager.SetPlayerStatus(playerStatus.Action, -lastSelectedCardCoin, false, true);
+            currentPlayerManager.SetPlayerStatus(playerStatus.Action, 0, false, false);
+        }
+        
+        // lastCards.Remove(lastCard);
+        if (lastCards.Count == 1)
+        {
+            List<GameObject> emptyList = new List<GameObject>();
+            lastCards = emptyList;
+        }
+        else 
+        {
+            lastCards.Remove(lastCard);
+        }
+        // Debug.Log("redo lastCard: " + lastCard.name);
+        updateRedoUI();
+    }
+
+    public void resetPlacedCards()
+    {
+        List<GameObject> emptyList = new List<GameObject>();
+        lastCards = emptyList;
+        Debug.Log("resetPlacedCards");
+        updateRedoUI();
+    }
+
+    public void updateRedoUI()
+    {
+        if (lastCards.Count > 0)
+        {
+            UndoUI.SetActive(true);
+        }
+        else
+        {
+            UndoUI.SetActive(false);
         }
     }
 }

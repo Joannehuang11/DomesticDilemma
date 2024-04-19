@@ -14,12 +14,14 @@ public enum lineType
 public class LineUnitManager : MonoBehaviour, IPointerClickHandler
 {
     public int ownerNo;
+    public int coinCost;
     
     public lineType lineType;
     public float placedLineThickness = 3f;
     private RectTransform lineRectTransform;
     private Vector3 hoScale;
     private Vector3 veScale;
+    private Vector3 originScale;
 
     public GameObject landCardObj;
     private GameObject progressManagerObj;
@@ -33,6 +35,7 @@ public class LineUnitManager : MonoBehaviour, IPointerClickHandler
     private GameObject player1Obj;
     PlayerManager player1Manager;
     Button buttonComponent;
+
     
     
     // Start is called before the first frame update
@@ -42,6 +45,7 @@ public class LineUnitManager : MonoBehaviour, IPointerClickHandler
         buttonComponent = GetComponent<Button>();
         hoScale = new Vector3(1, placedLineThickness, 1);
         veScale = new Vector3(placedLineThickness, 1, 1);
+        originScale = new Vector3(1, 1, 1);
 
         progressManagerObj = GameObject.Find("ProgressManager");
         progressManager = progressManagerObj.GetComponent<ProgressManager>();
@@ -55,6 +59,7 @@ public class LineUnitManager : MonoBehaviour, IPointerClickHandler
         player1Manager = player1Obj.GetComponent<PlayerManager>();
 
         ownerNo = -1;
+        coinCost = actionCardsPlayManager.actionCards[0].GetComponent<ActionCardManager>().coinCost;
     }
 
     // Update is called once per frame
@@ -80,7 +85,7 @@ public class LineUnitManager : MonoBehaviour, IPointerClickHandler
                 if (ownerNo < 0)
                 {
                     ownerNo = selectingPlayerNo;
-                    setOwnLine(lineType);
+                    setOwnLine(selectingPlayerNo);
 
                     if (selectingPlayerNo == 0)
                     {
@@ -115,26 +120,35 @@ public class LineUnitManager : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    public void setOwnLine(lineType lineType)
+    public void setOwnLine(int playerNo)
     {
-        // Debug.Log("setOwnLine: " + lineType);
-        switch(lineType)
-        {
-            case lineType.Top:
-                // Debug.Log("setOwnLine case type: " + lineType);
-                lineRectTransform.localScale = hoScale;
-                break;
-            case lineType.Right:
-                lineRectTransform.localScale = veScale;
-                break;
-            case lineType.Bottom:
-                lineRectTransform.localScale = hoScale;
-                break;
-            case lineType.Left:
-                lineRectTransform.localScale = veScale;
-                break;
-        }
+        ownerNo = playerNo;
         
+        // Debug.Log("setOwnLine: " + lineType);
+        if (ownerNo < 0)
+        {
+            lineRectTransform.localScale = originScale;
+        }
+        else
+        {
+            switch(lineType)
+            {
+                case lineType.Top:
+                    // Debug.Log("setOwnLine case type: " + lineType);
+                    lineRectTransform.localScale = hoScale;
+                    break;
+                case lineType.Right:
+                    lineRectTransform.localScale = veScale;
+                    break;
+                case lineType.Bottom:
+                    lineRectTransform.localScale = hoScale;
+                    break;
+                case lineType.Left:
+                    lineRectTransform.localScale = veScale;
+                    break;
+            }
+            territoryPlayManager.addPlacedCard(gameObject);
+        }
     }
 
     public void setButtonEnabled(bool isEnable)
