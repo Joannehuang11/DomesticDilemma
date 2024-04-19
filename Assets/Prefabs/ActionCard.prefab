@@ -99,6 +99,7 @@ MonoBehaviour:
   progressManagerObj: {fileID: 0}
   actionCardsDatasObj: {fileID: 0}
   pointGridPlayManagerObj: {fileID: 0}
+  coinCost: 0
   isSelected: 0
   thumbnailImgs:
   - {fileID: 6639602717920542836}
@@ -364,7 +365,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1103610162
+  m_TextStyleHashCode: 2451216
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
