@@ -149,24 +149,33 @@ public class TerritoryPlayManager : MonoBehaviour
 
         if (lastCard.GetComponent<LandUnit>() != null)
         {
-            int lastSelectedCardCoin = lastCard.GetComponent<LandUnit>().coinCost;
+            int lastPlacedCardCoin = lastCard.GetComponent<LandUnit>().coinCost;
+            int lastPlacedCardGridCount = lastCard.GetComponent<LandUnit>().gridCount;
+            Debug.Log("lastPlacedCardGridCount: " + lastPlacedCardGridCount);
 
-            lastCard.GetComponent<LandUnit>().setOwnALandCard(-1, resetLandImg, 0);
+            lastCard.GetComponent<LandUnit>().setOwnALandCard(-1, resetLandImg, 0, 0);
 
-            currentPlayerManager.SetPlayerStatus(playerStatus.Action, -lastSelectedCardCoin, false, true);
+            //if gridCount 2
+            if (lastPlacedCardGridCount > 1)
+            {
+                GameObject lastSecondCard = lastCards[lastCards.Count - 2];
+                lastSecondCard.GetComponent<LandUnit>().setOwnALandCard(-1, resetLandImg, 0, 0);
+                lastCards.Remove(lastSecondCard);
+            }
+
+            currentPlayerManager.SetPlayerStatus(playerStatus.Action, -lastPlacedCardCoin, false, true);
             currentPlayerManager.SetPlayerStatus(playerStatus.Action, 0, false, false);
         }
         else if (lastCard.GetComponent<LineUnitManager>() != null)
         {
-            int lastSelectedCardCoin = lastCard.GetComponent<LineUnitManager>().coinCost;
+            int lastPlacedCardCoin = lastCard.GetComponent<LineUnitManager>().coinCost;
             
             lastCard.GetComponent<LineUnitManager>().setOwnLine(-1);
 
-            currentPlayerManager.SetPlayerStatus(playerStatus.Action, -lastSelectedCardCoin, false, true);
+            currentPlayerManager.SetPlayerStatus(playerStatus.Action, -lastPlacedCardCoin, false, true);
             currentPlayerManager.SetPlayerStatus(playerStatus.Action, 0, false, false);
         }
         
-        // lastCards.Remove(lastCard);
         if (lastCards.Count == 1)
         {
             List<GameObject> emptyList = new List<GameObject>();

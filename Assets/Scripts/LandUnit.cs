@@ -10,6 +10,7 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
     public int ownerNo;
     public Image landImg;
     public int coinCost;
+    public int gridCount;
 
     //interface
     public GameObject player0Obj;
@@ -41,6 +42,7 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
         buttonComponent = GetComponent<Button>();
 
         coinCost = 0;
+        gridCount = 0;
     }
 
     // Update is called once per frame
@@ -109,11 +111,12 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
         ownerNo = playerNo;
     }
 
-    public void setOwnALandCard(int playerNo, Sprite img, int coin)
+    public void setOwnALandCard(int playerNo, Sprite img, int coin, int grid)
     {
         ownerNo = playerNo;
         landImg.sprite = img;
         coinCost = coin;
+        gridCount = grid;
         
         if (playerNo > -1)
         {
@@ -133,12 +136,12 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
             if (imgs.Count > 1 && landNo % 9 < 8)
             {
                 GameObject nextLandCard = landCardsDatas.GetLandCard(landNo + 1);
-                setOwnALandCard(playerNo, imgs[0], selectingCoinCost/2);
-                nextLandCard.GetComponent<LandUnit>().setOwnALandCard(playerNo, imgs[1], selectingCoinCost/2);
+                setOwnALandCard(playerNo, imgs[0], selectingCoinCost/2, 2);
+                nextLandCard.GetComponent<LandUnit>().setOwnALandCard(playerNo, imgs[1], selectingCoinCost/2, 2);
             } 
             else if (imgs.Count == 1)
             {
-                setOwnALandCard(playerNo, imgs[0], selectingCoinCost);
+                setOwnALandCard(playerNo, imgs[0], selectingCoinCost, 1);
             }
             return true;
         }
