@@ -68,10 +68,10 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
 
                 if (ownerNo < 0)
                 {
-                    ownerNo = selectingPlayerNo;
-
                     if (setOwnLandCards(selectingPlayerNo, selectedCardImgs))
                     {
+                        ownerNo = selectingPlayerNo;
+
                         if (selectingPlayerNo == 0)
                         {
                             territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.P0Placed);
@@ -136,14 +136,20 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
             if (imgs.Count > 1 && landNo % 9 < 8)
             {
                 GameObject nextLandCard = landCardsDatas.GetLandCard(landNo + 1);
-                setOwnALandCard(playerNo, imgs[0], selectingCoinCost/2, 2);
-                nextLandCard.GetComponent<LandUnit>().setOwnALandCard(playerNo, imgs[1], selectingCoinCost/2, 2);
+                if (nextLandCard.GetComponent<LandUnit>().ownerNo == -1)
+                {
+                    setOwnALandCard(playerNo, imgs[0], selectingCoinCost/2, 2);
+                    nextLandCard.GetComponent<LandUnit>().setOwnALandCard(playerNo, imgs[1], selectingCoinCost/2, 2);
+                    return true;
+                }
+                return false;
             } 
             else if (imgs.Count == 1)
             {
                 setOwnALandCard(playerNo, imgs[0], selectingCoinCost, 1);
+                return true;
             }
-            return true;
+            return false;
         }
         else
         {
