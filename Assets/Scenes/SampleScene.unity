@@ -6556,7 +6556,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Skip
+  m_text: Build test case
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15f8fe67452fb41bab7e62d12051cd5d, type: 2}
   m_sharedMaterial: {fileID: -8657657626130605653, guid: 15f8fe67452fb41bab7e62d12051cd5d,
@@ -9824,6 +9824,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7704403083766405156}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &956680846 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6239118296843301663, guid: 1a96f38e915674087af1d50784d6543e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7704403083766405156}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956680845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dfe1b59b3e7c462a80724b29f5d4f0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &984980100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15815,7 +15827,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1657981325
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15833,7 +15845,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -847}
+  m_AnchoredPosition: {x: 960, y: -947}
   m_SizeDelta: {x: 400, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1657981326
@@ -15888,6 +15900,30 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 956680846}
+        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
+        m_MethodName: SetPlayerCoin
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1000
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1657981324}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
