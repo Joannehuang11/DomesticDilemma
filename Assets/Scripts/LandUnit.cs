@@ -155,7 +155,7 @@ public class LandUnit : MonoBehaviour, IPointerClickHandler
     {
         int selectedActionCardNo = actionCardsPlayManager.selectedActionCardNo;
 
-        if (ownerNo < 0 || selectedActionCardNo == 0)
+        if (ownerNo != -1 || selectedActionCardNo == 0)
         {
             buttonComponent.enabled = false;
         }
