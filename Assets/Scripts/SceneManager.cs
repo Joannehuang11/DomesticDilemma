@@ -14,6 +14,8 @@ public class SceneManager : MonoBehaviour
 
     private GameObject audioManagerObj;
     AudioManager audioManager;
+    public bool isMainGameScene;
+
     
     // Start is called before the first frame update
     void Start()
@@ -41,19 +43,29 @@ public class SceneManager : MonoBehaviour
             progressManager.setIsInputBlock(false);
             // Debug.Log("End of intro.");
         }
+
+        if (index == introScenes.Count)
+        {
+            isMainGameScene = true;
+            // Debug.Log("Main game scene.");
+        }
+        else
+        {
+            isMainGameScene = false;
+        }
         
         for (int i = 0; i < introScenes.Count; i++)
         {
             if (i != index)
             {
                 introScenes[i].SetActive(false);
-                endScene.SetActive(false);
+                
             }
             else 
             {
                 introScenes[i].SetActive(true);
-                endScene.SetActive(false);
             }
+            endScene.SetActive(false);
         }
     }
     
@@ -69,24 +81,32 @@ public class SceneManager : MonoBehaviour
     {
         currentSceneIndex = 4;
         setScene(currentSceneIndex);
+
+        audioManager.playClickSound();
     }
 
     public void endGameScene()
     {
         progressManager.setIsInputBlock(true);
         endScene.SetActive(true);
+
+        isMainGameScene = false;
     }
 
     public void restartGameScene()
     {
         currentSceneIndex = introScenes.Count;
         setScene(currentSceneIndex);
+
+        audioManager.playClickSound();
     }
 
     public void backHomeScene()
     {
         currentSceneIndex = 0;
-        // endScene.SetActive(false);
+        endScene.SetActive(false);
         setScene(currentSceneIndex);
+
+        audioManager.playClickSound();
     }
 }

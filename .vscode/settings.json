@@ -56,7 +56,9 @@
         "Behaviour",
         "Datas",
         "Gameplay",
+        "Interactable",
         "playercall",
+        "Raycast",
         "UGUI"
     ]
 }
