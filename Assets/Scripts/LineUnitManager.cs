@@ -117,11 +117,11 @@ public class LineUnitManager : MonoBehaviour, IPointerClickHandler
 
     public void setOwnLine(lineType lineType)
     {
-        Debug.Log("setOwnLine: " + lineType);
+        // Debug.Log("setOwnLine: " + lineType);
         switch(lineType)
         {
             case lineType.Top:
-                Debug.Log("setOwnLine case type: " + lineType);
+                // Debug.Log("setOwnLine case type: " + lineType);
                 lineRectTransform.localScale = hoScale;
                 break;
             case lineType.Right:
