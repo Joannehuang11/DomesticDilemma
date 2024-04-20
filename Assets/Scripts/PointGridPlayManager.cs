@@ -22,9 +22,9 @@ public class PointGridPlayManager : MonoBehaviour
     //basic game data
     public pointGridPlayingState currentGridPlayingState = pointGridPlayingState.None;
     public pointGridPlayResult currentGridPlayResult = pointGridPlayResult.None;
-    public int coinWinDraw = 10;
-    public int coinWinGiveUp = 5;
-    public int pointWinPlayer = 15;
+    public int coinWinDraw;
+    public int coinWinGiveUp;
+    public int pointWinPlayer;
 
     // public int currentRound;
     // public int maxRound = 20;

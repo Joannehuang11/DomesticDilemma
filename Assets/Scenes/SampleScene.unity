@@ -6980,9 +6980,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentGridPlayingState: 0
   currentGridPlayResult: 0
-  coinWinDraw: 15
+  coinWinDraw: 10
   coinWinGiveUp: 5
-  pointWinPlayer: 10
+  pointWinPlayer: 15
   GamePlayUI: {fileID: 516009587}
   PointGridUI: {fileID: 1388479700}
   player0Obj: {fileID: 956680845}
