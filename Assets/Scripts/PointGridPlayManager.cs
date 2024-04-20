@@ -22,6 +22,9 @@ public class PointGridPlayManager : MonoBehaviour
     //basic game data
     public pointGridPlayingState currentGridPlayingState = pointGridPlayingState.None;
     public pointGridPlayResult currentGridPlayResult = pointGridPlayResult.None;
+    public int coinWinDraw = 10;
+    public int coinWinGiveUp = 5;
+    public int pointWinPlayer = 15;
 
     // public int currentRound;
     // public int maxRound = 20;
@@ -129,8 +132,8 @@ public class PointGridPlayManager : MonoBehaviour
         if (player0Manager.GetPlayerCall() == playerCall.Collab && player1Manager.GetPlayerCall() == playerCall.Collab)
         {
             SetGridPlayResult(pointGridPlayResult.P0P1Draw);
-            player0Manager.SetPlayerStatus(playerStatus.Action, 3, false, true);
-            player1Manager.SetPlayerStatus(playerStatus.Hold, 3, false, true);
+            player0Manager.SetPlayerStatus(playerStatus.Action, coinWinDraw, false, true);
+            player1Manager.SetPlayerStatus(playerStatus.Hold, coinWinDraw, false, true);
             
             //update games
             SetGridPlayingState(pointGridPlayingState.ResultAction);
@@ -140,7 +143,7 @@ public class PointGridPlayManager : MonoBehaviour
         else if (player0Manager.GetPlayerCall() == playerCall.NotCollab && player1Manager.GetPlayerCall() == playerCall.Collab)
                 {
             SetGridPlayResult(pointGridPlayResult.P0Win);
-            player0Manager.SetPlayerStatus(playerStatus.Action, 5, false, true);
+            player0Manager.SetPlayerStatus(playerStatus.Action, pointWinPlayer, false, true);
             player1Manager.SetPlayerStatus(playerStatus.Hold, 0, false, true);
 
             //update games
@@ -152,7 +155,7 @@ public class PointGridPlayManager : MonoBehaviour
         {
             SetGridPlayResult(pointGridPlayResult.P1Win);
             player0Manager.SetPlayerStatus(playerStatus.Action, 0, false, true);
-            player1Manager.SetPlayerStatus(playerStatus.Hold, 5, false, true);
+            player1Manager.SetPlayerStatus(playerStatus.Hold, pointWinPlayer, false, true);
 
             //update games
             SetGridPlayingState(pointGridPlayingState.ResultAction);
@@ -162,8 +165,8 @@ public class PointGridPlayManager : MonoBehaviour
         else if (player0Manager.GetPlayerCall() == playerCall.NotCollab && player1Manager.GetPlayerCall() == playerCall.NotCollab)
         {
             SetGridPlayResult(pointGridPlayResult.P0P1GiveUp);
-            player0Manager.SetPlayerStatus(playerStatus.Action, 1, false, true);
-            player1Manager.SetPlayerStatus(playerStatus.Hold, 1, false, true);
+            player0Manager.SetPlayerStatus(playerStatus.Action, coinWinGiveUp, false, true);
+            player1Manager.SetPlayerStatus(playerStatus.Hold, coinWinGiveUp, false, true);
         
             //update games
             SetGridPlayingState(pointGridPlayingState.ResultAction);

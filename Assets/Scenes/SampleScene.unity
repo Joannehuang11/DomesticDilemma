@@ -6980,6 +6980,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentGridPlayingState: 0
   currentGridPlayResult: 0
+  coinWinDraw: 15
+  coinWinGiveUp: 5
+  pointWinPlayer: 10
   GamePlayUI: {fileID: 516009587}
   PointGridUI: {fileID: 1388479700}
   player0Obj: {fileID: 956680845}
@@ -13454,7 +13457,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c64ee438e1e0d4e418f571b0e9598907, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 07be1028d66fe441988bc636388ab426, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13484,11 +13487,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34a30b1ab1c114daca0125b49be100d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultImg: {fileID: 21300000, guid: c64ee438e1e0d4e418f571b0e9598907, type: 3}
-  p0WinImg: {fileID: 21300000, guid: fc7efdbae8cfa48b0820a36b5226fe3a, type: 3}
-  p1WinImg: {fileID: 21300000, guid: 6252b7b5dbb8648199dddb63a1265a9a, type: 3}
-  drawImg: {fileID: 21300000, guid: 76facd4718ad9473293b9dcb573ab5b6, type: 3}
-  giveUpImg: {fileID: 21300000, guid: bef96ebd41ca64c2da1f3bca22ae320a, type: 3}
+  defaultImg: {fileID: 21300000, guid: 07be1028d66fe441988bc636388ab426, type: 3}
+  p0WinImg: {fileID: 21300000, guid: a07fd12e4f574407cb954ab42cccd78f, type: 3}
+  p1WinImg: {fileID: 21300000, guid: f77e2a9a27c884d868d5aa88b44ac6c9, type: 3}
+  drawImg: {fileID: 21300000, guid: b3da1b909f5784d8a91274b68f7c2a24, type: 3}
+  giveUpImg: {fileID: 21300000, guid: 15da1c57ef4bf4bb991251fd8c962e5e, type: 3}
   countdownImgs:
   - {fileID: 21300000, guid: 88a6be4e49bae43ed8802c19200b23f2, type: 3}
   - {fileID: 21300000, guid: 4ef5b196973e54f25868ed327206218f, type: 3}
