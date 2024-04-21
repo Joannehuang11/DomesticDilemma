@@ -38,12 +38,13 @@ public class PlayerManager : MonoBehaviour
     public GameObject playerStatusCard;
     public GameObject instructionsUI;
     public GameObject actionDoneUI;
+    public GameObject actionSkipUI;
     public GameObject warningTextUI;
     private TextMeshProUGUI warningTextTMP;
     public string moreCoinsText = "Need more coins";
     public string moreSpaceText = "Need more space";
-    public string actionDoneBTNText = "Done";
-    public string actionSkipBTNText = "Skip";
+    // public string actionDoneBTNText = "Done";
+    // public string actionSkipBTNText = "Skip";
 
     private Transform playerStatusSignCoin;
 
@@ -130,36 +131,31 @@ public class PlayerManager : MonoBehaviour
             case playerStatus.Selecting:
                 playerStatusText.text = "Selecting";
                 instructionsUI.SetActive(true);
-                setActionBTN(false, actionDoneBTNText);
-                // actionDoneUI.SetActive(false);
+                setActionBTN(false, false);
                 // Debug.Log("Player " + playerNo + " is selecting");
                 break;
             case playerStatus.Ready:
                 playerStatusText.text = "Ready";
                 instructionsUI.SetActive(false);
-                setActionBTN(false, actionDoneBTNText);
-                // actionDoneUI.SetActive(false);                
+                setActionBTN(false, false);
                 // Debug.Log("Player " + playerNo + " is ready");
                 break;
             case playerStatus.Action:
                 playerStatusText.text = "Action";
                 instructionsUI.SetActive(false);
-                setActionBTN(true, actionDoneBTNText);
-                // actionDoneUI.SetActive(true);
+                setActionBTN(true, false);
                 // Debug.Log("Player " + playerNo + " is action");
                 break;
             case playerStatus.Hold:
                 playerStatusText.text = "Hold";
                 instructionsUI.SetActive(false);
-                setActionBTN(false, actionDoneBTNText);
-                // actionDoneUI.SetActive(false);
+                setActionBTN(false, false);
                 // Debug.Log("Player " + playerNo + " is hold");
                 break;
             case playerStatus.Break:
                 playerStatusText.text = "Break";
                 instructionsUI.SetActive(false);
-                setActionBTN(true, actionSkipBTNText);
-                // actionDoneUI.SetActive(false);                
+                setActionBTN(false, true);
                 // Debug.Log("Player " + playerNo + " is hold");
                 break;                
         }
@@ -204,9 +200,9 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void setActionBTN(bool isShow, string BTNtext)
+    public void setActionBTN(bool isDoneShow, bool isSkipShow)
     {
-        actionDoneUI.SetActive(isShow);
-        actionDoneUI.GetComponentInChildren<TextMeshProUGUI>().text = BTNtext;
+        actionDoneUI.SetActive(isDoneShow);
+        actionSkipUI.SetActive(isSkipShow);
     }
 }

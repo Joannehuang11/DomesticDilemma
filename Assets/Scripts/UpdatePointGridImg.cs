@@ -87,6 +87,14 @@ public class UpdatePointGridImg : MonoBehaviour
         StartCoroutine(updateCountDownImgBreak(min));
     }
 
+    public void stopCountDownBreak()
+    {
+        StopAllCoroutines();
+        // Debug.Log("Stop Countdown Img Update");
+        
+        progressManager.startGame();
+    }
+
     private IEnumerator updateCountDownImgBreak(int min)
     {
         // Debug.Log("Start Countdown Img Update");
