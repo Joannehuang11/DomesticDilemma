@@ -8940,7 +8940,7 @@ MonoBehaviour:
   breakUnit: {fileID: 5046933678782855155, guid: 4bbcb0790b6c34113a99fc76b735bb74,
     type: 3}
   roundsPerSection: 5
-  breakTimes: 030000000500000003000000
+  breakTimes: 010000000200000001000000
   currentRound: 0
   inputBlockTimeTest: 10
   isInputBlock: 0
