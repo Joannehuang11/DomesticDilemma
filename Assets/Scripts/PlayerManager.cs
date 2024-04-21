@@ -42,6 +42,10 @@ public class PlayerManager : MonoBehaviour
     private TextMeshProUGUI warningTextTMP;
     public string moreCoinsText = "Need more coins";
     public string moreSpaceText = "Need more space";
+    public string actionDoneBTNText = "Done";
+    public string actionSkipBTNText = "Skip";
+
+    private Transform playerStatusSignCoin;
 
 
     //game costing
@@ -126,31 +130,36 @@ public class PlayerManager : MonoBehaviour
             case playerStatus.Selecting:
                 playerStatusText.text = "Selecting";
                 instructionsUI.SetActive(true);
-                actionDoneUI.SetActive(false);
+                setActionBTN(false, actionDoneBTNText);
+                // actionDoneUI.SetActive(false);
                 // Debug.Log("Player " + playerNo + " is selecting");
                 break;
             case playerStatus.Ready:
                 playerStatusText.text = "Ready";
                 instructionsUI.SetActive(false);
-                actionDoneUI.SetActive(false);                
+                setActionBTN(false, actionDoneBTNText);
+                // actionDoneUI.SetActive(false);                
                 // Debug.Log("Player " + playerNo + " is ready");
                 break;
             case playerStatus.Action:
                 playerStatusText.text = "Action";
                 instructionsUI.SetActive(false);
-                actionDoneUI.SetActive(true);
+                setActionBTN(true, actionDoneBTNText);
+                // actionDoneUI.SetActive(true);
                 // Debug.Log("Player " + playerNo + " is action");
                 break;
             case playerStatus.Hold:
                 playerStatusText.text = "Hold";
                 instructionsUI.SetActive(false);
-                actionDoneUI.SetActive(false);
+                setActionBTN(false, actionDoneBTNText);
+                // actionDoneUI.SetActive(false);
                 // Debug.Log("Player " + playerNo + " is hold");
                 break;
             case playerStatus.Break:
                 playerStatusText.text = "Break";
                 instructionsUI.SetActive(false);
-                actionDoneUI.SetActive(false);                
+                setActionBTN(true, actionSkipBTNText);
+                // actionDoneUI.SetActive(false);                
                 // Debug.Log("Player " + playerNo + " is hold");
                 break;                
         }
@@ -193,5 +202,11 @@ public class PlayerManager : MonoBehaviour
         {
             warningTextTMP.text = "";
         }
+    }
+
+    public void setActionBTN(bool isShow, string BTNtext)
+    {
+        actionDoneUI.SetActive(isShow);
+        actionDoneUI.GetComponentInChildren<TextMeshProUGUI>().text = BTNtext;
     }
 }
