@@ -8940,7 +8940,7 @@ MonoBehaviour:
   breakUnit: {fileID: 5046933678782855155, guid: 4bbcb0790b6c34113a99fc76b735bb74,
     type: 3}
   roundsPerSection: 5
-  breakTimes: 010000000200000001000000
+  breakTimes: 010000000100000001000000
   currentRound: 0
   inputBlockTimeTest: 10
   isInputBlock: 0
@@ -21462,7 +21462,7 @@ PrefabInstance:
     - target: {fileID: 7070816203920483660, guid: 1a96f38e915674087af1d50784d6543e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7070816203920483660, guid: 1a96f38e915674087af1d50784d6543e,
         type: 3}
