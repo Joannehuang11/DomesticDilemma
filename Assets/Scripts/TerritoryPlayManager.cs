@@ -168,6 +168,8 @@ public class TerritoryPlayManager : MonoBehaviour
                 GameObject lastSecondCard = lastCards[lastCards.Count - 2];
                 lastSecondCard.GetComponent<LandUnit>().setOwnALandCard(-1, resetLandImg, 0, 0);
                 lastCards.Remove(lastSecondCard);
+
+                currentPlayerManager.SetPlayerStatus(playerStatus.Action, -lastPlacedCardCoin, false, true);
             }
 
             currentPlayerManager.SetPlayerStatus(playerStatus.Action, -lastPlacedCardCoin, false, true);
