@@ -1,4 +1,6 @@
 using UnityEngine;
+using TMPro;
+using System.Collections.Generic;
 
 public enum pointGridPlayingState
 {
@@ -32,6 +34,9 @@ public class PointGridPlayManager : MonoBehaviour
     //UI
     public GameObject GamePlayUI;
     public GameObject PointGridUI;
+    public GameObject resultText;
+    private TextMeshProUGUI resultTextTMP;
+    public List<string> resultTexts;
 
     // interface
     public GameObject player0Obj;
@@ -49,6 +54,9 @@ public class PointGridPlayManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        resultTextTMP = resultText.GetComponent<TextMeshProUGUI>();
+
+        
         player0Manager = player0Obj.GetComponent<PlayerManager>();
         player1Manager = player1Obj.GetComponent<PlayerManager>();
         actionCardsPlayManager = actionCardsPlayManagerObj.GetComponent<ActionCardsPlayManager>();
@@ -57,6 +65,7 @@ public class PointGridPlayManager : MonoBehaviour
         // progressManagerObj = GameObject.Find("ProgressManager");
         // progressManager = progressManagerObj.GetComponent<ProgressManager>();
 
+        resultTextTMP.text = "";
         SetGridPlayingState(pointGridPlayingState.None);
         // SetGridPlayResult(pointGridPlayResult.None);
     }
@@ -193,7 +202,6 @@ public class PointGridPlayManager : MonoBehaviour
 
         //update game UI
         SetPointGridImg(currentGridPlayResult);
-
     }
 
     // Update the current state of the game    
@@ -210,8 +218,7 @@ public class PointGridPlayManager : MonoBehaviour
             case pointGridPlayingState.None:
                 // Debug.Log("pointGridPlayingState is None.");
                 break;
-            case pointGridPlayingState.Selecting:
-                // Debug.Log("pointGridPlayingState is Selecting.");
+            case pointGridPlayingState.Selecting:                // Debug.Log("pointGridPlayingState is Selecting.");
                 break;
             case pointGridPlayingState.ResultAction:
                 // Debug.Log("pointGridPlayingState is Result Action.");
@@ -252,5 +259,36 @@ public class PointGridPlayManager : MonoBehaviour
     public void SetPointGridImg(pointGridPlayResult result)
     {
         PointGridUI.GetComponent<UpdatePointGridImg>().SetPointGridImg(result);
+        setResultText(true, result);
+    }
+
+    public void setResultText(bool isShow, pointGridPlayResult result)
+    {
+        // Debug.Log("setResultText");
+        if (isShow)
+        {
+            switch(result)
+            {
+                case pointGridPlayResult.None:
+                    resultTextTMP.text = "";
+                    break;
+                case pointGridPlayResult.P0Win:
+                    resultTextTMP.text = resultTexts[3];
+                    break;
+                case pointGridPlayResult.P0P1Draw:
+                    resultTextTMP.text = resultTexts[0];
+                    break;
+                case pointGridPlayResult.P1Win:
+                    resultTextTMP.text = resultTexts[1];
+                    break;
+                case pointGridPlayResult.P0P1GiveUp:
+                    resultTextTMP.text = resultTexts[2];
+                    break;
+            }
+        }
+        else
+        {
+            resultTextTMP.text = "";
+        }
     }
 }

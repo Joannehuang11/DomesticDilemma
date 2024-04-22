@@ -171,6 +171,7 @@ public class ActionCardsPlayManager : MonoBehaviour
             setActionCardsPlayingState(actionCardsPlayingState.None, true);
             territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
             pointGridPlayManager.SetGridPlayingState(pointGridPlayingState.None);
+            pointGridPlayManager.SetGridPlayResult(pointGridPlayResult.None);
             territoryPlayManager.resetPlacedCards();
 
             //restart the game

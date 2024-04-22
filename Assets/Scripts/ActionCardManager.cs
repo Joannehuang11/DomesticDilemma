@@ -141,7 +141,6 @@ public class ActionCardManager : MonoBehaviour, IPointerClickHandler
                             player1Manager.warningTextUI.GetComponent<ButtonShaker>().ShakeButton();
                         }
                     }
-                    pointGridPlayManager.SetGridPlayResult(pointGridPlayResult.None);
                     break;
                 case actionCardsPlayingState.P0Selected:
                     //set this card selected
