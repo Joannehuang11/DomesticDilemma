@@ -64,7 +64,7 @@ public class PlayerManager : MonoBehaviour
         playerCall = playerCall.None;
 
         //UI
-        playerIDtext.text = "Player " + playerNo.ToString();
+        playerIDtext.text = "Player " + (playerNo+1).ToString();
         playerCoinText.text = playerCoin.ToString();        
         SetPlayerStatus(playerStatus.Selecting, 0, true, false);
         playerStatusSignSymbol.GetComponent<UpdateStatusSignSymbol>().setSymbol(playerStatus);
