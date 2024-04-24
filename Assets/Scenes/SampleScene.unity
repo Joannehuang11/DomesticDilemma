@@ -14236,7 +14236,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 887260321}
         m_TargetAssemblyTypeName: ProgressManager, Assembly-CSharp
-        m_MethodName: endGame
+        m_MethodName: exitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
