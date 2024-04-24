@@ -217,4 +217,21 @@ public class TerritoryPlayManager : MonoBehaviour
             UndoUI.SetActive(false);
         }
     }
+
+    public void ResetTerritory()
+    {
+        foreach (GameObject card in landCards)
+        {
+            card.GetComponent<LandUnit>().setOwnALandCard(-1, resetLandImg, 0, 0);
+
+            foreach (GameObject line in card.GetComponent<LandUnit>().lineObjs)
+            {
+                line.GetComponent<LineUnitManager>().setOwnLine(-1);
+            }  
+        }
+
+        lastCards = new List<GameObject>();
+
+        setTerritoryPlayingState(territoryPlayingState.None);
+    }
 }

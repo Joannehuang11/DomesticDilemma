@@ -7186,10 +7186,10 @@ MonoBehaviour:
   PointGridUI: {fileID: 1388479700}
   resultText: {fileID: 504674451}
   resultTexts:
-  - 'P1: Coop  P2:Coop'
-  - 'P1: Coop  P2:Defect'
-  - 'P1: Defect  P2:Defect'
-  - 'P1: Defect  P2:Coop'
+  - P1:Coop   P2:Coop
+  - P1:Coop   P2:Defect
+  - P1:Defect   P2:Defect
+  - P1:Defect   P2:Coop
   player0Obj: {fileID: 956680845}
   player1Obj: {fileID: 1433295384}
   actionCardsPlayManagerObj: {fileID: 1055735904}

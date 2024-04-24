@@ -217,4 +217,10 @@ public class ActionCardsPlayManager : MonoBehaviour
             card.GetComponent<ActionCardManager>().setButtonActive(isEnable);
         }
     }
+
+    public void ResetActionCardsPlay()
+    {
+        deSelectAllCards();
+        setActionCardsPlayingState(actionCardsPlayingState.None, false);
+    }
 }

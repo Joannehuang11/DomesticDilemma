@@ -230,6 +230,10 @@ public class ProgressManager : MonoBehaviour
         SceneManager.restartGameScene();
 
         // Debug.Log("Restart Game");
+        pointGridPlayManager.ResetPointGridGame();
+        actionCardsPlayManager.ResetActionCardsPlay();
+        territoryPlayManager.ResetTerritory();
+
         startGame();
     }
 
@@ -246,7 +250,7 @@ public class ProgressManager : MonoBehaviour
 
         // Debug.Log("Back Home");
         pointGridPlayManager.ResetPointGridGame();
-        actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.None, false);
-        territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
+        actionCardsPlayManager.ResetActionCardsPlay();
+        territoryPlayManager.ResetTerritory();
     }
 }
