@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -105,5 +106,12 @@ public class UpdatePointGridImg : MonoBehaviour
         }
 
         progressManager.startGame();
+    }
+
+    public void resetPointGridImg()
+    {
+        StopAllCoroutines();
+        
+        pointGridImg.sprite = defaultImg;
     }
 }

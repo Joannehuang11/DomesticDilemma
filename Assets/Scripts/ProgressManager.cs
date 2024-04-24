@@ -5,10 +5,10 @@ using UnityEngine;
 public class ProgressManager : MonoBehaviour
 {
     //interfaces
-    // public GameObject player0Obj;
-    // PlayerManager player0Manager;
-    // public GameObject player1Obj;
-    // PlayerManager player1Manager;
+    public GameObject player0Obj;
+    PlayerManager player0Manager;
+    public GameObject player1Obj;
+    PlayerManager player1Manager;
     public GameObject pointGridPlayManagerObj;
     PointGridPlayManager pointGridPlayManager;    
     public GameObject actionCardsPlayManagerObj;
@@ -38,8 +38,8 @@ public class ProgressManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // player0Manager = player0Obj.GetComponent<PlayerManager>();
-        // player1Manager = player1Obj.GetComponent<PlayerManager>();
+        player0Manager = player0Obj.GetComponent<PlayerManager>();
+        player1Manager = player1Obj.GetComponent<PlayerManager>();
         
         pointGridPlayManager = pointGridPlayManagerObj.GetComponent<PointGridPlayManager>();
         actionCardsPlayManager = actionCardsPlayManagerObj.GetComponent<ActionCardsPlayManager>();
@@ -220,6 +220,9 @@ public class ProgressManager : MonoBehaviour
 
     public void restartGame()
     {
+        player0Manager.SetPlayerCoin(0);
+        player1Manager.SetPlayerCoin(0);
+
         currentRound = 0;
         SetCurrentRound(currentRound);
         setIsInputBlock(false);
@@ -232,6 +235,9 @@ public class ProgressManager : MonoBehaviour
 
     public void backHome()
     {
+        player0Manager.SetPlayerCoin(0);
+        player1Manager.SetPlayerCoin(0);
+        
         currentRound = 0;
         SetCurrentRound(currentRound);
         setIsInputBlock(true);
@@ -239,5 +245,8 @@ public class ProgressManager : MonoBehaviour
         SceneManager.backHomeScene();
 
         // Debug.Log("Back Home");
+        pointGridPlayManager.ResetPointGridGame();
+        actionCardsPlayManager.setActionCardsPlayingState(actionCardsPlayingState.None, false);
+        territoryPlayManager.setTerritoryPlayingState(territoryPlayingState.None);
     }
 }

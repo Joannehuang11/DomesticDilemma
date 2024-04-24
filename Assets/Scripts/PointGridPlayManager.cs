@@ -110,6 +110,22 @@ public class PointGridPlayManager : MonoBehaviour
         PointGridUI.GetComponent<UpdatePointGridImg>().startCountDownSelecting();
     }
 
+    public void ResetPointGridGame()
+    {
+        //reset players call and status
+        player0Manager.SetPlayerCall(playerCall.None);
+        player0Manager.SetPlayerStatus(playerStatus.Selecting, 0, true, false);
+        player1Manager.SetPlayerCall(playerCall.None);
+        player1Manager.SetPlayerStatus(playerStatus.Selecting, 0, true, false);
+
+        //reset games
+        SetGridPlayingState(pointGridPlayingState.None);
+        SetGridPlayResult(pointGridPlayResult.None);
+
+        //update UI countdown
+        PointGridUI.GetComponent<UpdatePointGridImg>().resetPointGridImg();
+    }
+
     public void BreakPointGridGame(int min)
     {
         player0Manager.SetPlayerStatus(playerStatus.Break, 0, true, false);
