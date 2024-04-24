@@ -253,4 +253,9 @@ public class ProgressManager : MonoBehaviour
         actionCardsPlayManager.ResetActionCardsPlay();
         territoryPlayManager.ResetTerritory();
     }
+
+    public void exitGame()
+    {
+        Application.Quit();
+    }
 }
